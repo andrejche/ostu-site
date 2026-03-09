@@ -51,7 +51,7 @@ export default function OnlineNastavaSection() {
       setError("");
       try {
         const res = await fetch(
-          `http://192.168.0.28:3001/api/online?track=${trackKey}&year=${year}`
+          `https://ostu-site-backend.vercel.app/api/online?track=${trackKey}&year=${year}`
         );
         const data = await res.json();
         if (!res.ok) throw new Error(data?.error || "Request failed");
