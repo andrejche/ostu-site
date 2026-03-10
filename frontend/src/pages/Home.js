@@ -22,24 +22,11 @@ const onlineTracks = [
   { key: "meh",  title: "Мехатроника",             years: [2] },
 ];
 
-const events = [
-  { day: "09", month: "DEC", title: "Отворен ден",           note: "Посета за ученици и родители" },
-  { day: "18", month: "DEC", title: "Натпревар по роботика",  note: "Тимови од повеќе училишта" },
-  { day: "26", month: "DEC", title: "Проектна недела",        note: "Презентации и демонстрации" },
-];
-
 const stats = [
   { value: "6",    label: "Стручни насоки" },
   { value: "500+", label: "Активни ученици" },
   { value: "20+",  label: "Наставници" },
   { value: "1999", label: "Основано" },
-];
-
-const quickLinks = [
-  { label: "Упис",       icon: "📋", to: "/upis" },
-  { label: "Стипендии",  icon: "🏅", to: "/stipendii" },
-  { label: "Распоред",   icon: "🗓️", to: "/raspored" },
-  { label: "Контакт",    icon: "📞", to: "/kontakt" },
 ];
 
 // ─── useInView hook ────────────────────────────────────────────────────────────
@@ -166,12 +153,12 @@ export default function HomePage() {
             Современо техничко образование со практична настава, проекти и стручни насоки.
           </p>
 
-          {/* CTA buttons — fixed hover */}
+          {/* CTA buttons */}
           <div className="mt-10 w-full max-w-3xl px-4" style={{ animation: "fadeUp 0.6s 0.8s ease both" }}>
             <div className="grid gap-3 md:grid-cols-3">
               {ctas.map((c) => (
                 <Link key={c.label} to={c.to}
-                  className="flex items-center justify-center gap-2 rounded-lg bg-white/10 hover:bg-white/22 backdrop-blur border border-white/20 hover:border-white/40 px-6 py-4 text-sm font-semibold text-white transition-all duration-200 hover:scale-[1.02]"
+                  className="flex items-center justify-center gap-2 rounded-lg bg-white/10 hover:bg-white/20 backdrop-blur border border-white/20 hover:border-white/40 px-6 py-4 text-sm font-semibold text-white transition-all duration-200 hover:scale-[1.02]"
                 >
                   <span>{c.icon}</span>
                   {c.label}
@@ -230,11 +217,7 @@ export default function HomePage() {
       <section className="flex flex-col md:flex-row min-h-[600px]">
         <div className="w-full md:w-[60%] relative overflow-hidden min-h-[340px]">
           <Reveal direction="left" className="absolute inset-0">
-            <img
-              src={pic2}
-              alt="Настава"
-              className="w-full h-full object-cover"
-            />
+            <img src={pic2} alt="Настава" className="w-full h-full object-cover" />
           </Reveal>
           <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-r from-transparent to-slate-50 pointer-events-none" />
           <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-slate-50 to-transparent pointer-events-none" />
@@ -252,7 +235,7 @@ export default function HomePage() {
           </p>
           <p className="text-slate-600 text-sm leading-relaxed mb-8">
             Соработуваме со локални компании за{" "}
-            <a href="#" className="text-slate-400 hover:underline font-medium">практика и стажирање</a>
+            <Link to="/praktika" className="text-slate-400 hover:underline font-medium">практика и стажирање</Link>
             {" "}— отвораме врати кон вистинскиот свет на трудот уште за време на школувањето.
           </p>
           <div>
@@ -263,45 +246,37 @@ export default function HomePage() {
           </div>
         </Reveal>
       </section>
-      {/* ONLINE TESTOVI */}
+
+      {/* ── ONLINE TESTOVI ───────────────────────────────────────────────────── */}
       <section className="mx-auto max-w-6xl px-4 py-16">
         <div className="rounded-2xl bg-white p-8 shadow-lg ring-1 ring-slate-200 md:p-10">
-          
-          {/* HEADER */}
           <div className="text-center">
             <div className="inline-flex items-center gap-2 rounded-full bg-slate-100 px-4 py-2 text-sm font-semibold text-slate-700 ring-1 ring-slate-200">
               📝 Активности
             </div>
-
             <h2 className="mt-4 text-3xl font-extrabold text-[#0B2E5B] md:text-4xl">
               Онлајн Тестови
             </h2>
-
             <p className="mt-3 text-base text-slate-600">
               Следете ги најавените тестирања и рокови
             </p>
           </div>
-
-          {/* CONTENT CARD */}
           <div className="mt-10">
             <div className="flex flex-col items-center justify-center rounded-2xl border-2 border-dashed border-slate-300 bg-slate-50 p-12 text-center">
-              
               <div className="text-5xl">📭</div>
-
               <div className="mt-4 text-xl font-bold text-slate-800">
                 За сега не се најавени тестови
               </div>
-
               <div className="mt-2 text-sm text-slate-600">
                 Кога ќе бидат објавени нови тестови, ќе се прикажат тука.
               </div>
             </div>
           </div>
-
         </div>
       </section>
+
       {/* ── ОНЛАЈН НАСТАВА ───────────────────────────────────────────────────── */}
-       <section className="px-3 py-12 md:px-4 md:py-16">
+      <section className="px-3 py-12 md:px-4 md:py-16">
         <div className="mx-auto max-w-6xl">
           <Reveal>
             <div className="rounded-2xl bg-white p-5 shadow-lg ring-1 ring-slate-200 sm:p-8 md:p-10">
@@ -325,7 +300,6 @@ export default function HomePage() {
                   <div className="text-lg font-bold text-slate-800 md:text-xl">Насока</div>
                   <div className="text-xs text-slate-500 sm:text-sm">Кликни за избор</div>
                 </div>
-                {/* 1 col on mobile, 2 on sm, 3 on md */}
                 <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3">
                   {onlineTracks.map((t) => {
                     const active = trackKey === t.key;
@@ -362,7 +336,6 @@ export default function HomePage() {
               {/* Years */}
               <div className="mt-8 md:mt-10">
                 <div className="mb-3 text-lg font-bold text-slate-800 md:mb-4 md:text-xl">Година</div>
-                {/* Year buttons fill evenly on mobile */}
                 <div className="grid grid-cols-2 gap-2 sm:flex sm:flex-wrap sm:gap-3">
                   {activeTrack.years.map((y) => {
                     const active = year === y;
@@ -443,6 +416,7 @@ export default function HomePage() {
           </Reveal>
         </div>
       </section>
+
       {/* Keyframes for hero entrance */}
       <style>{`
         @keyframes fadeUp {
