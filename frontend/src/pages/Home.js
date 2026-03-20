@@ -103,7 +103,7 @@ export default function HomePage() {
     async function load() {
       setLoading(true); setError("");
       try {
-        const res  = await fetch(`http://localhost:3001/api/online?track=${trackKey}&year=${year}`);
+        const res  = await fetch(`https://ostu-site.onrender.com/api/online?track=${trackKey}&year=${year}`);
         const data = await res.json();
         if (!res.ok) throw new Error(data?.error || "Request failed");
         if (!cancelled) setSubjects(data.subjects ?? []);

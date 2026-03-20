@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import bg from "../assets/hero.png";
 
-const API = "http://localhost:3001/api/teachers";
+const API = "https://ostu-site.onrender.com/api/teachers";
 
 function useInView(threshold = 0.1) {
   const ref = useRef(null);

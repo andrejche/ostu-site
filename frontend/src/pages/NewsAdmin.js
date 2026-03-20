@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 
-const NEWS_API    = "http://localhost:3001/api/news";
-const TEACHER_API = "http://localhost:3001/api/teachers";
-const UPLOAD_API  = "http://localhost:3001/api/upload";
+const NEWS_API    = "https://ostu-site.onrender.com/api/news";
+const TEACHER_API = "https://ostu-site.onrender.com/api/teachers";
+const UPLOAD_API  = "https://ostu-site.onrender.com/api/upload";
 const ADMIN_KEY   = process.env.REACT_APP_NEWS_ADMIN_KEY || "";
 
 const authHeaders = {

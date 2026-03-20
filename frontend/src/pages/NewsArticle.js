@@ -3,7 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import bg from "../assets/hero.png";
 
-const API = "http://localhost:3001/api/news";
+const API = "https://ostu-site.onrender.com/api/news";
 
 function useInView(threshold = 0.12) {
   const ref = useRef(null);
