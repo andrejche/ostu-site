@@ -1,0 +1,198 @@
+{
+  "navbar": {
+    "information": "INFORMACIONE",
+    "admissions": "REGJISTRIME",
+    "students": "NXËNËS",
+    "scholarships": "BURSA",
+    "location": "LOKACIONI",
+    "contact": "KONTAKT"
+  },
+    "hero": {
+    "welcome": "Mirë se vini në",
+    "subtitle": "Arsim teknik modern me mësimdhënie praktike, projekte dhe drejtime profesionale."
+  },
+  "ctas": {
+    "online": "Mësimdhënie Online",
+    "tests": "Teste Online",
+    "aboutus": "Për ne"
+  },
+  "section1": {
+    "heading": "Rreth Nesh",
+    "lead": "Shkollë e mesme teknike me drejtime të shumta profesionale, pajisje moderne dhe mësues të dedikuar.",
+    "p1": "SSTU „Gostivar\" është një nga shkollat teknike kryesore në rajon. Nxënësit punojnë në projekte reale dhe mësimdhënie praktike me qëllim të përgatitjes më të mirë për fakultet ose punë.",
+    "p2": "Me infrastrukturë moderne dhe staf profesional, ofrojmë arsim që ndjek standardet botërore në fushën teknike dhe teknologjike."
+  },
+  "stats": {
+    "tracks": "Drejtime profesionale",
+    "students": "Nxënës aktivë",
+    "teachers": "Mësues",
+    "founded": "Themeluar"
+  },
+  "section2": {
+    "label": "Përgatitje Profesionale",
+    "heading": "Mësimdhënie\nPraktike",
+    "p1": "Çdo drejtim ofron punë praktike në laboratorë dhe punëtori të specializuara, ku nxënësit fitojnë aftësi të aplikueshme drejtpërdrejt në industri.",
+    "p2": "Bashkëpunojmë me kompanitë lokale për",
+    "p2link": "praktikë dhe trajnim",
+    "p2rest": "— hapim dyer drejt botës reale të punës gjatë shkollimit.",
+    "cta": "Mëso më shumë"
+  },
+  "testovi": {
+    "badge": "Aktivitete",
+    "heading": "Teste Online",
+    "subtitle": "Ndiqni testet e njoftuara dhe afatet",
+    "empty": "Aktualisht nuk ka teste të njoftuara",
+    "emptyNote": "Kur të publikohen teste të reja, do të shfaqen këtu."
+  },
+  "nastava": {
+    "badge": "Portal për nxënës",
+    "heading": "Mësimdhënie Online",
+    "subtitle": "Zgjidhni drejtimin dhe vitin",
+    "trackLabel": "Drejtimi",
+    "trackHint": "Kliko për të zgjedhur",
+    "yearLabel": "Viti",
+    "years": [
+      "Viti I",
+      "Viti II",
+      "Viti III",
+      "Viti IV"
+    ],
+    "subjects": "Lëndët",
+    "subjectMeta": "Materiale • detyra • lidhje",
+    "open": "Hap →",
+    "loading": "Duke u ngarkuar…",
+    "noData": "Nuk ka materiale për zgjedhjen e bërë.",
+    "yearsAvail": "Vitet:"
+  },
+  "tracks": {
+  "komp": "Teknikë kompjuterike",
+  "mas":  "Teknik mekanik",
+  "ener": "Energjetikë",
+  "elek": "Elektronikë",
+  "arh":  "Teknik arkitekture",
+  "meh":  "Mekatronikë"
+},
+  "nav": {
+  "admissions": "Regjistrim",
+  "location": "Vendndodhja",
+  "contact": "Kontakt"
+  },
+  "about": {
+  "historyTitle": "Historia",
+  "historyP1": "Klasat e para në shkollë u formuan në vitin shkollor 1960/61 në drejtimin elektro dhe mekanik nën emrin 'Shkolla Industriale me punë praktike' në Gostivar. Shkolla u themelua nga Këshilli Popullor i komunës së Gostivarit në vitin 1960 me vendimin nr.5233 datë 12.09.1960.",
+  "historyP2": "Më 04.09.1961 u mbajt këshilli i parë i mësuesve, dhe më 20.11.1961 u mbajt seanca e parë e bordit shkollor. Ndërtesa e shkollës u vu në përdorim më 18.11.1963, në ditën e çlirimit të Gostivarit.",
+  "historyP3": "Vendimi i fundit për verifikimin e drejtimeve u mor më 09.06.2006 nën numrin 11-2938/2.",
+  "cardTitle": "Kartela e shkollës"
+  },
+  "infoItems": {
+  "address": "Adresa",
+  "name": "Emri i shkollës",
+  "phone": "Telefon",
+  "email": "E-mail",
+  "built": "Viti i ndërtimit",
+  "construction": "Lloji i ndërtimit",
+  "constructionVal": "Ndërtim i fortë",
+  "sportsArea": "Sipërfaqja e terrenit sportiv",
+  "verification": "Verifikimi",
+  "verificationYear": "Viti i verifikimit",
+  "language": "Gjuha e mësimdhënies",
+  "languageVal": "Maqedonisht, Shqip dhe Turqisht",
+  "buildingArea": "Sipërfaqja e objektit",
+  "yardArea": "Sipërfaqja e oborrit",
+  "shifts": "Turnet",
+  "shiftsVal": "Dy turne",
+  "heating": "Mënyra e ngrohjes",
+  "heatingVal": "Ngrohje qendrore",
+  "classes": "Numri i klasave"
+},
+"newsArticle": {
+  "back": "Kthehu tek lajmet",
+  "loading": "Duke u ngarkuar…",
+  "error": "Artikulli nuk mund të ngarkohet."
+},
+"news": {
+  "title": "Lajme",
+  "subtitle": "Informacionet më të fundit nga OSTU Gostivar",
+  "loading": "Duke u ngarkuar…",
+  "error": "Lajmet nuk mund të ngarkohen.",
+  "empty": "Nuk ka lajme të publikuara",
+  "emptyNote": "Lajme të reja do të publikohen së shpejti.",
+  "readMore": "Lexo më shumë"
+},
+"contact": {
+  "title": "Kontakt",
+  "subtitle": "Na kontaktoni — do t'ju përgjigjemi së shpejti",
+  "infoTitle": "Informacione",
+  "address": "Adresa",
+  "phone": "Telefon",
+  "email": "E-mail",
+  "workingHours": "Orari i punës",
+  "workingHoursVal": "Hën–Pre: 07:30 – 20:00",
+  "followUs": "Na ndiqni",
+  "formTitle": "Dërgoni mesazh",
+  "nameLabel": "Emri dhe mbiemri *",
+  "namePlaceholder": "Emri juaj",
+  "emailLabel": "E-mail *",
+  "subjectLabel": "Subjekti",
+  "subjectPlaceholder": "Tema e mesazhit",
+  "messageLabel": "Mesazhi *",
+  "messagePlaceholder": "Shkruani mesazhin tuaj këtu...",
+  "sending": "Duke dërguar…",
+  "submit": "Dërgo mesazhin →",
+  "sent": "Mesazhi u dërgua!",
+  "sentNote": "Do t'ju përgjigjemi së shpejti.",
+  "sendAnother": "Dërgo mesazh tjetër",
+  "location": "Vendndodhja"
+},
+"scholarships": {
+  "title": "Bursa",
+  "intro": "Në Republikën e Maqedonisë së Veriut, bursave për nxënës të shkollave të mesme u ndahen përmes konkursit të Ministrisë së Arsimit dhe Shkencës. Nxënësit informohen përmes shkollës kur shpallet konkursi.",
+  "stateTitle": "Bursa shtetërore",
+  "stateDesc": "Bursat shpallen përmes konkursit zyrtar. Kujdestari i klasës informon nxënësit dhe u jep udhëzime se si të aplikojnë. Aplikimi zakonisht bëhet online përmes një linku të siguruar nga institucionet.",
+  "processTitle": "Si funksionon procesi",
+  "step1Title": "Njoftimi",
+  "step1Desc": "Kujdestari i klasës njofton nxënësit kur shpallet konkursi për bursa.",
+  "step2Title": "Aplikimi",
+  "step2Desc": "Nxënësit marrin një link përmes të cilit mund të aplikojnë vetë online.",
+  "step3Title": "Mbështetja",
+  "step3Desc": "Shkolla mund të ndihmojë në përgatitjen e dokumenteve ose informacioneve shtesë."
+},
+"praktika": {
+  "title": "Mësimdhënie Praktike",
+  "intro": "Në SSTU 'Gostivar' besojmë se të mësuarit i vërtetë ndodh kur nxënësit punojnë me kod real, probleme reale dhe mjete reale. Mësimdhënia jonë praktike është projektuar të përgatisë nxënësit për industrinë — jo vetëm të dinë teori, por të mund të punojnë.",
+  "activitiesTitle": "Çfarë bëjmë në orë",
+  "act1Title": "Sesione Live Coding",
+  "act1Desc": "Nxënësit shkruajnë kod në kohë reale së bashku me mësuesin. Çdo nxënës punon në kompjuterin e vet dhe ndjek hapat e mësuesit ndërsa ndërtojnë aplikacione funksionale.",
+  "act2Title": "Gjetja dhe korrigjimi i gabimeve",
+  "act2Desc": "Mësuesi fut qëllimisht gabime në kod, dhe nxënësit i gjejnë dhe i korrigjojnë. Kjo i mëson të mendojnë logjikisht dhe të punojnë me probleme reale.",
+  "act3Title": "Ndërtimi i projekteve",
+  "act3Desc": "Nxënësit punojnë në projekte të vogla por reale — aplikacione web, algoritme, baza të dhënash — me qëllim të fitimit të përvojës praktike të aplikueshme drejtpërdrejt.",
+  "act4Title": "Punë në ekip",
+  "act4Desc": "Nxënësit ndahen në ekipe dhe punojnë së bashku në një projekt të përbashkët. Mësojnë të përdorin kontrollin e versioneve, të komunikojnë dhe të ndajnë detyrat.",
+  "act5Title": "Code Review",
+  "act5Desc": "Pas përfundimit të projektit, nxënësit ia shqyrtojnë kodet njëri-tjetrit. Mësuesi jep komente dhe i mëson standardet e industrisë.",
+  "act6Title": "Vendosja dhe testimi",
+  "act6Desc": "Nxënësit vendosin aplikacionet e tyre online dhe i testojnë në mjedis real. Mësojnë për hosting, domaine, proceset CI/CD dhe testimin automatik.",
+  "toolsTitle": "Mjete dhe teknologji",
+  "toolsDesc": "Nxënësit punojnë me mjete standarde të industrisë — të njëjtat mjete që përdoren në kompanitë reale.",
+  "whyTitle": "Pse është kjo e rëndësishme",
+  "why1Title": "Të gatshëm për punë",
+  "why1Desc": "Nxënësit e përfundojnë arsimin me një portofol projektesh reale që mund t'ia tregojnë punëdhënësve të ardhshëm.",
+  "why2Title": "Të menduarit kritik",
+  "why2Desc": "Përmes debugimit dhe zgjidhjes së problemeve, nxënësit zhvillojnë mënyrë analitike të të menduarit e aplikueshme në çdo fushë.",
+  "why3Title": "Standardet globale",
+  "why3Desc": "Metodologjitë dhe mjetet që përdorim janë të njëjtat që aplikohen në kompanitë teknologjike në mbarë botën."
+},
+"nav": {
+  "about": "RRETH NESH",
+  "news": "LAJME",
+  "scholarships": "BURSA",
+  "contact": "KONTAKT",
+  "teachers": "PROFESORË",
+  "admissions": "REGJISTRIM",
+  "location": "VENDNDODHJA"
+},
+  "footer": {
+    "rights": "Të gjitha të drejtat e rezervuara"
+  }
+}

@@ -1,0 +1,198 @@
+{
+  "navbar": {
+    "information": "INFORMATION",
+    "admissions": "ADMISSIONS",
+    "students": "STUDENTS",
+    "scholarships": "SCHOLARSHIPS",
+    "location": "LOCATION",
+    "contact": "CONTACT"
+  },
+  "hero": {
+    "welcome": "Welcome to",
+    "subtitle": "Modern technical education with practical classes, projects and professional tracks."
+  },
+  "ctas": {
+    "online": "Online Classes",
+    "tests": "Online Tests",
+    "aboutus": "About Us"
+  },
+  "section1": {
+    "heading": "About Us",
+    "lead": "A secondary technical school with multiple professional tracks, modern equipment and dedicated teachers.",
+    "p1": "ОSTU „Gostivar\" is one of the leading technical schools in the region. Students work on real projects and practical classes to better prepare for university or employment.",
+    "p2": "With modern infrastructure and professional staff, we offer education that follows world standards in the technical and technological field."
+  },
+  "stats": {
+    "tracks": "Professional tracks",
+    "students": "Active students",
+    "teachers": "Teachers",
+    "founded": "Founded"
+  },
+  "section2": {
+    "label": "Professional Training",
+    "heading": "Practical\nClasses",
+    "p1": "Each track offers practical work in specialized laboratories and workshops, where students acquire skills directly applicable in industry.",
+    "p2": "We cooperate with local companies for",
+    "p2link": "internships and training",
+    "p2rest": "— opening doors to the real world of work while still in school.",
+    "cta": "Learn more"
+  },
+  "testovi": {
+    "badge": "Activities",
+    "heading": "Online Tests",
+    "subtitle": "Follow announced tests and deadlines",
+    "empty": "No tests announced yet",
+    "emptyNote": "When new tests are published, they will appear here."
+  },
+  "nastava": {
+    "badge": "Student Portal",
+    "heading": "Online Classes",
+    "subtitle": "Select a track and year",
+    "trackLabel": "Track",
+    "trackHint": "Click to select",
+    "yearLabel": "Year",
+    "years": [
+      "Year I",
+      "Year II",
+      "Year III",
+      "Year IV"
+    ],
+    "subjects": "Subjects",
+    "subjectMeta": "Materials • tasks • links",
+    "open": "Open →",
+    "loading": "Loading…",
+    "noData": "No materials for the selected option.",
+    "yearsAvail": "Years:"
+  },
+  "tracks": {
+  "komp": "Computer Engineering",
+  "mas":  "Mechanical Technician",
+  "ener": "Energy Engineering",
+  "elek": "Electronics",
+  "arh":  "Architectural Technician",
+  "meh":  "Mechatronics"
+},
+  "nav": {
+  "admissions": "Admissions",
+  "location": "Location",
+  "contact": "Contact"
+    },
+  "about": {
+  "historyTitle": "History",
+  "historyP1": "The first classes at the school were formed in the 1960/61 school year in the electrical and mechanical tracks under the name 'Industrial School with Practical Work' in Gostivar. The school was founded by the People's Committee of Gostivar municipality in 1960 with decision no.5233 from 12.09.1960.",
+  "historyP2": "On 04.09.1961 the first teacher council was held, and on 20.11.1961 the first school board session took place. The school building was put into use on 18.11.1963, on the day of the liberation of Gostivar.",
+  "historyP3": "The last decision for verification of the tracks was made on 09.06.2006 under number 11-2938/2.",
+  "cardTitle": "School Profile"
+  },
+  "infoItems": {
+  "address": "Address",
+  "name": "School Name",
+  "phone": "Phone",
+  "email": "Email",
+  "built": "Year Built",
+  "construction": "Construction Type",
+  "constructionVal": "Solid construction",
+  "sportsArea": "Sports Area",
+  "verification": "Verification",
+  "verificationYear": "Verification Year",
+  "language": "Language of Instruction",
+  "languageVal": "Macedonian, Albanian and Turkish",
+  "buildingArea": "Building Area",
+  "yardArea": "School Yard Area",
+  "shifts": "Shifts",
+  "shiftsVal": "Two shifts",
+  "heating": "Heating",
+  "heatingVal": "Central heating",
+  "classes": "Number of Classes"
+},
+"newsArticle": {
+  "back": "Back to news",
+  "loading": "Loading…",
+  "error": "Could not load the article."
+},
+"news": {
+  "title": "News",
+  "subtitle": "Latest updates from OSTU Gostivar",
+  "loading": "Loading…",
+  "error": "Could not load the news.",
+  "empty": "No news published yet",
+  "emptyNote": "New articles will be published soon.",
+  "readMore": "Read more"
+},
+"contact": {
+  "title": "Contact",
+  "subtitle": "Get in touch — we will respond shortly",
+  "infoTitle": "Information",
+  "address": "Address",
+  "phone": "Phone",
+  "email": "E-mail",
+  "workingHours": "Working hours",
+  "workingHoursVal": "Mon–Fri: 07:30 – 20:00",
+  "followUs": "Follow us",
+  "formTitle": "Send a message",
+  "nameLabel": "Full name *",
+  "namePlaceholder": "Your name",
+  "emailLabel": "Email *",
+  "subjectLabel": "Subject",
+  "subjectPlaceholder": "Message topic",
+  "messageLabel": "Message *",
+  "messagePlaceholder": "Write your message here...",
+  "sending": "Sending…",
+  "submit": "Send message →",
+  "sent": "Message sent!",
+  "sentNote": "We will get back to you soon.",
+  "sendAnother": "Send another message",
+  "location": "Location"
+},
+"scholarships": {
+  "title": "Scholarships",
+  "intro": "In the Republic of North Macedonia, scholarships for secondary school students are awarded through a competition by the Ministry of Education and Science. Students are informed through the school when a competition is announced.",
+  "stateTitle": "State Scholarships",
+  "stateDesc": "Scholarships are announced through an official competition. The homeroom teacher informs students and guides them on how to apply. Applications are usually submitted online via a link provided by the institutions.",
+  "processTitle": "How the process works",
+  "step1Title": "Notification",
+  "step1Desc": "The homeroom teacher notifies students when a scholarship competition is announced.",
+  "step2Title": "Application",
+  "step2Desc": "Students receive a link through which they can apply online independently.",
+  "step3Title": "Support",
+  "step3Desc": "The school can help with document preparation or additional information."
+},
+"praktika": {
+  "title": "Practical Training",
+  "intro": "At OSTU Gostivar we believe that real learning happens when students work with real code, real problems and real tools. Our practical training is designed to prepare students for the industry — not just to know theory, but to be able to work.",
+  "activitiesTitle": "What we do in class",
+  "act1Title": "Live Coding Sessions",
+  "act1Desc": "Students write code in real time alongside the teacher. Each student works on their own computer and follows the teacher's steps while building functional applications.",
+  "act2Title": "Debugging and Fixing Errors",
+  "act2Desc": "The teacher intentionally introduces bugs in the code, and students locate and fix them. This teaches them to think logically and work with real problems.",
+  "act3Title": "Building Projects",
+  "act3Desc": "Students work on small but real projects — web apps, algorithms, databases — to gain practical experience directly applicable in the workplace.",
+  "act4Title": "Teamwork",
+  "act4Desc": "Students are divided into teams and work together on a shared project. They learn to use version control, communicate and divide tasks among themselves.",
+  "act5Title": "Code Review",
+  "act5Desc": "After completing the project, students review each other's code. The teacher provides feedback and teaches industry standards.",
+  "act6Title": "Deployment and Testing",
+  "act6Desc": "Students deploy their applications online and test them in a real environment. They learn about hosting, domains, CI/CD processes and automated testing.",
+  "toolsTitle": "Tools and Technologies",
+  "toolsDesc": "Students work with industry-standard tools — the same tools used in real companies.",
+  "whyTitle": "Why this matters",
+  "why1Title": "Job Ready",
+  "why1Desc": "Students finish their education with a portfolio of real projects they can show to future employers.",
+  "why2Title": "Critical Thinking",
+  "why2Desc": "Through debugging and problem solving, students develop an analytical way of thinking applicable in every field.",
+  "why3Title": "Global Standards",
+  "why3Desc": "The methodologies and tools we use are the same ones applied in technology companies around the world."
+},
+"nav": {
+  "about": "ABOUT",
+  "news": "NEWS",
+  "scholarships": "SCHOLARSHIPS",
+  "contact": "CONTACT",
+  "teachers": "TEACHERS",
+  "admissions": "ADMISSIONS",
+  "location": "LOCATION"
+},
+    "footer": {
+    "rights": "All rights reserved"
+    }
+}

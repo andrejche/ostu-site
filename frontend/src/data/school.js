@@ -1,7 +1,7 @@
 export const school = {
   name: 'ОСТУ „Гостивар“',
   city: "Гостивар",
-  address: "Ilindenska 164, Gostivar",
+  address: "Ул. „Мара Уграинова“ бб, Гостивар",
   phone: "+389 42 214 333",
   website: "ostugostivar.edu.mk",
   programs: [

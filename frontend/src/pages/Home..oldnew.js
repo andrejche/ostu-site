@@ -1,27 +1,126 @@
 import { Link } from "react-router-dom";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { useTranslation } from "react-i18next";
 import pic1 from "../assets/hero.png";
-import pic2 from "../assets/slika.jpg";
+import pic2 from "../assets/slika.jpg"
 import pic3 from "../assets/slika2.jpg";
 import { school } from "../data/school";
 
+// ─── Simple SVG icons ─────────────────────────────────────────────────────────
+
+function OnlineIcon(props) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
+      <rect x="3" y="4" width="18" height="13" rx="2" className="fill-none stroke-current" strokeWidth="1.6" />
+      <path d="M9 19h6" className="fill-none stroke-current" strokeWidth="1.6" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+function TestsIcon(props) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
+      <rect x="5" y="3" width="14" height="18" rx="2" className="fill-none stroke-current" strokeWidth="1.6" />
+      <path d="M9 7h6M9 11h6M9 15h3" className="fill-none stroke-current" strokeWidth="1.6" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+function FaqIcon(props) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
+      <path
+        d="M12 3.5c-3 0-5.5 2.4-5.5 5.4 0 1.7.7 3 1.9 4l.3.3c.4.4.6.8.7 1.3V16
+           a1 1 0 0 0 1 1h3.2a1 1 0 0 0 1-1v-1.5c.1-.5.3-.9.7-1.3l.3-.3a5.2 5.2 0 0 0 1.9-4
+           c0-3-2.5-5.4-5.5-5.4Z"
+        className="fill-none stroke-current"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M9.8 18.2h4.4M10.4 20h3.2"
+        className="fill-none stroke-current"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+}
+
+function ProgramsIcon(props) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
+      <rect x="3" y="4" width="6" height="16" rx="1.4" className="fill-none stroke-current" strokeWidth="1.6" />
+      <rect x="10" y="4" width="6" height="16" rx="1.4" className="fill-none stroke-current" strokeWidth="1.6" />
+      <rect x="17" y="4" width="4" height="16" rx="1.4" className="fill-none stroke-current" strokeWidth="1.6" />
+    </svg>
+  );
+}
+
+function StudentsIcon(props) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
+      <path
+        d="M4 17.5c0-2 1.8-3.5 4-3.5s4 1.5 4 3.5V20H4v-2.5Z"
+        className="fill-none stroke-current"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <circle cx="8" cy="9" r="2.2" className="fill-none stroke-current" strokeWidth="1.6" />
+      <path
+        d="M12 18c.4-1.7 2-3 4-3s3.6 1.3 4 3"
+        className="fill-none stroke-current"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+      />
+      <circle cx="16" cy="9" r="2.2" className="fill-none stroke-current" strokeWidth="1.6" />
+    </svg>
+  );
+}
+
+function TeachersIcon(props) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
+      <rect x="4" y="4" width="16" height="12" rx="1.6" className="fill-none stroke-current" strokeWidth="1.6" />
+      <path d="M7 9h6M7 12h4" className="fill-none stroke-current" strokeWidth="1.6" strokeLinecap="round" />
+      <path d="M10 20h4" className="fill-none stroke-current" strokeWidth="1.6" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+function CalendarIcon(props) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
+      <rect x="3" y="4" width="18" height="16" rx="2" className="fill-none stroke-current" strokeWidth="1.6" />
+      <path d="M8 3v4M16 3v4M4 9h16" className="fill-none stroke-current" strokeWidth="1.6" strokeLinecap="round" />
+      <rect x="8" y="12" width="3" height="3" rx="0.6" className="fill-current" />
+    </svg>
+  );
+}
+
 // ─── Data ─────────────────────────────────────────────────────────────────────
 
+const ctas = [
+  { label: "Онлајн Настава", href: "#online", Icon: OnlineIcon },
+  { label: "Онлајн Тестови", href: "#tests",  Icon: TestsIcon },
+  { label: "ЧПП",            href: "#faq",    Icon: FaqIcon },
+];
+
 const onlineTracks = [
-  { key: "komp", title: "Компјутерска техника",  years: [1, 2, 3, 4] },
-  { key: "mas",  title: "Машински техничар",      years: [1, 2, 3] },
-  { key: "ener", title: "Енергетичар",            years: [2] },
-  { key: "elek", title: "Електроничар",           years: [2] },
-  { key: "arh",  title: "Архитектонски техничар", years: [1, 2] },
-  { key: "meh",  title: "Мехатроника",            years: [2] },
+  { key: "komp", title: "Компјутерска техника",   years: [1, 2, 3, 4] },
+  { key: "mas",  title: "Машински техничар",       years: [1, 2, 3] },
+  { key: "ener", title: "Енергетичар",             years: [2] },
+  { key: "elek", title: "Електроничар",            years: [2] },
+  { key: "arh",  title: "Архитектонски техничар",  years: [1, 2] },
+  { key: "meh",  title: "Мехатроника",             years: [2] },
 ];
 
 const stats = [
-  { value: "6",    key: "tracks" },
-  { value: "500+", key: "students" },
-  { value: "20+",  key: "teachers" },
-  { value: "1999", key: "founded" },
+  { value: "6",    label: "Стручни насоки",  Icon: ProgramsIcon },
+  { value: "500+", label: "Активни ученици", Icon: StudentsIcon },
+  { value: "20+",  label: "Наставници",      Icon: TeachersIcon },
+  { value: "1999", label: "Основано",        Icon: CalendarIcon },
 ];
 
 // ─── useInView hook ────────────────────────────────────────────────────────────
@@ -68,8 +167,6 @@ function Reveal({ children, delay = 0, direction = "up", className = "" }) {
 // ─── Component ────────────────────────────────────────────────────────────────
 
 export default function HomePage() {
-  const { t } = useTranslation();
-
   const [trackKey, setTrackKey] = useState("komp");
   const [year,     setYear]     = useState(1);
   const [loading,  setLoading]  = useState(false);
@@ -77,33 +174,30 @@ export default function HomePage() {
   const [error,    setError]    = useState("");
   const [heroFull, setHeroFull] = useState(true);
 
-  const ctas = [
-    { label: t("ctas.online"), to: null, icon: "🖥️", anchor: "online" },
-    { label: t("ctas.aboutus"),    to: "/za-nas",     icon: "❓" },
-    { label: t("ctas.tests"),  to: null, icon: "📝", anchor: "online-test" },
-  ];
-
   const activeTrack = useMemo(
-    () => onlineTracks.find((tr) => tr.key === trackKey) ?? onlineTracks[0],
+    () => onlineTracks.find((t) => t.key === trackKey) ?? onlineTracks[0],
     [trackKey]
   );
 
+  // Hero shrinks after first scroll
   useEffect(() => {
     const onScroll = () => setHeroFull(window.scrollY < 10);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // Reset year when track changes
   useEffect(() => {
     if (!activeTrack.years.includes(year)) setYear(activeTrack.years[0]);
   }, [trackKey]); // eslint-disable-line
 
+  // Fetch subjects
   useEffect(() => {
     let cancelled = false;
     async function load() {
       setLoading(true); setError("");
       try {
-        const res  = await fetch(`http://localhost:3001/api/online?track=${trackKey}&year=${year}`);
+        const res  = await fetch(`https://ostu-site-backend.vercel.app/api/online?track=${trackKey}&year=${year}`);
         const data = await res.json();
         if (!res.ok) throw new Error(data?.error || "Request failed");
         if (!cancelled) setSubjects(data.subjects ?? []);
@@ -121,16 +215,17 @@ export default function HomePage() {
     ({ komp: "💻", mas: "⚙️", ener: "⚡", elek: "🔌", arh: "🏛️" }[key] ?? "🤖");
 
   return (
-    <div className="bg-slate-100">
+    <div className="bg-slate-100 overflow-x-hidden">
 
       {/* ── HERO ─────────────────────────────────────────────────────────────── */}
       <section
         className="relative w-full overflow-hidden transition-[min-height] duration-700 ease-in-out"
         style={{ minHeight: heroFull ? "100vh" : "78vh" }}
       >
-        <div className="absolute inset-0 bg-cover bg-[center_top]" style={{ backgroundImage: `url(${pic1})` }} />
-        <div className="absolute inset-0 bg-slate-900/55" />
+        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${pic1})` }} />
+        <div className="absolute inset-0 bg-slate-900/65" />
 
+        {/* Arrows */}
         <button type="button" aria-label="Previous"
           className="absolute left-6 top-1/2 z-10 hidden -translate-y-1/2 rounded-full border border-white/30 bg-black/25 p-3 text-white hover:bg-black/45 transition md:block">
           <span className="text-xl leading-none">‹</span>
@@ -140,56 +235,58 @@ export default function HomePage() {
           <span className="text-xl leading-none">›</span>
         </button>
 
+        {/* Content */}
         <div className="relative z-10 flex min-h-[inherit] flex-col items-center justify-center px-6 pt-28 text-center text-white">
           <p className="text-xl font-medium text-white/80 md:text-3xl" style={{ animation: "fadeUp 0.6s 0.2s ease both" }}>
-            {t("hero.welcome")}
+            Добредојдовте во
           </p>
           <h1 className="mt-2 text-5xl font-extrabold tracking-tight md:text-7xl" style={{ animation: "fadeUp 0.6s 0.4s ease both" }}>
             {school.name}
           </h1>
           <p className="mt-4 max-w-2xl text-sm text-white/75 md:text-base" style={{ animation: "fadeUp 0.6s 0.6s ease both" }}>
-            {t("hero.subtitle")}
+            Современо техничко образование со практична настава, проекти и стручни насоки.
           </p>
 
+          {/* CTA buttons */}
           <div className="mt-10 w-full max-w-3xl px-4">
             <div className="grid gap-3 md:grid-cols-3">
-                {ctas.map((c) =>
-                  c.anchor ? (
-                    <button
-                      key={c.anchor}
-                      onClick={() => document.getElementById(c.anchor)?.scrollIntoView({ behavior: "smooth" })}
-                      className="flex items-center justify-center gap-2 rounded-lg bg-white/10 hover:bg-white/20 backdrop-blur border border-white/20 hover:border-white/40 px-6 py-4 text-sm font-semibold text-white transition-all duration-200 hover:scale-[1.02]"
-                    >
-                      <span>{c.icon}</span>
-                      {c.label}
-                    </button>
-                  ) : (
-                    <Link key={c.to} to={c.to}
-                      className="flex items-center justify-center gap-2 rounded-lg bg-white/10 hover:bg-white/20 backdrop-blur border border-white/20 hover:border-white/40 px-6 py-4 text-sm font-semibold text-white transition-all duration-200 hover:scale-[1.02]"
-                    >
-                      <span>{c.icon}</span>
-                      {c.label}
-                    </Link>
-                  )
-                )}
+              {ctas.map(({ label, href, Icon }) => (
+                <a
+                  key={label}
+                  href={href}
+                  className="flex items-center justify-center gap-2 rounded-lg bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 hover:border-white/40 px-6 py-4 text-sm font-semibold text-white transition-all duration-200 hover:scale-[1.02] will-change-transform"
+                >
+                  {Icon && <Icon className="h-5 w-5 text-white" />}
+                  <span>{label}</span>
+                </a>
+              ))}
             </div>
           </div>
 
+          {/* Scroll indicator */}
           <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 transition-opacity duration-500 pointer-events-none"
             style={{ opacity: heroFull ? 0.55 : 0 }}>
-            <span className="text-white/60 text-xs tracking-widest uppercase">Scroll</span>
+            <span className="text-white/60 text-[11px] tracking-widest uppercase">Скрол надолу</span>
             <div className="w-px h-8 bg-white/40 animate-pulse" />
           </div>
         </div>
       </section>
 
-      {/* ── SECTION 1 ────────────────────────────────────────────────────────── */}
+      {/* ── SECTION 1: Text Left / Image Right ───────────────────────────────── */}
       <section className="flex flex-col md:flex-row min-h-[600px]">
         <Reveal direction="left" className="w-full md:w-[40%] flex flex-col justify-center px-10 py-16 md:px-16 bg-slate-50">
-          <h2 className="text-4xl font-black text-slate-900 mb-3">{t("section1.heading")}</h2>
-          <p className="text-slate-500 text-base mb-6">{t("section1.lead")}</p>
-          <p className="text-slate-600 text-sm leading-relaxed mb-4">{t("section1.p1")}</p>
-          <p className="text-slate-600 text-sm leading-relaxed">{t("section1.p2")}</p>
+          <h2 className="text-4xl font-black text-slate-900 mb-3">За Нас</h2>
+          <p className="text-slate-500 text-base mb-6">
+            Средно техничко училиште со повеќе стручни насоки, модерна опрема и посветени наставници.
+          </p>
+          <p className="text-slate-600 text-sm leading-relaxed mb-4">
+            ОСТУ „Гостивар" е едно од водечките технички училишта во регионот. Учениците работат на реални
+            проекти и практична настава со цел подобра подготовка за факултет или работа.
+          </p>
+          <p className="text-slate-600 text-sm leading-relaxed">
+            Со современа инфраструктура и стручен кадар, нудиме образование кое ги следи светските стандарди
+            во техничката и технолошката областа.
+          </p>
         </Reveal>
 
         <div className="w-full md:w-[60%] relative overflow-hidden min-h-[340px]">
@@ -202,17 +299,20 @@ export default function HomePage() {
 
       {/* ── STATS ────────────────────────────────────────────────────────────── */}
       <section className="bg-slate-700 py-12">
-        <div className="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-          {stats.map((s, i) => (
-            <Reveal key={s.key} delay={i * 0.1}>
-              <div className="text-4xl font-black text-white">{s.value}</div>
-              <div className="mt-1 text-sm text-blue-200 font-medium">{t(`stats.${s.key}`)}</div>
+        <div className="max-w-6xl mx-auto px-6 grid grid-cols-2 gap-8 text-center md:grid-cols-4">
+          {stats.map(({ value, label, Icon }, i) => (
+            <Reveal key={label} delay={i * 0.1}>
+              <div className="mb-2 flex justify-center">
+                <Icon className="h-7 w-7 text-white/90" />
+              </div>
+              <div className="text-4xl font-black text-white">{value}</div>
+              <div className="mt-1 text-sm text-blue-200 font-medium">{label}</div>
             </Reveal>
           ))}
         </div>
       </section>
 
-      {/* ── SECTION 2 ────────────────────────────────────────────────────────── */}
+      {/* ── SECTION 2: Image Left / Text Right ───────────────────────────────── */}
       <section className="flex flex-col md:flex-row min-h-[600px]">
         <div className="w-full md:w-[60%] relative overflow-hidden min-h-[340px]">
           <Reveal direction="left" className="absolute inset-0">
@@ -223,49 +323,52 @@ export default function HomePage() {
         </div>
 
         <Reveal direction="right" className="w-full md:w-[40%] flex flex-col justify-center px-10 py-16 md:px-16 bg-slate-50">
-          <span className="text-slate-400 text-xs font-semibold tracking-widest uppercase mb-3">
-            {t("section2.label")}
-          </span>
+          <span className="text-slate-400 text-xs font-semibold tracking-widest uppercase mb-3">Стручна Подготовка</span>
           <h2 className="text-4xl font-black text-slate-900 mb-3 leading-tight">
-            {t("section2.heading").split("\n").map((line, i) => (
-              <span key={i}>{line}{i === 0 && <br />}</span>
-            ))}
+            Практична<br />Настава
           </h2>
           <div className="w-12 h-1 bg-slate-700 rounded-full mb-5" />
-          <p className="text-slate-600 text-sm leading-relaxed mb-4">{t("section2.p1")}</p>
+          <p className="text-slate-600 text-sm leading-relaxed mb-4">
+            Секоја насока нуди практична работа во специјализирани лаборатории и работилници,
+            каде учениците стекнуваат вештини директно применливи во индустријата.
+          </p>
           <p className="text-slate-600 text-sm leading-relaxed mb-8">
-            {t("section2.p2")}{" "}
-            <Link to="/praktika" className="text-slate-400 hover:underline font-medium">
-              {t("section2.p2link")}
-            </Link>
-            {" "}{t("section2.p2rest")}
+            Соработуваме со локални компании за{" "}
+            <Link to="/praktika" className="text-slate-400 hover:underline font-medium">практика и стажирање</Link>
+            {" "}— отвораме врати кон вистинскиот свет на трудот уште за време на школувањето.
           </p>
           <div>
-            <Link to="/nastava"
+            <Link to="/informacii"
               className="inline-flex items-center gap-2 bg-[#0B2E5B] hover:bg-[#0a2750] text-white text-sm font-semibold px-6 py-3 rounded-full transition-all duration-200 hover:gap-3">
-              {t("section2.cta")} <span>→</span>
+              Дознај повеќе <span>→</span>
             </Link>
           </div>
         </Reveal>
       </section>
 
       {/* ── ONLINE TESTOVI ───────────────────────────────────────────────────── */}
-      <section id="online-test" className="mx-auto max-w-6xl px-4 py-16">
+      <section id="tests" className="mx-auto max-w-6xl px-4 py-16">
         <div className="rounded-2xl bg-white p-8 shadow-lg ring-1 ring-slate-200 md:p-10">
           <div className="text-center">
             <div className="inline-flex items-center gap-2 rounded-full bg-slate-100 px-4 py-2 text-sm font-semibold text-slate-700 ring-1 ring-slate-200">
-              📝 {t("testovi.badge")}
+              📝 Активности
             </div>
             <h2 className="mt-4 text-3xl font-extrabold text-[#0B2E5B] md:text-4xl">
-              {t("testovi.heading")}
+              Онлајн Тестови
             </h2>
-            <p className="mt-3 text-base text-slate-600">{t("testovi.subtitle")}</p>
+            <p className="mt-3 text-base text-slate-600">
+              Следете ги најавените тестирања и рокови
+            </p>
           </div>
           <div className="mt-10">
             <div className="flex flex-col items-center justify-center rounded-2xl border-2 border-dashed border-slate-300 bg-slate-50 p-12 text-center">
               <div className="text-5xl">📭</div>
-              <div className="mt-4 text-xl font-bold text-slate-800">{t("testovi.empty")}</div>
-              <div className="mt-2 text-sm text-slate-600">{t("testovi.emptyNote")}</div>
+              <div className="mt-4 text-xl font-bold text-slate-800">
+                За сега не се најавени тестови
+              </div>
+              <div className="mt-2 text-sm text-slate-600">
+                Кога ќе бидат објавени нови тестови, ќе се прикажат тука.
+              </div>
             </div>
           </div>
         </div>
@@ -277,29 +380,33 @@ export default function HomePage() {
           <Reveal>
             <div className="rounded-2xl bg-white p-5 shadow-lg ring-1 ring-slate-200 sm:p-8 md:p-10">
 
+              {/* Header */}
               <div className="text-center">
                 <div className="inline-flex items-center gap-2 rounded-full bg-slate-100 px-3 py-1.5 text-xs font-semibold text-slate-700 ring-1 ring-slate-200 sm:px-4 sm:py-2 sm:text-sm">
-                  🎓 {t("nastava.badge")}
+                  🎓 Портал за ученици
                 </div>
                 <h2 className="mt-3 text-2xl font-extrabold text-[#0B2E5B] sm:mt-4 sm:text-3xl md:text-4xl">
-                  {t("nastava.heading")}
+                  Онлајн Настава
                 </h2>
                 <p className="mt-2 text-sm text-slate-600 sm:mt-3 sm:text-base">
-                  {t("nastava.subtitle")}
+                  Изберете насока и година
+                </p>
+                <p className="mt-1 text-[11px] font-semibold tracking-wide text-slate-500 uppercase">
+                  1. Насока • 2. Година • 3. Предмет
                 </p>
               </div>
 
               {/* Tracks */}
               <div className="mt-8 md:mt-10">
                 <div className="mb-3 flex items-center justify-between md:mb-4">
-                  <div className="text-lg font-bold text-slate-800 md:text-xl">{t("nastava.trackLabel")}</div>
-                  <div className="text-xs text-slate-500 sm:text-sm">{t("nastava.trackHint")}</div>
+                  <div className="text-lg font-bold text-slate-800 md:text-xl">Насока</div>
+                  <div className="text-xs text-slate-500 sm:text-sm">Кликни за избор</div>
                 </div>
                 <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3">
-                  {onlineTracks.map((tr) => {
-                    const active = trackKey === tr.key;
+                  {onlineTracks.map((t) => {
+                    const active = trackKey === t.key;
                     return (
-                      <button key={tr.key} type="button" onClick={() => setTrackKey(tr.key)}
+                      <button key={t.key} type="button" onClick={() => setTrackKey(t.key)}
                         className={
                           "group rounded-xl border-2 p-4 text-left transition-all duration-200 " +
                           "active:scale-[0.98] focus:outline-none focus:ring-4 focus:ring-[#0B2E5B]/15 " +
@@ -313,12 +420,12 @@ export default function HomePage() {
                             "grid h-10 w-10 shrink-0 place-items-center rounded-xl text-xl ring-1 transition " +
                             (active ? "bg-white/10 ring-white/20" : "bg-slate-100 ring-slate-200 group-hover:bg-slate-200")
                           }>
-                            {trackIcon(tr.key)}
+                            {trackIcon(t.key)}
                           </div>
                           <div className="min-w-0">
-                            <div className="truncate text-base font-extrabold leading-tight">{t(`tracks.${tr.key}`)}</div>
+                            <div className="truncate text-base font-extrabold leading-tight">{t.title}</div>
                             <div className={active ? "mt-0.5 text-xs text-white/80" : "mt-0.5 text-xs text-slate-500"}>
-                              {t("nastava.yearsAvail")} {tr.years.join(", ")}
+                              Години: {t.years.join(", ")}
                             </div>
                           </div>
                         </div>
@@ -330,9 +437,7 @@ export default function HomePage() {
 
               {/* Years */}
               <div className="mt-8 md:mt-10">
-                <div className="mb-3 text-lg font-bold text-slate-800 md:mb-4 md:text-xl">
-                  {t("nastava.yearLabel")}
-                </div>
+                <div className="mb-3 text-lg font-bold text-slate-800 md:mb-4 md:text-xl">Година</div>
                 <div className="grid grid-cols-2 gap-2 sm:flex sm:flex-wrap sm:gap-3">
                   {activeTrack.years.map((y) => {
                     const active = year === y;
@@ -346,7 +451,7 @@ export default function HomePage() {
                             : "border-slate-200 bg-white text-slate-800 hover:border-slate-900 hover:bg-slate-50")
                         }
                       >
-                        {t(`nastava.years.${y - 1}`)}
+                        {["I", "II", "III", "IV"][y - 1]} година
                       </button>
                     );
                   })}
@@ -356,15 +461,15 @@ export default function HomePage() {
               {/* Subjects */}
               <div className="mt-10 md:mt-12">
                 <div className="mb-4 flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between md:mb-5">
-                  <div className="text-xl font-extrabold text-[#0B2E5B] md:text-2xl">📚 {t("nastava.subjects")}</div>
-                  <div className="text-xs text-slate-500 sm:text-sm">{t(`tracks.${trackKey}`)} • {year}. {t("nastava.yearLabel").toLowerCase()}</div>
+                  <div className="text-xl font-extrabold text-[#0B2E5B] md:text-2xl">📚 Предмети</div>
+                  <div className="text-xs text-slate-500 sm:text-sm">{activeTrack.title} • {year}. година</div>
                 </div>
 
                 {loading && (
                   <div className="rounded-2xl border border-slate-200 bg-slate-50 p-6">
                     <div className="flex items-center gap-3 text-slate-600">
                       <div className="h-4 w-4 animate-spin rounded-full border-2 border-slate-300 border-t-slate-700" />
-                      <span className="text-sm font-semibold">{t("nastava.loading")}</span>
+                      <span className="text-sm font-semibold">Се вчитува…</span>
                     </div>
                   </div>
                 )}
@@ -375,7 +480,7 @@ export default function HomePage() {
                 )}
                 {!loading && !error && subjects.length === 0 && (
                   <div className="rounded-2xl border border-slate-200 bg-slate-50 p-6 text-slate-600">
-                    <span className="text-sm font-semibold">{t("nastava.noData")}</span>
+                    <span className="text-sm font-semibold">Нема материјали за избраното.</span>
                   </div>
                 )}
                 {!loading && !error && subjects.length > 0 && (
@@ -392,7 +497,7 @@ export default function HomePage() {
                             </div>
                             <div>
                               <div className="text-base font-extrabold text-slate-900 sm:text-lg">{s.title}</div>
-                              <div className="mt-0.5 text-xs text-slate-500 sm:mt-1 sm:text-sm">{t("nastava.subjectMeta")}</div>
+                              <div className="mt-0.5 text-xs text-slate-500 sm:mt-1 sm:text-sm">Материјали • задачи • линкови</div>
                             </div>
                           </div>
                           {s.lang && (
@@ -401,8 +506,13 @@ export default function HomePage() {
                             </span>
                           )}
                         </div>
-                        <div className="mt-3 text-xs font-semibold text-[#0B2E5B] group-hover:translate-x-1 transition-transform sm:mt-4 sm:text-sm">
-                          {t("nastava.open")}
+                        <div className="mt-3 flex items-center justify-between text-xs sm:text-sm">
+                          <span className="rounded-full bg-slate-100 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-slate-600">
+                            Предмет
+                          </span>
+                          <span className="font-semibold text-[#0B2E5B] group-hover:translate-x-1 transition-transform">
+                            Отвори →
+                          </span>
                         </div>
                       </button>
                     ))}
@@ -414,6 +524,7 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Keyframes for hero entrance */}
       <style>{`
         @keyframes fadeUp {
           from { opacity: 0; transform: translateY(20px); }

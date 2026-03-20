@@ -4,7 +4,7 @@ export default function ChatWidget() {
   const [open, setOpen] = useState(false);
   const [input, setInput] = useState("");
   const [msgs, setMsgs] = useState([
-    { role: "assistant", content: "Здраво! Прашај ме за ОСТУ „Гостивар“." },
+    { role: "assistant", content: "Здраво! Прашај ме се што те интересира поврзано со школото." },
   ]);
   const [streaming, setStreaming] = useState(false);
   const bottomRef = useRef(null);
@@ -79,18 +79,21 @@ export default function ChatWidget() {
         onClick={() => setOpen((v) => !v)}
         className="rounded-full bg-slate-900 px-4 py-3 text-sm font-semibold text-white shadow-lg hover:bg-slate-800"
       >
-        {open ? "Close" : "Chat"}
+        {open ? "Затвори" : <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 0 1-2.555-.337A5.972 5.972 0 0 1 5.41 20.97a5.969 5.969 0 0 1-.474-.065 4.48 4.48 0 0 0 .978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25Z" />
+                          </svg>
+}
       </button>
 
       {open && (
         <div className="mt-3 w-[340px] overflow-hidden rounded-2xl bg-white shadow-2xl ring-1 ring-slate-200">
           <div className="flex items-center justify-between border-b border-slate-200 px-4 py-3">
             <div>
-              <div className="text-sm font-semibold text-slate-900">School Assistant</div>
-              <div className="text-xs text-slate-500">Live</div>
+              <div className="text-sm font-semibold text-slate-900">Асистент</div>
+              <div className="text-xs text-slate-500">Во живо</div>
             </div>
             <span className="rounded-full bg-blue-700 px-2 py-1 text-[11px] font-semibold text-white">
-              Online
+              Онлајн
             </span>
           </div>
 
@@ -115,7 +118,7 @@ export default function ChatWidget() {
             <input
               value={input}
               onChange={(e) => setInput(e.target.value)}
-              placeholder="Write a message…"
+              placeholder="Напиши порака…"
               onKeyDown={(e) => e.key === "Enter" && send()}
               disabled={streaming}
               className="flex-1 rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900 placeholder:text-slate-400 outline-none focus:border-blue-700"
@@ -125,7 +128,7 @@ export default function ChatWidget() {
               disabled={streaming}
               className="rounded-xl bg-blue-700 px-3 py-2 text-sm font-semibold text-white hover:bg-blue-800 disabled:opacity-60"
             >
-              {streaming ? "..." : "Send"}
+              {streaming ? "..." : "Прати"}
             </button>
           </div>
         </div>

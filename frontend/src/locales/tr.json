@@ -1,0 +1,198 @@
+{
+  "navbar": {
+    "information": "BİLGİLER",
+    "admissions": "KAYITLAR",
+    "students": "ÖĞRENCİLER",
+    "scholarships": "BURSLAR",
+    "location": "KONUM",
+    "contact": "İLETİŞİM"
+  },
+    "hero": {
+    "welcome": "Hoş Geldiniz",
+    "subtitle": "Pratik dersler, projeler ve mesleki yönelimlerle modern teknik eğitim."
+  },
+  "ctas": {
+    "online": "Çevrimiçi Dersler",
+    "tests": "Çevrimiçi Testler",
+    "aboutus": "Hakkımızda"
+  },
+  "section1": {
+    "heading": "Hakkımızda",
+    "lead": "Modern ekipman ve özverili öğretmenlerle birden fazla mesleki yönelim sunan orta teknik okul.",
+    "p1": "OSТУ „Gostivar\", bölgedeki önde gelen teknik okullardan biridir. Öğrenciler, üniversiteye veya istihdama daha iyi hazırlanmak amacıyla gerçek projeler ve pratik dersler üzerinde çalışır.",
+    "p2": "Modern altyapı ve profesyonel kadrosuyla teknik ve teknoloji alanında dünya standartlarını takip eden bir eğitim sunuyoruz."
+  },
+  "stats": {
+    "tracks": "Mesleki yönelimler",
+    "students": "Aktif öğrenciler",
+    "teachers": "Öğretmenler",
+    "founded": "Kuruluş"
+  },
+  "section2": {
+    "label": "Mesleki Hazırlık",
+    "heading": "Pratik\nEğitim",
+    "p1": "Her yönelim, öğrencilerin endüstride doğrudan uygulanabilir beceriler kazandığı özel laboratuvarlarda ve atölyelerde pratik çalışma imkânı sunar.",
+    "p2": "Yerel şirketlerle",
+    "p2link": "staj ve pratik eğitim",
+    "p2rest": "için işbirliği yapıyoruz — okul yıllarında gerçek iş dünyasına kapılar açıyoruz.",
+    "cta": "Daha fazla bilgi"
+  },
+  "testovi": {
+    "badge": "Etkinlikler",
+    "heading": "Çevrimiçi Testler",
+    "subtitle": "Duyurulan testleri ve son tarihleri takip edin",
+    "empty": "Şu an duyurulan test yok",
+    "emptyNote": "Yeni testler yayınlandığında burada görünecektir."
+  },
+  "nastava": {
+    "badge": "Öğrenci Portalı",
+    "heading": "Çevrimiçi Dersler",
+    "subtitle": "Bir yönelim ve yıl seçin",
+    "trackLabel": "Yönelim",
+    "trackHint": "Seçmek için tıklayın",
+    "yearLabel": "Yıl",
+    "years": [
+      "I. Yıl",
+      "II. Yıl",
+      "III. Yıl",
+      "IV. Yıl"
+    ],
+    "subjects": "Dersler",
+    "subjectMeta": "Materyaller • görevler • bağlantılar",
+    "open": "Aç →",
+    "loading": "Yükleniyor…",
+    "noData": "Seçilen seçenek için materyal yok.",
+    "yearsAvail": "Yıllar:"
+  },
+  "tracks": {
+  "komp": "Bilgisayar Tekniği",
+  "mas":  "Makine Teknikeri",
+  "ener": "Enerji Mühendisliği",
+  "elek": "Elektronik",
+  "arh":  "Mimari Teknikeri",
+  "meh":  "Mekatronik"
+},
+  "nav": {
+  "admissions": "Kayıt",
+  "location": "Konum",
+  "contact": "İletişim"
+    },
+  "about": {
+  "historyTitle": "Tarih",
+  "historyP1": "Okulun ilk sınıfları, 1960/61 öğretim yılında Gostivar'da 'Pratik Çalışmalı Endüstri Okulu' adıyla elektro ve makine bölümlerinde oluşturuldu. Okul, 12.09.1960 tarihli 5233 sayılı kararla Gostivar belediyesi Halk Komitesi tarafından 1960 yılında kuruldu.",
+  "historyP2": "04.09.1961'de ilk öğretmenler kurulu, 20.11.1961'de ise ilk okul kurulu toplantısı yapıldı. Okul binası, Gostivar'ın kurtuluş günü olan 18.11.1963'te kullanıma açıldı.",
+  "historyP3": "Bölümlerin doğrulanmasına ilişkin son karar, 09.06.2006 tarihinde 11-2938/2 sayısıyla alındı.",
+  "cardTitle": "Okul Profili"
+},
+"infoItems": {
+  "address": "Adres",
+  "name": "Okul Adı",
+  "phone": "Telefon",
+  "email": "E-posta",
+  "built": "İnşaat Yılı",
+  "construction": "İnşaat Türü",
+  "constructionVal": "Sağlam yapı",
+  "sportsArea": "Spor Alanı",
+  "verification": "Doğrulama",
+  "verificationYear": "Doğrulama Yılı",
+  "language": "Öğretim Dili",
+  "languageVal": "Makedonca, Arnavutça ve Türkçe",
+  "buildingArea": "Bina Alanı",
+  "yardArea": "Okul Bahçesi Alanı",
+  "shifts": "Vardiyalar",
+  "shiftsVal": "İki vardiya",
+  "heating": "Isıtma",
+  "heatingVal": "Merkezi ısıtma",
+  "classes": "Sınıf Sayısı"
+},
+"newsArticle": {
+  "back": "Haberlere dön",
+  "loading": "Yükleniyor…",
+  "error": "Makale yüklenemedi."
+},
+"news": {
+  "title": "Haberler",
+  "subtitle": "OSTU Gostivar'dan en son bilgiler",
+  "loading": "Yükleniyor…",
+  "error": "Haberler yüklenemedi.",
+  "empty": "Henüz yayınlanmış haber yok",
+  "emptyNote": "Yakında yeni haberler yayınlanacak.",
+  "readMore": "Devamını oku"
+},
+"contact": {
+  "title": "İletişim",
+  "subtitle": "Bize ulaşın — kısa sürede yanıt vereceğiz",
+  "infoTitle": "Bilgiler",
+  "address": "Adres",
+  "phone": "Telefon",
+  "email": "E-posta",
+  "workingHours": "Çalışma saatleri",
+  "workingHoursVal": "Pzt–Cum: 07:30 – 20:00",
+  "followUs": "Bizi takip edin",
+  "formTitle": "Mesaj gönderin",
+  "nameLabel": "Ad ve soyad *",
+  "namePlaceholder": "Adınız",
+  "emailLabel": "E-posta *",
+  "subjectLabel": "Konu",
+  "subjectPlaceholder": "Mesajın konusu",
+  "messageLabel": "Mesaj *",
+  "messagePlaceholder": "Mesajınızı buraya yazın...",
+  "sending": "Gönderiliyor…",
+  "submit": "Mesaj gönder →",
+  "sent": "Mesaj gönderildi!",
+  "sentNote": "En kısa sürede size geri döneceğiz.",
+  "sendAnother": "Başka mesaj gönder",
+  "location": "Konum"
+},
+"scholarships": {
+  "title": "Burslar",
+  "intro": "Kuzey Makedonya Cumhuriyeti'nde, lise öğrencilerine yönelik burslar Eğitim ve Bilim Bakanlığı tarafından açılan yarışma aracılığıyla verilmektedir. Öğrenciler, yarışma duyurulduğunda okul aracılığıyla bilgilendirilir.",
+  "stateTitle": "Devlet Bursları",
+  "stateDesc": "Burslar resmi bir yarışma aracılığıyla duyurulur. Sınıf rehber öğretmeni öğrencileri bilgilendirir ve başvuru konusunda rehberlik eder. Başvurular genellikle kurumlar tarafından sağlanan bir bağlantı üzerinden çevrimiçi yapılır.",
+  "processTitle": "Süreç nasıl işler",
+  "step1Title": "Bilgilendirme",
+  "step1Desc": "Sınıf rehber öğretmeni, burs yarışması duyurulduğunda öğrencileri bilgilendirir.",
+  "step2Title": "Başvuru",
+  "step2Desc": "Öğrenciler, bağımsız olarak çevrimiçi başvuru yapabilecekleri bir bağlantı alır.",
+  "step3Title": "Destek",
+  "step3Desc": "Okul, belge hazırlanması veya ek bilgi konusunda yardımcı olabilir."
+},
+"praktika": {
+  "title": "Pratik Eğitim",
+  "intro": "OSТУ Gostivar'da gerçek öğrenmenin, öğrencilerin gerçek kod, gerçek problemler ve gerçek araçlarla çalıştığında gerçekleştiğine inanıyoruz. Pratik eğitimimiz, öğrencileri sektöre hazırlamak için tasarlanmıştır — sadece teori bilmek değil, çalışabilmek.",
+  "activitiesTitle": "Derste ne yapıyoruz",
+  "act1Title": "Canlı Kodlama Oturumları",
+  "act1Desc": "Öğrenciler öğretmenle birlikte gerçek zamanlı olarak kod yazar. Her öğrenci kendi bilgisayarında çalışır ve işlevsel uygulamalar oluştururken öğretmenin adımlarını takip eder.",
+  "act2Title": "Hata Ayıklama ve Düzeltme",
+  "act2Desc": "Öğretmen kasıtlı olarak koda hatalar ekler, öğrenciler bunları bulur ve düzeltir. Bu onlara mantıksal düşünmeyi ve gerçek problemlerle çalışmayı öğretir.",
+  "act3Title": "Proje Geliştirme",
+  "act3Desc": "Öğrenciler küçük ama gerçek projeler üzerinde çalışır — web uygulamaları, algoritmalar, veritabanları — iş yerinde doğrudan uygulanabilir pratik deneyim kazanmak için.",
+  "act4Title": "Takım Çalışması",
+  "act4Desc": "Öğrenciler takımlara bölünür ve ortak bir proje üzerinde birlikte çalışır. Versiyon kontrolü kullanmayı, iletişim kurmayı ve görevleri paylaşmayı öğrenirler.",
+  "act5Title": "Kod İncelemesi",
+  "act5Desc": "Projeyi tamamladıktan sonra öğrenciler birbirlerinin kodlarını inceler. Öğretmen geri bildirim verir ve endüstri standartlarını öğretir.",
+  "act6Title": "Dağıtım ve Test",
+  "act6Desc": "Öğrenciler uygulamalarını çevrimiçi ortama dağıtır ve gerçek ortamda test eder. Hosting, alan adları, CI/CD süreçleri ve otomatik test hakkında bilgi edinirler.",
+  "toolsTitle": "Araçlar ve Teknolojiler",
+  "toolsDesc": "Öğrenciler endüstri standardı araçlarla çalışır — gerçek şirketlerde kullanılan araçların aynıları.",
+  "whyTitle": "Bu neden önemli",
+  "why1Title": "İşe Hazır",
+  "why1Desc": "Öğrenciler, gelecekteki işverenlerine gösterebilecekleri gerçek proje portföyüyle eğitimlerini tamamlar.",
+  "why2Title": "Eleştirel Düşünme",
+  "why2Desc": "Hata ayıklama ve problem çözme yoluyla öğrenciler, her alanda uygulanabilir analitik düşünme biçimi geliştirir.",
+  "why3Title": "Global Standartlar",
+  "why3Desc": "Kullandığımız metodolojiler ve araçlar, dünya genelindeki teknoloji şirketlerinde uygulananlarla aynıdır."
+},
+"nav": {
+  "about": "HAKKIMIZDA",
+  "news": "HABERLER",
+  "scholarships": "BURSLAR",
+  "contact": "İLETİŞİM",
+  "teachers": "ÖĞRETMENLER",
+  "admissions": "KAYIT",
+  "location": "KONUM"
+},
+    "footer": {
+    "rights": "Tüm hakları saklıdır"
+    }
+}
