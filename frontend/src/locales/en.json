@@ -192,6 +192,13 @@
   "admissions": "ADMISSIONS",
   "location": "LOCATION"
 },
+"chat": {
+  "welcome": "Hello! Ask me anything about the school.",
+  "title": "Assistant",
+  "live": "Live",
+  "placeholder": "Write a message...",
+  "error": "Server error. Please try again."
+},
     "footer": {
     "rights": "All rights reserved"
     }

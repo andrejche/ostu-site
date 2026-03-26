@@ -1,4 +1,4 @@
-import { Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route, useLocation, Navigate } from "react-router-dom";
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import Nav from "./components/Nav";
@@ -13,7 +13,7 @@ import Scholarships from "./pages/Scholarships";
 import Contact from "./pages/Contact";
 import Teachers from "./pages/Teachers";
 import NewsArticle from "./pages/NewsArticle";
-import NewsAdmin from "./pages/NewsAdmin";
+import AdminPanel from "./pages/AdminPanel";
 import Nastava from "./pages/Coding";
 
 // ─── Scroll to top on every route change ──────────────────────────────────────
@@ -44,7 +44,8 @@ export default function App() {
           <Route path="/profesori" element={<Teachers />} />
           <Route path="/nastava" element={<Nastava />} />
           <Route path="/vesti/:id"    element={<NewsArticle />} />
-          <Route path="/admin/vesti"  element={<NewsAdmin />} />
+          <Route path="/admin"         element={<AdminPanel />} />
+          <Route path="/admin/vesti"   element={<Navigate to="/admin" replace />} />
         </Routes>
       </main>
       <ChatWidget />

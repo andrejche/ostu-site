@@ -3,15 +3,23 @@ import { useEffect, useRef, useState } from "react";
 const NEWS_API    = "https://ostu-site.onrender.com/api/news";
 const TEACHER_API = "https://ostu-site.onrender.com/api/teachers";
 const UPLOAD_API  = "https://ostu-site.onrender.com/api/upload";
-const ADMIN_KEY   = process.env.REACT_APP_NEWS_ADMIN_KEY || "";
 
-const authHeaders = {
+const authHeaders = (adminKey) => ({
   "Content-Type": "application/json",
-  "x-admin-key": ADMIN_KEY,
-};
+  "x-admin-key": adminKey,
+});
 
 const emptyArticle = { title: "", excerpt: "", body: "", image: "", category: "", published: true };
 const emptyTeacher = { name: "", subjects: [], image: "" };
+
+async function verifyAdminKey(adminKey) {
+  const res = await fetch(`${NEWS_API}/__auth-check__`, {
+    method: "DELETE",
+    headers: authHeaders(adminKey),
+  });
+  // Unauthorized means invalid key; other responses indicate key passed auth middleware.
+  return !(res.status === 401 || res.status === 403);
+}
 
 // ─── Image Compression Component ───────────────────────────────────────────────────
 
@@ -33,13 +41,14 @@ function compressImage(file, maxWidth = 1200, quality = 0.8) {
 }
 
 // ─── Image Upload Component ───────────────────────────────────────────────────
-function ImageUpload({ value, onChange }) {
+function ImageUpload({ value, onChange, adminKey }) {
   const [dragging,  setDragging]  = useState(false);
   const [uploading, setUploading] = useState(false);
   const inputRef = useRef(null);
 
 const upload = async (file) => {
   if (!file) return;
+  if (!adminKey) return;
   setUploading(true);
 
   // Compress image in browser before uploading
@@ -50,7 +59,7 @@ const upload = async (file) => {
   try {
     const res  = await fetch(UPLOAD_API, {
       method: "POST",
-      headers: { "x-admin-key": ADMIN_KEY },
+      headers: { "x-admin-key": adminKey },
       body: formData,
     });
     const data = await res.json();
@@ -134,13 +143,73 @@ const upload = async (file) => {
 // ─── Main Admin Shell ─────────────────────────────────────────────────────────
 export default function Admin() {
   const [tab, setTab] = useState("news");
+  const [adminKey, setAdminKey] = useState("");
+  const [keyInput, setKeyInput] = useState("");
+  const [authLoading, setAuthLoading] = useState(false);
+  const [authError, setAuthError] = useState("");
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    const candidate = keyInput.trim();
+    if (!candidate) {
+      setAuthError("Внеси админ клуч.");
+      return;
+    }
+
+    setAuthLoading(true);
+    setAuthError("");
+    try {
+      const valid = await verifyAdminKey(candidate);
+      if (!valid) {
+        setAuthError("Невалиден админ клуч.");
+        return;
+      }
+      setAdminKey(candidate);
+      setKeyInput("");
+    } catch {
+      setAuthError("Неуспешна проверка. Пробај повторно.");
+    } finally {
+      setAuthLoading(false);
+    }
+  };
+
+  if (!adminKey) {
+    return (
+      <div className="min-h-screen bg-slate-100 px-4 py-16">
+        <div className="mx-auto max-w-md rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
+          <h1 className="text-2xl font-extrabold text-slate-800">🔐 Админ најава</h1>
+          <p className="mt-2 text-sm text-slate-500">
+            Внеси админ клуч за пристап до Site Management Panel.
+          </p>
+          <form onSubmit={handleLogin} className="mt-6 space-y-4">
+            <input
+              type="password"
+              className={inp}
+              value={keyInput}
+              onChange={(e) => setKeyInput(e.target.value)}
+              placeholder="Админ клуч"
+              autoComplete="off"
+            />
+            {authError && <Msg msg={`Грешка: ${authError}`} />}
+            <button
+              type="submit"
+              disabled={authLoading}
+              className="w-full rounded-xl bg-[#0B2E5B] px-6 py-3 text-sm font-bold text-white transition-colors hover:bg-[#0a2750] disabled:opacity-50"
+            >
+              {authLoading ? "Проверка..." : "Најави се"}
+            </button>
+          </form>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-slate-100">
       <div className="bg-[#0B2E5B] px-6 py-5 shadow-lg">
         <div className="mx-auto max-w-5xl flex items-center justify-between flex-wrap gap-4">
           <div>
-            <h1 className="text-xl font-extrabold text-white">⚙️ Админ панел</h1>
+            <h1 className="text-xl font-extrabold text-white">⚙️ Site Management Panel</h1>
             <p className="text-white/60 text-xs mt-0.5">ОСТУ „Гостивар"</p>
           </div>
           <div className="flex gap-2">
@@ -161,15 +230,23 @@ export default function Admin() {
       </div>
 
       <div className="mx-auto max-w-5xl px-4 py-10">
-        {tab === "news"     && <NewsTab />}
-        {tab === "teachers" && <TeachersTab />}
+        <div className="mb-6 flex justify-end">
+          <button
+            onClick={() => setAdminKey("")}
+            className="rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm font-bold text-slate-700 transition-colors hover:bg-slate-50"
+          >
+            Одјава
+          </button>
+        </div>
+        {tab === "news"     && <NewsTab adminKey={adminKey} />}
+        {tab === "teachers" && <TeachersTab adminKey={adminKey} />}
       </div>
     </div>
   );
 }
 
 // ─── NEWS TAB ─────────────────────────────────────────────────────────────────
-function NewsTab() {
+function NewsTab({ adminKey }) {
   const [articles, setArticles] = useState([]);
   const [form,     setForm]     = useState(emptyArticle);
   const [editing,  setEditing]  = useState(null);
@@ -180,11 +257,12 @@ function NewsTab() {
   useEffect(() => { load(); }, []);
 
   const save = async () => {
+    if (!adminKey) return setMsg("Грешка: Внеси админ клуч.");
     setLoading(true);
     try {
       const url    = editing ? `${NEWS_API}/${editing}` : NEWS_API;
       const method = editing ? "PUT" : "POST";
-      const res    = await fetch(url, { method, headers: authHeaders, body: JSON.stringify(form) });
+      const res    = await fetch(url, { method, headers: authHeaders(adminKey), body: JSON.stringify(form) });
       if (!res.ok) throw new Error((await res.json()).error);
       setMsg(editing ? "Ажурирано!" : "Објавено!");
       setForm(emptyArticle); setEditing(null); load();
@@ -193,8 +271,9 @@ function NewsTab() {
   };
 
   const del = async (id) => {
+    if (!adminKey) return setMsg("Грешка: Внеси админ клуч.");
     if (!window.confirm("Избриши ја оваа вест?")) return;
-    await fetch(`${NEWS_API}/${id}`, { method: "DELETE", headers: authHeaders });
+    await fetch(`${NEWS_API}/${id}`, { method: "DELETE", headers: authHeaders(adminKey) });
     load();
   };
 
@@ -233,7 +312,7 @@ function NewsTab() {
             </Field>
           </div>
           <Field label="Слика">
-            <ImageUpload value={form.image} onChange={(url) => setForm({ ...form, image: url })} />
+            <ImageUpload value={form.image} onChange={(url) => setForm({ ...form, image: url })} adminKey={adminKey} />
           </Field>
         </div>
         {msg && <Msg msg={msg} />}
@@ -276,7 +355,7 @@ function NewsTab() {
 }
 
 // ─── TEACHERS TAB ─────────────────────────────────────────────────────────────
-function TeachersTab() {
+function TeachersTab({ adminKey }) {
   const [teachers, setTeachers] = useState([]);
   const [form,     setForm]     = useState(emptyTeacher);
   const [editing,  setEditing]  = useState(null);
@@ -297,11 +376,12 @@ function TeachersTab() {
   const removeSubject = (s) => setForm({ ...form, subjects: form.subjects.filter((x) => x !== s) });
 
   const save = async () => {
+    if (!adminKey) return setMsg("Грешка: Внеси админ клуч.");
     if (!form.name.trim()) return setMsg("Грешка: Името е задолжително.");
     try {
       const url    = editing !== null ? `${TEACHER_API}/${editing}` : TEACHER_API;
       const method = editing !== null ? "PUT" : "POST";
-      const res    = await fetch(url, { method, headers: authHeaders, body: JSON.stringify(form) });
+      const res    = await fetch(url, { method, headers: authHeaders(adminKey), body: JSON.stringify(form) });
       if (!res.ok) throw new Error((await res.json()).error);
       setMsg(editing !== null ? "Ажурирано!" : "Додаден наставник!");
       setForm(emptyTeacher); setEditing(null); setSubInput(""); load();
@@ -316,8 +396,9 @@ function TeachersTab() {
   };
 
   const del = async (idx) => {
+    if (!adminKey) return setMsg("Грешка: Внеси админ клуч.");
     if (!window.confirm("Избриши го наставникот?")) return;
-    await fetch(`${TEACHER_API}/${idx}`, { method: "DELETE", headers: authHeaders });
+    await fetch(`${TEACHER_API}/${idx}`, { method: "DELETE", headers: authHeaders(adminKey) });
     load();
   };
 
@@ -334,7 +415,7 @@ function TeachersTab() {
             <input className={inp} value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} placeholder="Маријанчо Алексоски" />
           </Field>
           <Field label="Слика">
-            <ImageUpload value={form.image} onChange={(url) => setForm({ ...form, image: url })} />
+            <ImageUpload value={form.image} onChange={(url) => setForm({ ...form, image: url })} adminKey={adminKey} />
           </Field>
           <Field label="Предмети">
             <div className="flex gap-2">

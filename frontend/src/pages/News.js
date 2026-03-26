@@ -94,12 +94,26 @@ export default function News() {
   const navigate                    = useNavigate();
 
   useEffect(() => {
-    fetch(API)
-      .then((r) => r.json())
-      .then((data) => setArticles(data))
-      .catch(() => setError(t("news.error")))
-      .finally(() => setLoading(false));
-  }, []); // eslint-disable-line
+    let cancelled = false;
+    async function loadNews() {
+      setLoading(true);
+      setError("");
+      try {
+        const res = await fetch(API);
+        const data = await res.json();
+        if (!res.ok) throw new Error(data?.error || "Request failed");
+        if (!cancelled) setArticles(Array.isArray(data) ? data : []);
+      } catch {
+        if (!cancelled) setError(t("news.error"));
+      } finally {
+        if (!cancelled) setLoading(false);
+      }
+    }
+    loadNews();
+    return () => {
+      cancelled = true;
+    };
+  }, [t]);
 
   return (
     <div className="relative bg-slate-100">

@@ -192,6 +192,13 @@
   "admissions": "KAYIT",
   "location": "KONUM"
 },
+"chat": {
+  "welcome": "Merhaba! Okul hakkında merak ettiğiniz her şeyi sorabilirsiniz.",
+  "title": "Asistan",
+  "live": "Canlı",
+  "placeholder": "Mesaj yaz...",
+  "error": "Sunucu hatası. Tekrar deneyin."
+},
     "footer": {
     "rights": "Tüm hakları saklıdır"
     }

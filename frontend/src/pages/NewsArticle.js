@@ -42,12 +42,26 @@ export default function NewsArticle() {
   const [error,   setError]   = useState("");
 
   useEffect(() => {
-    fetch(`${API}/${id}`)
-      .then((r) => r.json())
-      .then((data) => setArticle(data))
-      .catch(() => setError(t("newsArticle.error")))
-      .finally(() => setLoading(false));
-  }, [id]); // eslint-disable-line
+    let cancelled = false;
+    async function loadArticle() {
+      setLoading(true);
+      setError("");
+      try {
+        const res = await fetch(`${API}/${id}`);
+        const data = await res.json();
+        if (!res.ok) throw new Error(data?.error || "Request failed");
+        if (!cancelled) setArticle(data);
+      } catch {
+        if (!cancelled) setError(t("newsArticle.error"));
+      } finally {
+        if (!cancelled) setLoading(false);
+      }
+    }
+    loadArticle();
+    return () => {
+      cancelled = true;
+    };
+  }, [id, t]);
 
   const date = article
     ? new Date(article.createdAt).toLocaleDateString(i18n.language === "mk" ? "mk-MK" : i18n.language === "sq" ? "sq-AL" : i18n.language === "tr" ? "tr-TR" : "en-GB", {

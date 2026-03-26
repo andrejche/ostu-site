@@ -192,6 +192,13 @@
   "admissions": "REGJISTRIM",
   "location": "VENDNDODHJA"
 },
+"chat": {
+  "welcome": "Përshëndetje! Pyetni çdo gjë që ju intereson rreth shkollës.",
+  "title": "Asistent",
+  "live": "Drejtpërdrejt",
+  "placeholder": "Shkruaj mesazh...",
+  "error": "Gabim serveri. Provo përsëri."
+},
   "footer": {
     "rights": "Të gjitha të drejtat e rezervuara"
   }

@@ -1,39 +1,63 @@
-import { useMemo, useRef, useState } from "react";
+import { useMemo, useRef, useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 export default function ChatWidget() {
-  const [open, setOpen] = useState(false);
-  const [input, setInput] = useState("");
-  const [msgs, setMsgs] = useState([
-    { role: "assistant", content: "Здраво! Прашај ме се што те интересира поврзано со школото." },
+  const { t } = useTranslation();
+
+  const [open,      setOpen]      = useState(false);
+  const [input,     setInput]     = useState("");
+  const [msgs,      setMsgs]      = useState([
+    { role: "assistant", content: t("chat.welcome") },
   ]);
   const [streaming, setStreaming] = useState(false);
+
   const bottomRef = useRef(null);
+  const inputRef  = useRef(null);
 
   const historyForApi = useMemo(
     () => msgs.slice(-10).map((m) => ({ role: m.role, content: m.content })),
     [msgs]
   );
 
-  const scrollDown = () => bottomRef.current?.scrollIntoView({ behavior: "smooth" });
+  const scrollDown = () =>
+    bottomRef.current?.scrollIntoView({ behavior: "smooth" });
+
+  useEffect(() => {
+    if (open) {
+      inputRef.current?.focus();
+      scrollDown();
+    }
+  }, [open]);
+
+  // Auto scroll when new messages arrive
+  useEffect(() => {
+    scrollDown();
+  }, [msgs]);
 
   async function send() {
     const text = input.trim();
     if (!text || streaming) return;
 
-    setMsgs((p) => [...p, { role: "user", content: text }, { role: "assistant", content: "" }]);
+    setMsgs((p) => [
+      ...p,
+      { role: "user", content: text },
+      { role: "assistant", content: "" },
+    ]);
     setInput("");
     setStreaming(true);
 
     try {
-      const res = await fetch("https://ostu-site.onrender.com/api/chat", {
+      const res = await fetch("http://localhost:3001/api/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: text, history: historyForApi }),
       });
 
-      const reader = res.body.getReader();
+      if (!res.ok || !res.body) throw new Error("Chat request failed");
+
+      const reader  = res.body.getReader();
       const decoder = new TextDecoder();
-      let buffer = "";
+      let buffer    = "";
 
       while (true) {
         const { value, done } = await reader.read();
@@ -51,88 +75,128 @@ export default function ChatWidget() {
             setMsgs((prev) => {
               const copy = [...prev];
               const last = copy[copy.length - 1];
-              copy[copy.length - 1] = { ...last, content: (last.content || "") + payload.delta };
+              copy[copy.length - 1] = {
+                ...last,
+                content: (last.content || "") + payload.delta,
+              };
               return copy;
             });
-            scrollDown();
           }
 
           if (payload.done || payload.error) setStreaming(false);
         }
       }
-    } catch {
+    } catch (e) {
+      console.error("Chat error:", e);
       setStreaming(false);
       setMsgs((prev) => {
         const copy = [...prev];
-        copy[copy.length - 1] = { role: "assistant", content: "Грешка со сервер. Пробај пак." };
+        copy[copy.length - 1] = {
+          role: "assistant",
+          content: t("chat.error"),
+        };
         return copy;
       });
     } finally {
       setStreaming(false);
-      scrollDown();
     }
   }
 
   return (
-    <div className="fixed bottom-6 right-6 z-50">
-      <button
-        onClick={() => setOpen((v) => !v)}
-        className="rounded-full bg-slate-900 px-4 py-3 text-sm font-semibold text-white shadow-lg hover:bg-slate-800"
-      >
-        {open ? "Затвори" : <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                          <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 0 1-2.555-.337A5.972 5.972 0 0 1 5.41 20.97a5.969 5.969 0 0 1-.474-.065 4.48 4.48 0 0 0 .978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25Z" />
-                          </svg>
-}
-      </button>
+    <div className="fixed bottom-6 right-4 z-50 sm:right-6 flex flex-col items-end">
 
+      {/* Chat box — opens upward */}
       {open && (
-        <div className="mt-3 w-[340px] overflow-hidden rounded-2xl bg-white shadow-2xl ring-1 ring-slate-200">
+        <div className="mb-3 w-[calc(100vw-2rem)] overflow-hidden rounded-2xl bg-white/90 backdrop-blur shadow-2xl ring-1 ring-slate-200 sm:w-[360px]">
+
+          {/* Header */}
           <div className="flex items-center justify-between border-b border-slate-200 px-4 py-3">
-            <div>
-              <div className="text-sm font-semibold text-slate-900">Асистент</div>
-              <div className="text-xs text-slate-500">Во живо</div>
+            <div className="flex items-center gap-3">
+              <div className="w-9 h-9 rounded-full bg-[#0B2E5B] flex items-center justify-center text-white text-sm font-bold">
+                AI
+              </div>
+              <div>
+                <div className="text-sm font-semibold text-slate-900">
+                  {t("chat.title")}
+                </div>
+                <div className="text-xs text-green-500">● {t("chat.live")}</div>
+              </div>
             </div>
-            <span className="rounded-full bg-blue-700 px-2 py-1 text-[11px] font-semibold text-white">
-              Онлајн
-            </span>
+            <button
+              onClick={() => setOpen(false)}
+              className="text-slate-400 hover:text-slate-700 transition text-lg font-bold px-2"
+            >
+              ✕
+            </button>
           </div>
 
-          <div className="max-h-[340px] space-y-2 overflow-auto px-3 py-3">
+          {/* Messages */}
+          <div className="h-[280px] space-y-2 overflow-auto px-3 py-3">
             {msgs.map((m, i) => (
               <div
                 key={i}
                 className={
-                  "max-w-[85%] whitespace-pre-wrap rounded-2xl px-3 py-2 text-sm leading-relaxed " +
+                  "max-w-[85%] whitespace-pre-wrap px-3 py-2 text-sm leading-relaxed " +
                   (m.role === "user"
-                    ? "ml-auto bg-blue-700 text-white"
-                    : "mr-auto bg-slate-100 text-slate-900")
+                    ? "ml-auto bg-[#0B2E5B] text-white rounded-2xl rounded-br-md shadow"
+                    : "mr-auto bg-slate-100 text-slate-900 rounded-2xl rounded-bl-md shadow-sm")
                 }
               >
-                {m.content || (streaming && i === msgs.length - 1 ? "…" : "")}
+                {m.content ||
+                  (streaming && i === msgs.length - 1 ? (
+                    <div className="flex gap-1 mt-1">
+                      <span className="w-2 h-2 bg-slate-400 rounded-full animate-bounce" />
+                      <span className="w-2 h-2 bg-slate-400 rounded-full animate-bounce [animation-delay:0.2s]" />
+                      <span className="w-2 h-2 bg-slate-400 rounded-full animate-bounce [animation-delay:0.4s]" />
+                    </div>
+                  ) : "")}
               </div>
             ))}
             <div ref={bottomRef} />
           </div>
 
-          <div className="flex gap-2 border-t border-slate-200 p-3">
+          {/* Input */}
+          <div className="flex items-center gap-2 border-t border-slate-200 p-3">
             <input
+              ref={inputRef}
               value={input}
               onChange={(e) => setInput(e.target.value)}
-              placeholder="Напиши порака…"
+              placeholder={t("chat.placeholder")}
               onKeyDown={(e) => e.key === "Enter" && send()}
               disabled={streaming}
-              className="flex-1 rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900 placeholder:text-slate-400 outline-none focus:border-blue-700"
+              className="flex-1 rounded-full border border-slate-200 px-4 py-2.5 text-base outline-none focus:ring-2 focus:ring-[#0B2E5B]/30 text-slate-800"
             />
             <button
               onClick={send}
               disabled={streaming}
-              className="rounded-xl bg-blue-700 px-3 py-2 text-sm font-semibold text-white hover:bg-blue-800 disabled:opacity-60"
+              className="rounded-full bg-[#0B2E5B] hover:bg-[#0a2750] text-white px-4 py-2.5 text-sm font-semibold transition disabled:opacity-50"
             >
-              {streaming ? "..." : "Прати"}
+              ➤
             </button>
           </div>
         </div>
       )}
+
+      {/* Floating button — hidden when chat is open */}
+      {!open && (
+        <button
+          onClick={() => setOpen(true)}
+          className="rounded-full bg-slate-900 hover:bg-slate-800 transition p-3.5 text-white shadow-lg"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+            strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
+            <path strokeLinecap="round" strokeLinejoin="round"
+              d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 0 1-2.555-.337A5.972 5.972 0 0 1 5.41 20.97a5.969 5.969 0 0 1-.474-.065 4.48 4.48 0 0 0 .978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25Z" />
+          </svg>
+        </button>
+      )}
+
+      <style>{`
+        @keyframes fadeUp {
+          from { opacity: 0; transform: translateY(10px); }
+          to   { opacity: 1; transform: translateY(0); }
+        }
+      `}</style>
     </div>
   );
 }
