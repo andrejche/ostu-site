@@ -109,10 +109,10 @@ export default function ChatWidget() {
       {open && (
         <>
           {/* Backdrop */}
-          <div
-            className="fixed inset-0 z-40 bg-black/40"
-            onClick={() => setOpen(false)}
-          />
+            <div
+              className="fixed inset-0 z-40 bg-black/40 md:hidden"
+              onClick={() => setOpen(false)}
+            />
 
           {/* Chat box */}
           <div className="relative z-50 mb-3 w-[calc(100vw-2rem)] overflow-hidden rounded-2xl bg-white shadow-2xl ring-1 ring-slate-200 sm:w-[360px]">
