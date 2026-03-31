@@ -137,16 +137,6 @@ export default function HomePage() {
       >
         <div className="absolute inset-0 bg-cover bg-[center_top]" style={{ backgroundImage: `url(${pic1})` }} />
         <div className="absolute inset-0 bg-slate-900/55" />
-
-        <button type="button" aria-label="Previous"
-          className="absolute left-6 top-1/2 z-10 hidden -translate-y-1/2 rounded-full border border-white/30 bg-black/25 p-3 text-white hover:bg-black/45 transition md:block">
-          <span className="text-xl leading-none">‹</span>
-        </button>
-        <button type="button" aria-label="Next"
-          className="absolute right-6 top-1/2 z-10 hidden -translate-y-1/2 rounded-full border border-white/30 bg-black/25 p-3 text-white hover:bg-black/45 transition md:block">
-          <span className="text-xl leading-none">›</span>
-        </button>
-
         <div className="relative z-10 flex min-h-[inherit] flex-col items-center justify-center px-6 pt-18 text-center text-white">
           <p className="text-xl font-medium text-white/80 md:text-3xl" style={{ animation: "fadeUp 0.6s 0.2s ease both" }}>
             {t("hero.welcome")}

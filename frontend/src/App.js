@@ -16,6 +16,7 @@ import NewsArticle from "./pages/NewsArticle";
 import AdminPanel from "./pages/AdminPanel";
 import Nastava from "./pages/Coding";
 import Folders from "./pages/Folders";
+import NotFound from "./pages/NotFound";
 
 // ─── Scroll to top on every route change ──────────────────────────────────────
 function ScrollToTop() {
@@ -48,6 +49,7 @@ export default function App() {
           <Route path="/vesti/:id"    element={<NewsArticle />} />
           <Route path="/admin"         element={<AdminPanel />} />
           <Route path="/admin/vesti"   element={<Navigate to="/admin" replace />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
       <ChatWidget />

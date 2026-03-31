@@ -2,7 +2,8 @@
     "komp": {
         "1": [{
                 "id": "inf1",
-                "title": "Информатика за прва година"
+                "title": "Информатика за прва година",
+                "url": "https://claude.ai/chat/f3d9e1d5-12eb-4c53-9ac3-3676aefa7592"
             },
             {
                 "id": "acad1",
