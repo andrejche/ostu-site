@@ -5,6 +5,11 @@ import pic1 from "../assets/hero.png";
 import pic2 from "../assets/slika.jpg";
 import pic3 from "../assets/slika2.jpg";
 import { school } from "../data/school";
+const API_URL = process.env.REACT_APP_API_URL;
+
+if (!API_URL) {
+  console.error("API URL missing!");
+}
 
 // ─── Data ─────────────────────────────────────────────────────────────────────
 
@@ -78,9 +83,9 @@ export default function HomePage() {
   const [heroFull, setHeroFull] = useState(true);
 
   const ctas = [
-    { label: t("ctas.online"), to: null, icon: "🖥️", anchor: "online" },
-    { label: t("ctas.aboutus"),    to: "/za-nas",     icon: "❓" },
-    { label: t("ctas.tests"),  to: null, icon: "📝", anchor: "online-test" },
+    { label: t("ctas.online"), to: "/folders", icon: "🖥️" },
+    { label: t("ctas.aboutus"), to: "/za-nas",     icon: "❓" },
+    { label: t("ctas.tests"),  to: "/nastava", icon: "📝"},
   ];
 
   const activeTrack = useMemo(
@@ -103,9 +108,11 @@ export default function HomePage() {
     async function load() {
       setLoading(true); setError("");
       try {
-        const res  = await fetch(`https://ostu-site.onrender.com/api/online?track=${trackKey}&year=${year}`);
+        const res = await fetch(`${API_URL}/api/online?track=${trackKey}&year=${year}`);
+        if (!res.ok) {
+          throw new Error("Request failed");
+        }
         const data = await res.json();
-        if (!res.ok) throw new Error(data?.error || "Request failed");
         if (!cancelled) setSubjects(data.subjects ?? []);
       } catch (e) {
         if (!cancelled) setError(e.message);
@@ -153,25 +160,16 @@ export default function HomePage() {
 
           <div className="mt-10 w-full max-w-3xl px-4">
             <div className="grid gap-3 md:grid-cols-3">
-                {ctas.map((c) =>
-                  c.anchor ? (
-                    <button
-                      key={c.anchor}
-                      onClick={() => document.getElementById(c.anchor)?.scrollIntoView({ behavior: "smooth" })}
-                      className="flex items-center justify-center gap-2 rounded-lg bg-white/10 hover:bg-white/20 backdrop-blur border border-white/20 hover:border-white/40 px-6 py-4 text-sm font-semibold text-white transition-all duration-200 hover:scale-[1.02]"
-                    >
-                      <span>{c.icon}</span>
-                      {c.label}
-                    </button>
-                  ) : (
-                    <Link key={c.to} to={c.to}
-                      className="flex items-center justify-center gap-2 rounded-lg bg-white/10 hover:bg-white/20 backdrop-blur border border-white/20 hover:border-white/40 px-6 py-4 text-sm font-semibold text-white transition-all duration-200 hover:scale-[1.02]"
-                    >
-                      <span>{c.icon}</span>
-                      {c.label}
-                    </Link>
-                  )
-                )}
+              {ctas.map((c) => (
+                <Link
+                  key={c.to}
+                  to={c.to}
+                  className="flex items-center justify-center gap-2 rounded-lg bg-white/10 hover:bg-white/20 backdrop-blur border border-white/20 hover:border-white/40 px-6 py-4 text-sm font-semibold text-white transition-all duration-200 hover:scale-[1.02]"
+                >
+                  <span>{c.icon}</span>
+                  {c.label}
+                </Link>
+              ))}
             </div>
           </div>
 
@@ -381,10 +379,11 @@ export default function HomePage() {
                 {!loading && !error && subjects.length > 0 && (
                   <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4">
                     {subjects.map((s) => (
-                      <button key={s.id} type="button"
-                        onClick={() => console.log("open subject", trackKey, year, s.id)}
-                        className="group rounded-2xl border border-slate-200 bg-white p-4 text-left shadow-sm transition-all duration-200 hover:border-[#0B2E5B] hover:shadow-md active:scale-[0.99] focus:outline-none focus:ring-4 focus:ring-[#0B2E5B]/10 sm:p-6"
-                      >
+                    <Link
+                      key={s.id}
+                      to={`/folders`}
+                      className="group rounded-2xl border border-slate-200 bg-white p-4 text-left shadow-sm transition-all duration-200 hover:border-[#0B2E5B] hover:shadow-md active:scale-[0.99] focus:outline-none focus:ring-4 focus:ring-[#0B2E5B]/10 sm:p-6"
+                    >
                         <div className="flex items-start justify-between gap-2 sm:gap-3">
                           <div className="flex items-center gap-2 sm:gap-3">
                             <div className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-slate-100 text-lg ring-1 ring-slate-200 group-hover:bg-slate-200 transition sm:h-11 sm:w-11 sm:text-xl">
@@ -404,7 +403,7 @@ export default function HomePage() {
                         <div className="mt-3 text-xs font-semibold text-[#0B2E5B] group-hover:translate-x-1 transition-transform sm:mt-4 sm:text-sm">
                           {t("nastava.open")}
                         </div>
-                      </button>
+                      </Link>
                     ))}
                   </div>
                 )}

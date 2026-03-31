@@ -1,7 +1,12 @@
 import { useEffect, useRef, useState } from "react";
 import bg from "../assets/hero.png";
+const API_URL = process.env.REACT_APP_API_URL;
 
-const API = "https://ostu-site.onrender.com/api/teachers";
+const API = `${API_URL}/api/teachers`;
+
+if (!API_URL) {
+  console.error("API URL is missing!");
+}
 
 function useInView(threshold = 0.1) {
   const ref = useRef(null);

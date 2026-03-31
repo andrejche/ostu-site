@@ -1,5 +1,6 @@
 import { useMemo, useRef, useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
+const API_URL = process.env.REACT_APP_API_URL;
 
 export default function ChatWidget() {
   const { t } = useTranslation();
@@ -47,13 +48,14 @@ export default function ChatWidget() {
     setStreaming(true);
 
     try {
-      const res = await fetch("http://localhost:3001/api/chat", {
+      const res = await fetch(`${API_URL}/api/chat`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: text, history: historyForApi }),
       });
 
-      if (!res.ok || !res.body) throw new Error("Chat request failed");
+      if (!res.ok) throw new Error("Chat request failed");
+      if (!res.body) throw new Error("No response body");
 
       const reader  = res.body.getReader();
       const decoder = new TextDecoder();

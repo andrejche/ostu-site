@@ -1,8 +1,13 @@
 import { useEffect, useRef, useState } from "react";
+const API_URL = process.env.REACT_APP_API_URL;
 
-const NEWS_API    = "https://ostu-site.onrender.com/api/news";
-const TEACHER_API = "https://ostu-site.onrender.com/api/teachers";
-const UPLOAD_API  = "https://ostu-site.onrender.com/api/upload";
+const NEWS_API    = `${API_URL}/api/news`;
+const TEACHER_API = `${API_URL}/api/teachers`;
+const UPLOAD_API  = `${API_URL}/api/upload`;
+
+if (!API_URL) {
+  console.error("API URL missing!");
+}
 
 const authHeaders = (adminKey) => ({
   "Content-Type": "application/json",

@@ -15,6 +15,7 @@ import Teachers from "./pages/Teachers";
 import NewsArticle from "./pages/NewsArticle";
 import AdminPanel from "./pages/AdminPanel";
 import Nastava from "./pages/Coding";
+import Folders from "./pages/Folders";
 
 // ─── Scroll to top on every route change ──────────────────────────────────────
 function ScrollToTop() {
@@ -43,6 +44,7 @@ export default function App() {
           <Route path="/vesti"        element={<News />} />
           <Route path="/profesori" element={<Teachers />} />
           <Route path="/nastava" element={<Nastava />} />
+           <Route path="/Folders" element={<Folders />} />
           <Route path="/vesti/:id"    element={<NewsArticle />} />
           <Route path="/admin"         element={<AdminPanel />} />
           <Route path="/admin/vesti"   element={<Navigate to="/admin" replace />} />

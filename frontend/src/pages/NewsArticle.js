@@ -2,8 +2,13 @@ import { useEffect, useRef, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import bg from "../assets/hero.png";
+const API_URL = process.env.REACT_APP_API_URL;
 
-const API = "https://ostu-site.onrender.com/api/news";
+const API = `${API_URL}/api/news`;
+
+if (!API_URL) {
+  console.error("API URL missing!");
+}
 
 function useInView(threshold = 0.12) {
   const ref = useRef(null);

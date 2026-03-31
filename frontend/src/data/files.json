@@ -1,0 +1,768 @@
+[
+  {
+    "id": "komp",
+    "name": "Компјутерска техника",
+    "type": "folder",
+    "children": [
+      {
+        "id": "komp-1",
+        "name": "I Година",
+        "type": "folder",
+        "children": [
+          {
+            "id": "inf1",
+            "name": "Информатика за прва година",
+            "type": "folder",
+            "children": [
+              { "id": "t1", "name": "Теорија - учебник", "type": "file", "url": "https://drive.google.com/file/d/1mX3CqLhfKxd9FKvmKubezT3ykYchp2TO/view?usp=sharing" },
+              { "id": "h1", "name": "Влезни единици", "type": "file", "url": "https://drive.google.com/file/d/1we8WW0b2ES6kNNLEJq9YW8N9IB8fcGXF/view?usp=sharing" },
+              { "id": "h2", "name": "Излезни единици", "type": "file", "url": "https://drive.google.com/file/d/1B-0hwpmekpegMP8HnE65sxG0Ujf4Ft96/view?usp=sharing" },
+              { "id": "h3", "name": "Компјутерски систем", "type": "file", "url": "https://drive.google.com/file/d/1TzSoljQIOygq5MIUYfxB-pqG6dHMQhmu/view?usp=sharing" },
+              { "id": "h4", "name": "Видови на компјутери", "type": "file", "url": "https://drive.google.com/file/d/1tznEGVGXFMGniOxH4E2JM1mQGb1WGIcP/view?usp=sharing" },
+              { "id": "h5", "name": "Периферни уреди", "type": "file", "url": "https://drive.google.com/file/d/1-zaBmtbiWAFQWFKUe9kNYoqXLoGIKahe/view?usp=sharing" },
+              { "id": "h6", "name": "Мемориски уреди", "type": "file", "url": "https://drive.google.com/file/d/1Dgctw0TtOV0g10wBxImR7EiklKPmv239/view?usp=sharing" },
+              { "id": "s1", "name": "Видови на софтвер 1", "type": "file", "url": "https://drive.google.com/file/d/1vkaHAe9CN5OtNiAGd1GsT4JtumExiP7E/view?usp=sharing" },
+              { "id": "s2", "name": "Видови на софтвер 2", "type": "file", "url": "https://drive.google.com/file/d/1kg6m0t-2QJ6SOtBzyhcPvO9_5ismIhXo/view?usp=sharing" },
+              { "id": "s3", "name": "Оперативен систем", "type": "file", "url": "https://drive.google.com/file/d/1f5V7l74cyRtw7gUKSxK1mq1m67Nva1XR/view?usp=sharing" },
+              { "id": "s4", "name": "Фолдери и датотеки", "type": "file", "url": "https://drive.google.com/file/d/1iVWinaRqYGpFmqeXLbU4rsjqrHXXyTg4/view?usp=sharing" },
+              { "id": "c1", "name": "Алгоритми", "type": "file", "url": "https://drive.google.com/file/d/1x02y_MGRCMrB-f4rhasvAFQKrqX_hMb-/view?usp=sharing" },
+              { "id": "c2", "name": "Програмирање", "type": "file", "url": "https://drive.google.com/file/d/1gXXSFSoOUavPdvmDcOI87xwIxbtNELs4/view?usp=sharing" },
+              { "id": "c3", "name": "Програмски јазици", "type": "file", "url": "https://drive.google.com/file/d/1asrrHA3aa0JMfbShjyqV6igidKvvFGDx/view?usp=sharing" },
+              { "id": "n1", "name": "Компјутерска мрежа", "type": "file", "url": "https://drive.google.com/file/d/1yyyXsRyFvLEIRufMUtgDgfoFEtTfDzJd/view?usp=sharing" },
+              { "id": "n2", "name": "Мрежна опрема", "type": "file", "url": "https://drive.google.com/file/d/1WBKr2StVGCkytUgsGv-itnx2qHEYjTEd/view?usp=sharing" },
+              { "id": "n3", "name": "Историја и развој", "type": "file", "url": "https://drive.google.com/file/d/1l3A_0EPJUUXJGWtx2bt3EV58EM3IGr-z/view?usp=sharing" }
+            ]
+          },
+          {
+            "id": "acad-folder",
+            "name": "AutoCad",
+            "type": "folder",
+            "children": [
+              { "id": "a0", "name": "YouTube Пример 0", "type": "file", "url": "https://www.youtube.com/watch?v=wY3rezjj9es&t=371s" },
+              { "id": "a1", "name": "YouTube Пример 1", "type": "file", "url": "https://www.youtube.com/watch?v=eMdCDFISkiw" },
+              { "id": "a2", "name": "YouTube Пример 2", "type": "file", "url": "https://www.youtube.com/watch?v=dxtq_sy7Gw0" },
+              { "id": "a3", "name": "YouTube Пример 3", "type": "file", "url": "https://www.youtube.com/watch?v=v0YoXCjKMZE" },
+              { "id": "a4", "name": "YouTube Пример 4", "type": "file", "url": "https://www.youtube.com/watch?v=MEiyi2WMfZc" },
+              { "id": "a5", "name": "YouTube Пример 5", "type": "file", "url": "https://www.youtube.com/watch?v=8PCFt1O7EL8" },
+              { "id": "a6", "name": "YouTube Пример 6", "type": "file", "url": "https://www.youtube.com/watch?v=XnVmvMcQ94I" },
+              { "id": "a7", "name": "YouTube Пример 7", "type": "file", "url": "https://www.youtube.com/watch?v=6reJsWxvGyM" },
+              { "id": "a8", "name": "YouTube Пример 8", "type": "file", "url": "https://www.youtube.com/watch?v=JR_U2uCssIg" },
+              { "id": "a9", "name": "YouTube Пример 9", "type": "file", "url": "https://www.youtube.com/watch?v=wBRJdyatvcY" },
+              { "id": "a10", "name": "YouTube Пример 10", "type": "file", "url": "https://www.youtube.com/watch?v=w22qqOORTj4" },
+              { "id": "a11", "name": "YouTube Пример 11", "type": "file", "url": "https://www.youtube.com/watch?v=zf28FvMOko4" },
+              { "id": "a12", "name": "YouTube Пример 12", "type": "file", "url": "https://www.youtube.com/watch?v=gubORj98Y18" },
+              { "id": "a13", "name": "YouTube Пример 13", "type": "file", "url": "https://www.youtube.com/watch?v=dvy6QjHOQ0g" },
+              { "id": "a14", "name": "YouTube Пример 14", "type": "file", "url": "https://www.youtube.com/watch?v=7Mm6eZFl5bM" },
+              { "id": "a15", "name": "YouTube Пример 15", "type": "file", "url": "https://www.youtube.com/watch?v=mwZcCmnbRlA" },
+              { "id": "a16", "name": "YouTube Пример 16", "type": "file", "url": "https://www.youtube.com/watch?v=0k-OnSMcnBs" },
+              { "id": "a17", "name": "YouTube Пример 17", "type": "file", "url": "https://www.youtube.com/watch?v=Hc4cG-p2q4w" },
+              { "id": "a18", "name": "YouTube Пример 18", "type": "file", "url": "https://www.youtube.com/watch?v=1rniKcUW9Xo" },
+              { "id": "a19", "name": "YouTube Пример 19", "type": "file", "url": "https://www.youtube.com/watch?v=wFkR1SvhMZk" },
+              { "id": "a20", "name": "YouTube Пример 20", "type": "file", "url": "https://www.youtube.com/watch?v=2RPNGuyJy-M" },
+              { "id": "a21", "name": "YouTube Пример 21", "type": "file", "url": "https://www.youtube.com/watch?v=2LmZfax1Dxs" },
+              { "id": "a22", "name": "YouTube Пример 22", "type": "file", "url": "https://www.youtube.com/watch?v=7MNXElnwnH8" },
+              { "id": "a23", "name": "YouTube Пример 23", "type": "file", "url": "https://www.youtube.com/watch?v=BvkpGGEoPmk" },
+              { "id": "a24", "name": "YouTube Пример 24", "type": "file", "url": "https://www.youtube.com/watch?v=E76qJdClrbA" },
+              { "id": "a25", "name": "YouTube Пример 25", "type": "file", "url": "https://www.youtube.com/watch?v=J5FM-E4Kcuw" },
+              { "id": "a26", "name": "YouTube Пример 26", "type": "file", "url": "https://www.youtube.com/watch?v=RQll_sGa2pc" },
+              { "id": "a27", "name": "YouTube Пример 27", "type": "file", "url": "https://www.youtube.com/watch?v=un7atXBHZuo" },
+              { "id": "a28", "name": "YouTube Пример 28", "type": "file", "url": "https://www.youtube.com/watch?v=8uibNJmjDoI" },
+              { "id": "a29", "name": "YouTube Пример 29", "type": "file", "url": "https://www.youtube.com/watch?v=OCAnP8cXXk4" },
+              { "id": "a30", "name": "YouTube Пример 30", "type": "file", "url": "https://www.youtube.com/watch?v=ONEs8F3je1k" },
+              { "id": "a31", "name": "YouTube Пример 31", "type": "file", "url": "https://www.youtube.com/watch?v=xEpi3C29PoM" },
+              { "id": "a32", "name": "YouTube Пример 32", "type": "file", "url": "https://www.youtube.com/watch?v=e-38yl71n8I" },
+              { "id": "a33", "name": "YouTube Пример 33", "type": "file", "url": "https://www.youtube.com/watch?v=VPe8D0hekUo" },
+              { "id": "a34", "name": "YouTube Пример 34", "type": "file", "url": "https://www.youtube.com/watch?v=OsSexwfuuTc" },
+              { "id": "a35", "name": "YouTube Пример 35", "type": "file", "url": "https://www.youtube.com/watch?v=QlYb4qv8dGw" },
+              { "id": "a36", "name": "YouTube Пример 36", "type": "file", "url": "https://www.youtube.com/watch?v=V0WGeuQ2GaY" },
+              { "id": "a37", "name": "YouTube Пример 37", "type": "file", "url": "https://www.youtube.com/watch?v=fHqolQwz93U" },
+              { "id": "a38", "name": "YouTube Пример 38", "type": "file", "url": "https://www.youtube.com/watch?v=Woc4jUXBFtM&list=PLMtzJAOD3B7Z0kAGbqdVPZuT91pNIsF-R" },
+              { "id": "a39", "name": "YouTube Пример 39", "type": "file", "url": "https://www.youtube.com/watch?v=U0gbU_EAPRE" },
+              { "id": "a40", "name": "YouTube Пример 40", "type": "file", "url": "https://www.youtube.com/watch?v=hlSDL_oG4R0" },
+              { "id": "a41", "name": "YouTube Пример 41", "type": "file", "url": "https://www.youtube.com/watch?v=bWpU0DpKelU" },
+              { "id": "a42", "name": "YouTube Пример 42", "type": "file", "url": "https://www.youtube.com/watch?v=EVRx2AYeOSA" },
+              { "id": "a43", "name": "YouTube Пример 43", "type": "file", "url": "https://www.youtube.com/watch?v=sr92RVFmDkg" },
+              { "id": "a44", "name": "YouTube Пример 44", "type": "file", "url": "https://www.youtube.com/watch?v=6Jtccoo5g88&t=11s" },
+              { "id": "a45", "name": "YouTube Пример 45", "type": "file", "url": "https://www.youtube.com/watch?v=G7DV0S33MFI" },
+              { "id": "a46", "name": "YouTube Пример 46", "type": "file", "url": "https://www.youtube.com/watch?v=R5KVtgz0lB4" },
+              { "id": "a47", "name": "YouTube Пример 47", "type": "file", "url": "https://www.youtube.com/watch?v=dE3fa-MPsCg" },
+              { "id": "a48", "name": "YouTube Пример 48", "type": "file", "url": "https://www.youtube.com/watch?v=JwRvNHFKGH4" },
+              { "id": "a49", "name": "YouTube Пример 49", "type": "file", "url": "https://www.youtube.com/watch?v=XSRn0maJRfg" },
+              { "id": "a50", "name": "YouTube Пример 50", "type": "file", "url": "https://www.youtube.com/watch?v=uZkh90jzjBI" },
+              { "id": "a51", "name": "YouTube Пример 51", "type": "file", "url": "https://www.youtube.com/watch?v=ADHIyRAwMyc" },
+              { "id": "a52", "name": "YouTube Пример 52", "type": "file", "url": "https://www.youtube.com/results?search_query=autocad+tutorial+2007&sp=eAE%253D" },
+              { "id": "a53", "name": "YouTube Пример 53", "type": "file", "url": "https://www.youtube.com/watch?v=24oKDtIaP-I" },
+              { "id": "a54", "name": "YouTube Пример 54", "type": "file", "url": "https://www.youtube.com/watch?v=t6uWlormym8" },
+              { "id": "a55", "name": "YouTube Пример 55", "type": "file", "url": "https://www.youtube.com/watch?v=ECpGjiinbaw" },
+              { "id": "a56", "name": "YouTube Пример 56", "type": "file", "url": "https://www.youtube.com/watch?v=EITt-2rBm1A" },
+              { "id": "a57", "name": "YouTube Пример 57", "type": "file", "url": "https://www.youtube.com/watch?v=S0ccuSeZ_LU" },
+              { "id": "a58", "name": "YouTube Пример 58", "type": "file", "url": "https://www.youtube.com/watch?v=YNYbnX5wIzA" },
+              { "id": "a59", "name": "YouTube Пример 59", "type": "file", "url": "https://www.youtube.com/watch?v=j_BaRR3GTtU" },
+              { "id": "a60", "name": "YouTube Пример 60", "type": "file", "url": "https://www.youtube.com/watch?v=R8Hd7DUZcF0" },
+              { "id": "a61", "name": "YouTube Пример 61", "type": "file", "url": "https://www.youtube.com/watch?v=pIU6a4ECdlk" },
+              { "id": "a62", "name": "YouTube Пример 62", "type": "file", "url": "https://www.youtube.com/watch?v=ONapRVyXn2E" },
+              { "id": "a63", "name": "YouTube Пример 63", "type": "file", "url": "https://www.youtube.com/watch?v=UGTs5DiUAUI" },
+              { "id": "a64", "name": "YouTube Пример 64", "type": "file", "url": "https://www.youtube.com/watch?v=cmR9cfWJRUU" },
+              { "id": "a65", "name": "YouTube Пример 65", "type": "file", "url": "https://www.youtube.com/watch?v=sGeERfiw2Vk&t=20s" },
+              { "id": "a66", "name": "YouTube Пример 66", "type": "file", "url": "https://www.youtube.com/watch?v=TebtsatwiiU" },
+              { "id": "a67", "name": "YouTube Пример 67", "type": "file", "url": "https://www.youtube.com/watch?v=uy2GvFwVJU4&list=PL970B66C256FA05E1" },
+              { "id": "a68", "name": "YouTube Пример 68", "type": "file", "url": "https://www.youtube.com/watch?v=p2ioGErcZuI" }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "komp-2",
+        "name": "II Година",
+        "type": "folder",
+        "children": [
+          {
+            "id": "op",
+            "name": "Основи на програмирање",
+            "type": "folder",
+            "children": [
+              { "id": "cpp-book", "name": "E-Учебник C++", "type": "file", "url": "https://drive.google.com/file/d/1MGebCy-U-dHE1Jr4YtD5vl-9d1gSS8ZA/view?usp=sharing" },
+              { "id": "cpp-alg", "name": "Алгоритми", "type": "file", "url": "https://drive.google.com/file/d/1x02y_MGRCMrB-f4rhasvAFQKrqX_hMb-/view?usp=sharing" },
+              { "id": "cpp-struct", "name": "Алгоритамски структури", "type": "file", "url": "https://drive.google.com/file/d/19CYXiZ8vLTDRvjm1VzZSkmPLT8Po9Dsq/view?usp=sharing" },
+              { "id": "cpp-prog", "name": "Програмирање", "type": "file", "url": "https://drive.google.com/file/d/1gXXSFSoOUavPdvmDcOI87xwIxbtNELs4/view?usp=sharing" },
+              { "id": "cpp-lang", "name": "Програмски јазици", "type": "file", "url": "https://drive.google.com/file/d/1asrrHA3aa0JMfbShjyqV6igidKvvFGDx/view?usp=sharing" },
+              { "id": "cpp-dev", "name": "Dev-C++ Download", "type": "file", "url": "https://sourceforge.net/projects/orwelldevcpp/files/Setup%20Releases/Dev-Cpp%205.9.2%20TDM-GCC%204.8.1%20Setup.exe/download" },
+              { "id": "cpp-codeblocks", "name": "CodeBlocks Download", "type": "file", "url": "https://sourceforge.net/projects/codeblocks/" },
+              { "id": "cpp-compiler", "name": "CodeBlocks Compiler", "type": "file", "url": "https://jmeubank.github.io/tdm-gcc/articles/2020-03/9.2.0-release" },
+              { "id": "cpp-online", "name": "Online Compiler", "type": "file", "url": "https://www.onlinegdb.com/" },
+              { "id": "cpp-examples", "name": "CPP Examples", "type": "file", "url": "https://codeforwin.org/2015/05/basic-programming-practice-problems.html" },
+              { "id": "cpp-struct2", "name": "Структура на програм", "type": "file", "url": "http://ostugostivar.edu.mk/ostu_nova_zyro/Struktura.htm" },
+              { "id": "cpp-types", "name": "Типови променливи", "type": "file", "url": "http://ostugostivar.edu.mk/ostu_nova_zyro/Tipovi.htm" },
+              { "id": "cpp-types2", "name": "Сите типови", "type": "file", "url": "http://ostugostivar.edu.mk/ostu_nova_zyro/Тип.htm" },
+              { "id": "cpp-op", "name": "Оператори", "type": "file", "url": "http://ostugostivar.edu.mk/ostu_nova_zyro/Operatori.htm" },
+              { "id": "v1", "name": "Вежба 1", "type": "file", "url": "http://ostugostivar.edu.mk/ostu_nova_zyro/vezba1.htm" },
+              { "id": "v3", "name": "Вежба 3", "type": "file", "url": "http://ostugostivar.edu.mk/ostu_nova_zyro/vezba3.htm" },
+              { "id": "v4", "name": "Вежба If", "type": "file", "url": "http://ostugostivar.edu.mk/ostu_nova_zyro/vezba4.htm" },
+              { "id": "v5", "name": "Вежба If-else", "type": "file", "url": "http://ostugostivar.edu.mk/ostu_nova_zyro/vezba5.htm" },
+              { "id": "v9", "name": "Вежба Switch", "type": "file", "url": "http://ostugostivar.edu.mk/ostu_nova_zyro/vezba9.htm" },
+              { "id": "v6", "name": "Вежба For", "type": "file", "url": "http://ostugostivar.edu.mk/ostu_nova_zyro/vezba6.htm" },
+              { "id": "v7", "name": "Вежба While", "type": "file", "url": "http://ostugostivar.edu.mk/ostu_nova_zyro/vezba7.htm" },
+              { "id": "v8", "name": "Вежба Do While", "type": "file", "url": "http://ostugostivar.edu.mk/ostu_nova_zyro/vezba8.htm" },
+              { "id": "v10", "name": "Вежба типови", "type": "file", "url": "http://ostugostivar.edu.mk/ostu_nova_zyro/vezba10.htm" },
+              { "id": "theory-func", "name": "Теорија функции", "type": "file", "url": "http://ostugostivar.edu.mk/ostu_nova_zyro/Функции-во-С++.pdf" },
+              { "id": "theory-arr", "name": "Теорија низи", "type": "file", "url": "http://ostugostivar.edu.mk/ostu_nova_zyro/NIZI-C++.pdf" },
+              { "id": "arr1", "name": "Вежба низа 1", "type": "file", "url": "http://ostugostivar.edu.mk/ostu_nova_zyro/vezba_pole1.htm" },
+              { "id": "arr2", "name": "Вежба низа 2", "type": "file", "url": "http://ostugostivar.edu.mk/ostu_nova_zyro/vezba_pole3.htm" },
+              { "id": "mat-theory", "name": "Теорија матрици", "type": "file", "url": "http://ostugostivar.edu.mk/ostu_nova_zyro/dvodimenzinalni-nizi.pdf" },
+              { "id": "mat-zad", "name": "Задачи матрици", "type": "file", "url": "http://ostugostivar.edu.mk/ostu_nova_zyro/Дводимензионални низи.pdf" },
+              { "id": "mat1", "name": "Вежба матрица 1", "type": "file", "url": "http://ostugostivar.edu.mk/ostu_nova_zyro/vezba_matrica1.htm" },
+              { "id": "mat2", "name": "Вежба матрица 2", "type": "file", "url": "http://ostugostivar.edu.mk/ostu_nova_zyro/vezba_matrica2.htm" },
+              { "id": "ptr", "name": "Теорија покажувачи", "type": "file", "url": "http://ostugostivar.edu.mk/ostu_nova_zyro/Покажувачи.pdf" },
+              { "id": "ptr1", "name": "Вежба покажувачи 1", "type": "file", "url": "http://ostugostivar.edu.mk/ostu_nova_zyro/vezba_pok1.htm" },
+              { "id": "ptr2", "name": "Вежба покажувачи 2", "type": "file", "url": "http://ostugostivar.edu.mk/ostu_nova_zyro/vezba_pok2.htm" },
+              { "id": "struct", "name": "Теорија структури", "type": "file", "url": "http://ostugostivar.edu.mk/ostu_nova_zyro/Структури.pdf" },
+              { "id": "struct-v", "name": "Вежби структури", "type": "file", "url": "http://ostugostivar.edu.mk/ostu_nova_zyro/vezba_struct.htm" },
+              { "id": "files", "name": "Теорија датотеки", "type": "file", "url": "http://ostugostivar.edu.mk/ostu_nova_zyro/Датотеки.pdf" },
+              { "id": "f1", "name": "Вежба датотеки 1", "type": "file", "url": "http://ostugostivar.edu.mk/ostu_nova_zyro/vezba_dat1.htm" },
+              { "id": "f2", "name": "Вежба датотеки 2", "type": "file", "url": "http://ostugostivar.edu.mk/ostu_nova_zyro/vezba_dat2.htm" },
+              { "id": "f3", "name": "Вежба датотеки 3", "type": "file", "url": "http://ostugostivar.edu.mk/ostu_nova_zyro/vezba_dat3.htm" }
+            ]
+          },
+          {
+            "id": "pascal-komp2",
+            "name": "Pascal",
+            "type": "folder",
+            "children": []
+          },
+          { "id": "em-mk", "name": "Електрични мерења (МК)", "type": "file", "url": "https://www.e-ucebnici.mon.gov.mk/pdf/Elektricni%20merenja%20-%20WEB.pdf" },
+          { "id": "em-alb", "name": "Електрични мерења (АЛБ)", "type": "file", "url": "https://www.e-ucebnici.mon.gov.mk/pdf/Elektricni%20merenja_ALB_web.pdf" }
+        ]
+      },
+      {
+        "id": "komp-3",
+        "name": "III Година",
+        "type": "folder",
+        "children": [
+          {
+            "id": "oop",
+            "name": "ООП со C++",
+            "type": "folder",
+            "children": [
+              { "id": "devcpp", "name": "Dev-C++ Download", "type": "file", "url": "https://sourceforge.net/projects/orwelldevcpp/files/Setup%20Releases/Dev-Cpp%205.9.2%20TDM-GCC%204.8.1%20Setup.exe/download" },
+              { "id": "codeblocks", "name": "CodeBlocks", "type": "file", "url": "https://sourceforge.net/projects/codeblocks/" },
+              { "id": "compiler", "name": "Compiler", "type": "file", "url": "https://jmeubank.github.io/tdm-gcc/articles/2020-03/9.2.0-release" },
+              { "id": "online", "name": "Online Compiler", "type": "file", "url": "https://www.onlinegdb.com/" },
+              { "id": "oop1", "name": "Текстуални низи", "type": "file", "url": "http://ostugostivar.edu.mk/OOP/OOP_materijal/OOP_nizi.htm" },
+              { "id": "oop2", "name": "Стрингови", "type": "file", "url": "http://ostugostivar.edu.mk/OOP/OOP_materijal/OOP_string.htm" },
+              { "id": "oop3", "name": "Рекурзија", "type": "file", "url": "http://ostugostivar.edu.mk/OOP/OOP_materijal/OOP_rekurzija.htm" },
+              { "id": "oop4", "name": "Структури", "type": "file", "url": "https://drive.google.com/file/d/1eQT3FPHmba2ziCiB8BTjKXXLDrCxO6lh/view" },
+              { "id": "oop5", "name": "Структури примери", "type": "file", "url": "http://ostugostivar.edu.mk/OOP/OOP_materijal/OOP_strukturi_funkcii.htm" },
+              { "id": "oop6", "name": "Класи теорија", "type": "file", "url": "https://drive.google.com/file/d/1GHbwyUUWBD0wD9zlkGkGH8OXd2ISVMzw/view" },
+              { "id": "oop7", "name": "Класи конструктор", "type": "file", "url": "http://ostugostivar.edu.mk/OOP/OOP_materijal/OOP_klasi_konstruktor.htm" },
+              { "id": "oop8", "name": "Задачи класи", "type": "file", "url": "https://drive.google.com/file/d/1ep2UjmGcdaKhTkZsdwQkrcURD-CLPLvb/view" },
+              { "id": "oop9", "name": "Примери класи", "type": "file", "url": "http://ostugostivar.edu.mk/OOP/OOP_materijal/OOP_klasi_primeri.htm" },
+              { "id": "oop10", "name": "Динамичка алокација", "type": "file", "url": "http://ostugostivar.edu.mk/OOP/OOP_materijal/OOP_klasi_dynalloc.htm" },
+              { "id": "oop11", "name": "Overload", "type": "file", "url": "http://ostugostivar.edu.mk/OOP/OOP_materijal/OOP_opera_over.htm" },
+              { "id": "oop12", "name": "Наследување", "type": "file", "url": "http://ostugostivar.edu.mk/OOP/OOP_materijal/OOP_nasleduvanje.htm" },
+              { "id": "oop13", "name": "Мулти наследување", "type": "file", "url": "http://ostugostivar.edu.mk/OOP/OOP_materijal/OOP_multi_level.htm" },
+              { "id": "oop14", "name": "Friend функции", "type": "file", "url": "http://ostugostivar.edu.mk/OOP/OOP_materijal/OOP_friend_funkcii_klasi.htm" },
+              { "id": "oop15", "name": "Виртуелни функции", "type": "file", "url": "http://ostugostivar.edu.mk/OOP/OOP_materijal/OOP_virtuelni_funkcii.htm" },
+              { "id": "oop16", "name": "Полиморфизам", "type": "file", "url": "http://ostugostivar.edu.mk/OOP/OOP_materijal/OOP_polimorfizam.htm" },
+              { "id": "oop17", "name": "Датотеки теорија", "type": "file", "url": "https://drive.google.com/file/d/1OdgXbjO1s8GQBn13I7M7Gd4KQhQYPzKU/view" },
+              { "id": "oop18", "name": "Вежба датотеки 1", "type": "file", "url": "http://ostugostivar.edu.mk/OOP/OOP_materijal/vezba_dat1.htm" },
+              { "id": "oop19", "name": "Вежба датотеки 2", "type": "file", "url": "http://ostugostivar.edu.mk/OOP/OOP_materijal/vezba_dat2.htm" },
+              { "id": "oop20", "name": "Вежба датотеки 3", "type": "file", "url": "http://ostugostivar.edu.mk/OOP/OOP_materijal/vezba_dat3.htm" }
+            ]
+          },
+          {
+            "id": "js",
+            "name": "JavaScript",
+            "type": "folder",
+            "children": [
+              { "id": "js1", "name": "Синтакса", "type": "file", "url": "http://ostugostivar.edu.mk/JAVA/JAVA_materijal/java_sintaksa.htm" },
+              { "id": "js2", "name": "HTML тагови", "type": "file", "url": "https://drive.google.com/file/d/1EIZEIFswHm_4zNSZ9Z4MEvqo5UCieYta/view" },
+              { "id": "js3", "name": "Типови", "type": "file", "url": "http://ostugostivar.edu.mk/JAVA/JAVA_materijal/java_promenlivi.htm" },
+              { "id": "js4", "name": "Оператори", "type": "file", "url": "http://ostugostivar.edu.mk/JAVA/JAVA_materijal/java_operatori.htm" },
+              { "id": "js5", "name": "IF", "type": "file", "url": "http://ostugostivar.edu.mk/JAVA/JAVA_materijal/java_izbor_if.htm" },
+              { "id": "js6", "name": "Switch", "type": "file", "url": "http://ostugostivar.edu.mk/JAVA/JAVA_materijal/java_izbor_switch.htm" },
+              { "id": "js7", "name": "For", "type": "file", "url": "http://ostugostivar.edu.mk/JAVA/JAVA_materijal/java_for.htm" },
+              { "id": "js8", "name": "While", "type": "file", "url": "http://ostugostivar.edu.mk/JAVA/JAVA_materijal/java_while.htm" },
+              { "id": "js9", "name": "DOM", "type": "file", "url": "http://ostugostivar.edu.mk/JAVA/JAVA_materijal/java_html_dom.htm" },
+              { "id": "js10", "name": "Анимации", "type": "file", "url": "http://ostugostivar.edu.mk/JAVA/JAVA_materijal/java_anim.htm" }
+            ]
+          },
+          {
+            "id": "php",
+            "name": "PHP",
+            "type": "folder",
+            "children": [
+              { "id": "php0", "name": "WAMP Server", "type": "file", "url": "https://sourceforge.net/projects/wampserver/" },
+              { "id": "php1", "name": "Променливи", "type": "file", "url": "http://ostugostivar.edu.mk/PHP/PHP_materijal/PHP_promenlivi.htm" },
+              { "id": "php2", "name": "Константи", "type": "file", "url": "http://ostugostivar.edu.mk/PHP/PHP_materijal/PHP_konstanti.htm" },
+              { "id": "php3", "name": "Echo/Print", "type": "file", "url": "http://ostugostivar.edu.mk/PHP/PHP_materijal/PHP_echo_print.htm" },
+              { "id": "php4", "name": "Оператори", "type": "file", "url": "http://ostugostivar.edu.mk/PHP/PHP_materijal/PHP_operatori.htm" },
+              { "id": "php5", "name": "IF", "type": "file", "url": "http://ostugostivar.edu.mk/PHP/PHP_materijal/PHP_if.htm" },
+              { "id": "php6", "name": "FOR", "type": "file", "url": "http://ostugostivar.edu.mk/PHP/PHP_materijal/PHP_for.htm" },
+              { "id": "php7", "name": "WHILE", "type": "file", "url": "http://ostugostivar.edu.mk/PHP/PHP_materijal/PHP_while.htm" },
+              { "id": "php8", "name": "Функции", "type": "file", "url": "http://ostugostivar.edu.mk/PHP/PHP_materijal/PHP_sopstveni_funkcii.htm" }
+            ]
+          },
+          {
+            "id": "cpp-komp3",
+            "name": "Програмски јазик C++",
+            "type": "folder",
+            "children": []
+          },
+          {
+            "id": "pascal-komp3",
+            "name": "Pascal",
+            "type": "folder",
+            "children": [
+              { "id": "p1", "name": "Turbo Pascal Download", "type": "file", "url": "https://drive.google.com/file/d/1xfcYL1dWQRMRUCvIcG6H1kJnTHBcNh9M/view" },
+              { "id": "p2", "name": "Pascal Windows", "type": "file", "url": "https://sourceforge.net/projects/turbopascal-wdb/" },
+              { "id": "p3", "name": "Dev Pascal", "type": "file", "url": "https://www.bloodshed.net/devpascal.html" },
+              { "id": "p4", "name": "Типови", "type": "file", "url": "http://ostugostivar.edu.mk/pascal_nova_zyro/promenlivi.htm" },
+              { "id": "p5", "name": "Низи", "type": "file", "url": "http://ostugostivar.edu.mk/pascal_nova_zyro/t_nizi.htm" },
+              { "id": "p6", "name": "Матрици", "type": "file", "url": "http://ostugostivar.edu.mk/pascal_nova_zyro/t_matrici.htm" },
+              { "id": "p7", "name": "Покажувачи", "type": "file", "url": "http://ostugostivar.edu.mk/pascal_nova_zyro/t_pointers.htm" },
+              { "id": "p8", "name": "Слогови", "type": "file", "url": "http://ostugostivar.edu.mk/pascal_nova_zyro/t_record.htm" },
+              { "id": "p9", "name": "Датотеки", "type": "file", "url": "http://ostugostivar.edu.mk/pascal_nova_zyro/t_files.htm" },
+              { "id": "p10", "name": "Множества", "type": "file", "url": "http://ostugostivar.edu.mk/pascal_nova_zyro/t_sets.htm" },
+              { "id": "p11", "name": "Функции", "type": "file", "url": "http://ostugostivar.edu.mk/pascal_nova_zyro/t_func.htm" },
+              { "id": "p12", "name": "Процедури", "type": "file", "url": "http://ostugostivar.edu.mk/pascal_nova_zyro/t_proc.htm" }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "komp-4",
+        "name": "IV Година",
+        "type": "folder",
+        "children": [
+          {
+            "id": "java",
+            "name": "Java",
+            "type": "folder",
+            "children": [
+              { "id": "java-book", "name": "Книга Јава", "type": "file", "url": "https://drive.google.com/file/d/1gT8D9q3QUwHdzzHlk8PJ1N5QkfiZ7m3v/view?usp=sharing" },
+              { "id": "java-netbeans", "name": "Java NetBeans 12.4", "type": "file", "url": "https://drive.google.com/file/d/1dpA0qiKqpbPkT16ZCf_o9NOxYTVkUvSO/view?usp=drive_link" },
+              { "id": "java-jdk", "name": "JDK 8u301 windows 64", "type": "file", "url": "https://drive.google.com/file/d/1jY1P7LXrooMOQh2hcgthGQJD2NkTqu3y/view?usp=sharing" },
+              { "id": "java1", "name": "Вовед во Јава", "type": "file", "url": "http://ostugostivar.edu.mk/JAVA/JAVA_materijal/Java_voved.htm" },
+              { "id": "java2", "name": "JVM, JSP, Applets, J2EE, Java Beans, Mobile", "type": "file", "url": "http://ostugostivar.edu.mk/JAVA/JAVA_materijal/Java.htm" },
+              { "id": "java3", "name": "Примитивни и непримитивни податочни типови", "type": "file", "url": "http://ostugostivar.edu.mk/JAVA/JAVA_materijal/Примитивни податочни типови.htm" },
+              { "id": "java4", "name": "Java типови на променливи", "type": "file", "url": "http://ostugostivar.edu.mk/JAVA/JAVA_materijal/Променливи.htm" },
+              { "id": "java5", "name": "Java оператори", "type": "file", "url": "http://ostugostivar.edu.mk/JAVA/JAVA_materijal/java_operatori.htm" },
+              { "id": "java6", "name": "Java структури за избор - if", "type": "file", "url": "http://ostugostivar.edu.mk/JAVA/JAVA_materijal/java_izbor_if.htm" },
+              { "id": "java7", "name": "Java структури за избор - switch", "type": "file", "url": "http://ostugostivar.edu.mk/JAVA/JAVA_materijal/java_izbor_switch.htm" },
+              { "id": "java8", "name": "Java структури за повторување - for", "type": "file", "url": "http://ostugostivar.edu.mk/JAVA/JAVA_materijal/java_for.htm" },
+              { "id": "java9", "name": "Java структури за повторување - while и do-while", "type": "file", "url": "http://ostugostivar.edu.mk/JAVA/JAVA_materijal/java_while.htm" },
+              { "id": "java10", "name": "Java наредба break и continue", "type": "file", "url": "http://ostugostivar.edu.mk/JAVA/JAVA_materijal/java_break.htm" },
+              { "id": "java11", "name": "Java String Class", "type": "file", "url": "https://drive.google.com/file/d/10YrLvYbFCcIFdG8I2Q7ryNoBfEVdTQaV/view?usp=sharing" },
+              { "id": "java12", "name": "Java работа со датум", "type": "file", "url": "https://drive.google.com/file/d/16VE_OviGVdpldE9k89sIpJpFKVT39ECG/view?usp=sharing" },
+              { "id": "java13", "name": "Класи", "type": "file", "url": "http://ostugostivar.edu.mk/JAVA/JAVA_materijal/Класа.htm" },
+              { "id": "java14", "name": "Објекти во Java", "type": "file", "url": "https://drive.google.com/file/d/13dqXYotByAt6u-zPxJ2oxa9w4-3e7_HS/view?usp=sharing" },
+              { "id": "java15", "name": "ООП концепти во Јава - Прв дел", "type": "file", "url": "https://drive.google.com/file/d/1qWAbm28YhSo03NnsK7uilxppXo6AuLgr/view?usp=sharing" },
+              { "id": "java16", "name": "ООП концепти во Јава - Втор дел", "type": "file", "url": "https://drive.google.com/file/d/109uCeScvDqj_Nzof9iuUUeutZjejPRhf/view?usp=sharing" },
+              { "id": "java17", "name": "ООП концепти во Јава - Трет дел", "type": "file", "url": "https://drive.google.com/file/d/14p9EuLpKHtlKnvw1aDrRCT__RFZ_voQ2/view?usp=sharing" },
+              { "id": "java18", "name": "Проект - Java", "type": "file", "url": "http://ostugostivar.edu.mk/JAVA/JAVA_materijal/Proekt_Java.htm" },
+              { "id": "java19", "name": "Аплети во Java", "type": "file", "url": "http://ostugostivar.edu.mk/JAVA/JAVA_materijal/Аплет.htm" }
+            ]
+          },
+          {
+            "id": "csharp",
+            "name": "C#",
+            "type": "folder",
+            "children": [
+              { "id": "cs-vs", "name": "Microsoft Visual Studio 2015", "type": "file", "url": "https://drive.google.com/file/d/1W9oLMrSWI46-paaJwAwghLFRWgrk3syt/view?usp=sharing" },
+              { "id": "cs1", "name": "Microsoft .NET Framework, CLR, IL", "type": "file", "url": "http://ostugostivar.edu.mk/CSharp/CSharp_materijal/CSharp_NetFramework.htm" },
+              { "id": "cs2", "name": "Конзолни, веб страни, веб апликации, веб сервиси во C#", "type": "file", "url": "http://ostugostivar.edu.mk/CSharp/CSharp_materijal/CSharp_konzolna.htm" },
+              { "id": "cs3", "name": "Windows апликации во C#", "type": "file", "url": "http://ostugostivar.edu.mk/CSharp/CSharp_materijal/CSharp_windows.htm" },
+              { "id": "cs4", "name": "Windows апликација ПОЗДРАВ во C#", "type": "file", "url": "http://ostugostivar.edu.mk/CSharp/CSharp_materijal/CSharp_pozdrav.htm" },
+              { "id": "cs5", "name": "Типови на променливи во C#", "type": "file", "url": "http://ostugostivar.edu.mk/CSharp/CSharp_materijal/CSharp_tipovi_promenlivi.htm" },
+              { "id": "cs6", "name": "Константи во C#", "type": "file", "url": "http://ostugostivar.edu.mk/CSharp/CSharp_materijal/CSharp_konstanti.htm" },
+              { "id": "cs7", "name": "Оператори во C#", "type": "file", "url": "http://ostugostivar.edu.mk/CSharp/CSharp_materijal/CSharp_operatori.htm" },
+              { "id": "cs8", "name": "Структура за избор if во C#", "type": "file", "url": "http://ostugostivar.edu.mk/CSharp/CSharp_materijal/CSharp_izbor_if.htm" },
+              { "id": "cs9", "name": "Структура за избор switch во C#", "type": "file", "url": "http://ostugostivar.edu.mk/CSharp/CSharp_materijal/CSharp_izbor_switch.htm" },
+              { "id": "cs10", "name": "Break и continue во C#", "type": "file", "url": "http://ostugostivar.edu.mk/CSharp/CSharp_materijal/CSharp_break.htm" },
+              { "id": "cs11", "name": "Структура за повторување for во C#", "type": "file", "url": "http://ostugostivar.edu.mk/CSharp/CSharp_materijal/CSharp_for.htm" },
+              { "id": "cs12", "name": "Структура за повторување while во C#", "type": "file", "url": "http://ostugostivar.edu.mk/CSharp/CSharp_materijal/CSharp_while.htm" },
+              { "id": "cs13", "name": "Структура за повторување do while во C#", "type": "file", "url": "http://ostugostivar.edu.mk/CSharp/CSharp_materijal/CSharp_dowhile.htm" },
+              { "id": "cs14", "name": "Наредба goto во C#", "type": "file", "url": "http://ostugostivar.edu.mk/CSharp/CSharp_materijal/CSharp_goto.htm" },
+              { "id": "cs15", "name": "Стрингови во C#", "type": "file", "url": "http://ostugostivar.edu.mk/CSharp/CSharp_materijal/CSharp_string.htm" },
+              { "id": "cs16", "name": "Низи во C#", "type": "file", "url": "http://ostugostivar.edu.mk/CSharp/CSharp_materijal/CSharp_nizi.htm" },
+              { "id": "cs17", "name": "Матрици во C#", "type": "file", "url": "http://ostugostivar.edu.mk/CSharp/CSharp_materijal/CSharp_matrici.htm" },
+              { "id": "cs18", "name": "Класи, објекти, инстанци, методи, конструктори", "type": "file", "url": "http://ostugostivar.edu.mk/CSharp/CSharp_materijal/CSharp_klasi.htm" },
+              { "id": "cs19", "name": "Private, protected, public, internal полиња во класи", "type": "file", "url": "http://ostugostivar.edu.mk/CSharp/CSharp_materijal/CSharp_pristap.htm" },
+              { "id": "cs20", "name": "Класи конструктор и деструктор", "type": "file", "url": "http://ostugostivar.edu.mk/CSharp/CSharp_materijal/CSharp_konstructor.htm" },
+              { "id": "cs21", "name": "Класи наследување", "type": "file", "url": "http://ostugostivar.edu.mk/CSharp/CSharp_materijal/CSharp_nasleduvanje.htm" },
+              { "id": "cs22", "name": "Апстрактни класи", "type": "file", "url": "http://ostugostivar.edu.mk/CSharp/CSharp_materijal/CSharp_apstraktni_klasi.htm" },
+              { "id": "cs23", "name": "Проект во C#", "type": "file", "url": "http://ostugostivar.edu.mk/CSharp/CSharp_materijal/proekt.htm" }
+            ]
+          },
+          {
+            "id": "bazi",
+            "name": "Бази на податоци",
+            "type": "folder",
+            "children": [
+              { "id": "bazi-wamp", "name": "WAMP Server download", "type": "file", "url": "https://sourceforge.net/projects/wampserver/" },
+              { "id": "bazi-off", "name": "Office 2015/2016 download", "type": "file", "url": "https://drive.google.com/file/d/1XkcDbii8I83NrCH6cJXtL2RHF6SEFG35/view?usp=sharing" },
+              { "id": "bazi1", "name": "Бази на податоци - скрипта", "type": "file", "url": "https://drive.google.com/file/d/1kHeXGM02qLPWs2qX-wgLNxW0CeadxFCk/view?usp=sharing" },
+              { "id": "bazi2", "name": "Модели на бази на податоци", "type": "file", "url": "https://drive.google.com/file/d/1vA4ArDvt7F_tepgzIgHFoPu4NegftGDu/view?usp=sharing" },
+              { "id": "bazi3", "name": "Системи за управување со бази на податоци", "type": "file", "url": "https://drive.google.com/file/d/1bC-k1SeeL7N5qqI91nB7EItMOGA28_5m/view?usp=sharing" },
+              { "id": "bazi4", "name": "Релациони бази на податоци - учебник", "type": "file", "url": "https://drive.google.com/file/d/1POkbgiz2lkL9URn0HiednUXgrWXuwesU/view?usp=sharing" },
+              { "id": "bazi5", "name": "Релациони бази на податоци", "type": "file", "url": "https://drive.google.com/file/d/1QEjIcIn9-oR2UjpRvs7R0Vb8J8MBN4HC/view?usp=sharing" },
+              { "id": "bazi6", "name": "Видови на бази на податоци", "type": "file", "url": "https://drive.google.com/file/d/1uyjqLVz99_NDnLP-HdklEixnJh2rnM6L/view?usp=sharing" },
+              { "id": "bazi7", "name": "Типови на податоци", "type": "file", "url": "http://ostugostivar.edu.mk/BAZI/BAZI_materijal/MySQL Типови на податоци.htm" },
+              { "id": "bazi8", "name": "Креирање на база на податоци - phpMyAdmin", "type": "file", "url": "https://drive.google.com/file/d/1LgeOirK3X6BZ3FwLxRVAqW3BfoH_cImd/view?usp=sharing" },
+              { "id": "bazi9", "name": "Креирање на табели - phpMyAdmin", "type": "file", "url": "https://drive.google.com/file/d/1UUNTDeySfBSLqEwsCurzxQK_q1ZSQ0nN/view?usp=sharing" },
+              { "id": "bazi10", "name": "Креирање на примарен клуч - phpMyAdmin", "type": "file", "url": "https://drive.google.com/file/d/1rXpmkXojwek4c6U7rr7K4B2G1f99dleA/view?usp=sharing" },
+              { "id": "bazi11", "name": "Креирање на релации меѓу табелите - phpMyAdmin", "type": "file", "url": "https://drive.google.com/file/d/1WCci0ETAHlwx8Q1vYkbEqFPnN-04giU5/view?usp=sharing" },
+              { "id": "bazi12", "name": "Креирање на прашалници - phpMyAdmin", "type": "file", "url": "https://drive.google.com/file/d/1oLPV8GyiSTeiB2-2c8NRXZbGk2ZtoSWF/view?usp=sharing" },
+              { "id": "bazi13", "name": "Експортирање на база на податоци - phpMyAdmin", "type": "file", "url": "https://drive.google.com/file/d/1UcwJR8D5GwhT1HbcebR3fFSHhwzc1sfC/view?usp=sharing" },
+              { "id": "bazi14", "name": "Импортирање на база на податоци - phpMyAdmin", "type": "file", "url": "https://drive.google.com/file/d/1HAK_U8uYmWjTVs9lVPzXczctol4AQ3V1/view?usp=sharing" },
+              { "id": "bazi15", "name": "Креирање на база на податоци со PHP скрипта", "type": "file", "url": "http://ostugostivar.edu.mk/BAZI/BAZI_materijal/PHP_bazi_conn.htm" },
+              { "id": "bazi16", "name": "Креирање на табела со PHP скрипта", "type": "file", "url": "http://ostugostivar.edu.mk/BAZI/BAZI_materijal/PHP_bazi_tabela.htm" },
+              { "id": "bazi17", "name": "Внес на податоци во табела со PHP скрипта", "type": "file", "url": "http://ostugostivar.edu.mk/BAZI/BAZI_materijal/PHP_bazi_vnes.htm" },
+              { "id": "bazi18", "name": "Промена на податоци во табела со PHP скрипта", "type": "file", "url": "http://ostugostivar.edu.mk/1BAZI_materijal/PHP_bazi_edit.htm" },
+              { "id": "bazi19", "name": "Приказ на податоци од табела со PHP скрипта", "type": "file", "url": "http://ostugostivar.edu.mk/BAZI/BAZI_materijal/PHP_bazi_prikaz.htm" },
+              { "id": "bazi20", "name": "Бришење на податоци од табела со PHP скрипта", "type": "file", "url": "http://ostugostivar.edu.mk/BAZI/BAZI_materijal/PHP_bazi_brisenje.htm" },
+              { "id": "bazi21", "name": "Внес на податоци од HTML во табела со PHP скрипта", "type": "file", "url": "http://ostugostivar.edu.mk/BAZI/BAZI_materijal/HTML_PHP_bazi_vnes.htm" },
+              { "id": "bazi22", "name": "Промена на податоци од HTML во табела со PHP скрипта", "type": "file", "url": "http://ostugostivar.edu.mk/BAZI/BAZI_materijal/HTML_PHP_bazi_edit.htm" },
+              { "id": "bazi23", "name": "Бришење на податоци од HTML од табела со PHP скрипта", "type": "file", "url": "http://ostugostivar.edu.mk/BAZI/BAZI_materijal/HTML_PHP_bazi_brisi.htm" },
+              { "id": "bazi24", "name": "Приказ на податоци во HTML од табела со PHP скрипта", "type": "file", "url": "http://ostugostivar.edu.mk/BAZI/BAZI_materijal/HTML_PHP_bazi_prikaz.htm" }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "masinski",
+    "name": "Машински техничар",
+    "type": "folder",
+    "children": [
+      {
+        "id": "masinski-1",
+        "name": "I Година",
+        "type": "folder",
+        "children": [
+          {
+            "id": "mas-predmet1",
+            "name": "Машинство",
+            "type": "folder",
+            "children": [
+              { "id": "mas-link-1", "name": "Агропроизводство", "type": "file", "url": "https://ostugostivar.edu.mk/text/vlado/Агропроизводство.htm" },
+              { "id": "mas-link-2", "name": "Градежништво", "type": "file", "url": "https://ostugostivar.edu.mk/text/vlado/Градежништво.htm" },
+              { "id": "mas-link-3", "name": "Дрвна индустрија", "type": "file", "url": "https://ostugostivar.edu.mk/text/vlado/Дрвна индустрија.htm" },
+              { "id": "mas-link-4", "name": "Индустрија за пијалоци", "type": "file", "url": "https://ostugostivar.edu.mk/text/vlado/Индустрија за пијалоци.htm" },
+              { "id": "mas-link-5", "name": "Машини и опрема", "type": "file", "url": "https://ostugostivar.edu.mk/text/vlado/Машини и опрема.htm" },
+              { "id": "mas-link-6", "name": "Медицина", "type": "file", "url": "https://ostugostivar.edu.mk/text/vlado/Медицина.htm" },
+              { "id": "mas-link-7", "name": "Опрема", "type": "file", "url": "https://ostugostivar.edu.mk/text/vlado/Опрема.htm" },
+              { "id": "mas-link-8", "name": "Општо", "type": "file", "url": "https://ostugostivar.edu.mk/text/vlado/Општо.htm" },
+              { "id": "mas-link-9", "name": "Оружје", "type": "file", "url": "https://ostugostivar.edu.mk/text/vlado/Оружје.htm" },
+              { "id": "mas-link-10", "name": "Преработувачка месна индустрија", "type": "file", "url": "https://ostugostivar.edu.mk/text/vlado/Преработувачка месна индустрија.htm" },
+              { "id": "mas-link-11", "name": "Прехрамбена индустрија", "type": "file", "url": "https://ostugostivar.edu.mk/text/vlado/Прехрамбена индустрија.htm" },
+              { "id": "mas-link-12", "name": "Рецирклажа на отпад", "type": "file", "url": "https://ostugostivar.edu.mk/text/vlado/Рецирклажа  на отпад.htm" },
+              { "id": "mas-link-13", "name": "Рударство", "type": "file", "url": "https://ostugostivar.edu.mk/text/vlado/Рударство.htm" },
+              { "id": "mas-link-14", "name": "Сточарство и живинарство", "type": "file", "url": "https://ostugostivar.edu.mk/text/vlado/Сточарство и живинарство.htm" },
+              { "id": "mas-link-15", "name": "Текстилна индустрија", "type": "file", "url": "https://ostugostivar.edu.mk/text/vlado/Текстилна индустрија.htm" },
+              { "id": "mas-link-16", "name": "Технологија на обработка", "type": "file", "url": "https://ostugostivar.edu.mk/text/vlado/Технологија на обработка.htm" }
+            ]
+          },
+          {
+            "id": "mas-autocad",
+            "name": "AutoCad",
+            "type": "folder",
+            "children": [
+              { "id": "mas-a0", "name": "YouTube Пример 0", "type": "file", "url": "https://www.youtube.com/watch?v=wY3rezjj9es&t=371s" },
+              { "id": "mas-a1", "name": "YouTube Пример 1", "type": "file", "url": "https://www.youtube.com/watch?v=eMdCDFISkiw" },
+              { "id": "mas-a2", "name": "YouTube Пример 2", "type": "file", "url": "https://www.youtube.com/watch?v=dxtq_sy7Gw0" },
+              { "id": "mas-a3", "name": "YouTube Пример 3", "type": "file", "url": "https://www.youtube.com/watch?v=v0YoXCjKMZE" },
+              { "id": "mas-a4", "name": "YouTube Пример 4", "type": "file", "url": "https://www.youtube.com/watch?v=MEiyi2WMfZc" },
+              { "id": "mas-a5", "name": "YouTube Пример 5", "type": "file", "url": "https://www.youtube.com/watch?v=8PCFt1O7EL8" },
+              { "id": "mas-a6", "name": "YouTube Пример 6", "type": "file", "url": "https://www.youtube.com/watch?v=XnVmvMcQ94I" },
+              { "id": "mas-a7", "name": "YouTube Пример 7", "type": "file", "url": "https://www.youtube.com/watch?v=6reJsWxvGyM" },
+              { "id": "mas-a8", "name": "YouTube Пример 8", "type": "file", "url": "https://www.youtube.com/watch?v=JR_U2uCssIg" },
+              { "id": "mas-a9", "name": "YouTube Пример 9", "type": "file", "url": "https://www.youtube.com/watch?v=wBRJdyatvcY" },
+              { "id": "mas-a10", "name": "YouTube Пример 10", "type": "file", "url": "https://www.youtube.com/watch?v=w22qqOORTj4" },
+              { "id": "mas-a11", "name": "YouTube Пример 11", "type": "file", "url": "https://www.youtube.com/watch?v=zf28FvMOko4" },
+              { "id": "mas-a12", "name": "YouTube Пример 12", "type": "file", "url": "https://www.youtube.com/watch?v=gubORj98Y18" },
+              { "id": "mas-a13", "name": "YouTube Пример 13", "type": "file", "url": "https://www.youtube.com/watch?v=dvy6QjHOQ0g" },
+              { "id": "mas-a14", "name": "YouTube Пример 14", "type": "file", "url": "https://www.youtube.com/watch?v=7Mm6eZFl5bM" },
+              { "id": "mas-a15", "name": "YouTube Пример 15", "type": "file", "url": "https://www.youtube.com/watch?v=mwZcCmnbRlA" },
+              { "id": "mas-a16", "name": "YouTube Пример 16", "type": "file", "url": "https://www.youtube.com/watch?v=0k-OnSMcnBs" },
+              { "id": "mas-a17", "name": "YouTube Пример 17", "type": "file", "url": "https://www.youtube.com/watch?v=Hc4cG-p2q4w" },
+              { "id": "mas-a18", "name": "YouTube Пример 18", "type": "file", "url": "https://www.youtube.com/watch?v=1rniKcUW9Xo" },
+              { "id": "mas-a19", "name": "YouTube Пример 19", "type": "file", "url": "https://www.youtube.com/watch?v=wFkR1SvhMZk" },
+              { "id": "mas-a20", "name": "YouTube Пример 20", "type": "file", "url": "https://www.youtube.com/watch?v=2RPNGuyJy-M" },
+              { "id": "mas-a21", "name": "YouTube Пример 21", "type": "file", "url": "https://www.youtube.com/watch?v=2LmZfax1Dxs" },
+              { "id": "mas-a22", "name": "YouTube Пример 22", "type": "file", "url": "https://www.youtube.com/watch?v=7MNXElnwnH8" },
+              { "id": "mas-a23", "name": "YouTube Пример 23", "type": "file", "url": "https://www.youtube.com/watch?v=BvkpGGEoPmk" },
+              { "id": "mas-a24", "name": "YouTube Пример 24", "type": "file", "url": "https://www.youtube.com/watch?v=E76qJdClrbA" },
+              { "id": "mas-a25", "name": "YouTube Пример 25", "type": "file", "url": "https://www.youtube.com/watch?v=J5FM-E4Kcuw" },
+              { "id": "mas-a26", "name": "YouTube Пример 26", "type": "file", "url": "https://www.youtube.com/watch?v=RQll_sGa2pc" },
+              { "id": "mas-a27", "name": "YouTube Пример 27", "type": "file", "url": "https://www.youtube.com/watch?v=un7atXBHZuo" },
+              { "id": "mas-a28", "name": "YouTube Пример 28", "type": "file", "url": "https://www.youtube.com/watch?v=8uibNJmjDoI" },
+              { "id": "mas-a29", "name": "YouTube Пример 29", "type": "file", "url": "https://www.youtube.com/watch?v=OCAnP8cXXk4" },
+              { "id": "mas-a30", "name": "YouTube Пример 30", "type": "file", "url": "https://www.youtube.com/watch?v=ONEs8F3je1k" },
+              { "id": "mas-a31", "name": "YouTube Пример 31", "type": "file", "url": "https://www.youtube.com/watch?v=xEpi3C29PoM" },
+              { "id": "mas-a32", "name": "YouTube Пример 32", "type": "file", "url": "https://www.youtube.com/watch?v=e-38yl71n8I" },
+              { "id": "mas-a33", "name": "YouTube Пример 33", "type": "file", "url": "https://www.youtube.com/watch?v=VPe8D0hekUo" },
+              { "id": "mas-a34", "name": "YouTube Пример 34", "type": "file", "url": "https://www.youtube.com/watch?v=OsSexwfuuTc" },
+              { "id": "mas-a35", "name": "YouTube Пример 35", "type": "file", "url": "https://www.youtube.com/watch?v=QlYb4qv8dGw" },
+              { "id": "mas-a36", "name": "YouTube Пример 36", "type": "file", "url": "https://www.youtube.com/watch?v=V0WGeuQ2GaY" },
+              { "id": "mas-a37", "name": "YouTube Пример 37", "type": "file", "url": "https://www.youtube.com/watch?v=fHqolQwz93U" },
+              { "id": "mas-a38", "name": "YouTube Пример 38", "type": "file", "url": "https://www.youtube.com/watch?v=Woc4jUXBFtM&list=PLMtzJAOD3B7Z0kAGbqdVPZuT91pNIsF-R" },
+              { "id": "mas-a39", "name": "YouTube Пример 39", "type": "file", "url": "https://www.youtube.com/watch?v=U0gbU_EAPRE" },
+              { "id": "mas-a40", "name": "YouTube Пример 40", "type": "file", "url": "https://www.youtube.com/watch?v=hlSDL_oG4R0" },
+              { "id": "mas-a41", "name": "YouTube Пример 41", "type": "file", "url": "https://www.youtube.com/watch?v=bWpU0DpKelU" },
+              { "id": "mas-a42", "name": "YouTube Пример 42", "type": "file", "url": "https://www.youtube.com/watch?v=EVRx2AYeOSA" },
+              { "id": "mas-a43", "name": "YouTube Пример 43", "type": "file", "url": "https://www.youtube.com/watch?v=sr92RVFmDkg" },
+              { "id": "mas-a44", "name": "YouTube Пример 44", "type": "file", "url": "https://www.youtube.com/watch?v=6Jtccoo5g88&t=11s" },
+              { "id": "mas-a45", "name": "YouTube Пример 45", "type": "file", "url": "https://www.youtube.com/watch?v=G7DV0S33MFI" },
+              { "id": "mas-a46", "name": "YouTube Пример 46", "type": "file", "url": "https://www.youtube.com/watch?v=R5KVtgz0lB4" },
+              { "id": "mas-a47", "name": "YouTube Пример 47", "type": "file", "url": "https://www.youtube.com/watch?v=dE3fa-MPsCg" },
+              { "id": "mas-a48", "name": "YouTube Пример 48", "type": "file", "url": "https://www.youtube.com/watch?v=JwRvNHFKGH4" },
+              { "id": "mas-a49", "name": "YouTube Пример 49", "type": "file", "url": "https://www.youtube.com/watch?v=XSRn0maJRfg" },
+              { "id": "mas-a50", "name": "YouTube Пример 50", "type": "file", "url": "https://www.youtube.com/watch?v=uZkh90jzjBI" },
+              { "id": "mas-a51", "name": "YouTube Пример 51", "type": "file", "url": "https://www.youtube.com/watch?v=ADHIyRAwMyc" },
+              { "id": "mas-a52", "name": "YouTube Пример 52", "type": "file", "url": "https://www.youtube.com/results?search_query=autocad+tutorial+2007&sp=eAE%253D" },
+              { "id": "mas-a53", "name": "YouTube Пример 53", "type": "file", "url": "https://www.youtube.com/watch?v=24oKDtIaP-I" },
+              { "id": "mas-a54", "name": "YouTube Пример 54", "type": "file", "url": "https://www.youtube.com/watch?v=t6uWlormym8" },
+              { "id": "mas-a55", "name": "YouTube Пример 55", "type": "file", "url": "https://www.youtube.com/watch?v=ECpGjiinbaw" },
+              { "id": "mas-a56", "name": "YouTube Пример 56", "type": "file", "url": "https://www.youtube.com/watch?v=EITt-2rBm1A" },
+              { "id": "mas-a57", "name": "YouTube Пример 57", "type": "file", "url": "https://www.youtube.com/watch?v=S0ccuSeZ_LU" },
+              { "id": "mas-a58", "name": "YouTube Пример 58", "type": "file", "url": "https://www.youtube.com/watch?v=YNYbnX5wIzA" },
+              { "id": "mas-a59", "name": "YouTube Пример 59", "type": "file", "url": "https://www.youtube.com/watch?v=j_BaRR3GTtU" },
+              { "id": "mas-a60", "name": "YouTube Пример 60", "type": "file", "url": "https://www.youtube.com/watch?v=R8Hd7DUZcF0" },
+              { "id": "mas-a61", "name": "YouTube Пример 61", "type": "file", "url": "https://www.youtube.com/watch?v=pIU6a4ECdlk" },
+              { "id": "mas-a62", "name": "YouTube Пример 62", "type": "file", "url": "https://www.youtube.com/watch?v=ONapRVyXn2E" },
+              { "id": "mas-a63", "name": "YouTube Пример 63", "type": "file", "url": "https://www.youtube.com/watch?v=UGTs5DiUAUI" },
+              { "id": "mas-a64", "name": "YouTube Пример 64", "type": "file", "url": "https://www.youtube.com/watch?v=cmR9cfWJRUU" },
+              { "id": "mas-a65", "name": "YouTube Пример 65", "type": "file", "url": "https://www.youtube.com/watch?v=sGeERfiw2Vk&t=20s" },
+              { "id": "mas-a66", "name": "YouTube Пример 66", "type": "file", "url": "https://www.youtube.com/watch?v=TebtsatwiiU" },
+              { "id": "mas-a67", "name": "YouTube Пример 67", "type": "file", "url": "https://www.youtube.com/watch?v=uy2GvFwVJU4&list=PL970B66C256FA05E1" },
+              { "id": "mas-a68", "name": "YouTube Пример 68", "type": "file", "url": "https://www.youtube.com/watch?v=p2ioGErcZuI" }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "masinski-2",
+        "name": "II Година",
+        "type": "folder",
+        "children": [
+          { "id": "termo-1", "name": "Термодинамика (I, II и III тема)", "type": "file", "url": "https://drive.google.com/file/d/17T69u2m5vPRjSuPu_M6fblelFWNIRZ0M/view" }
+        ]
+      },
+      {
+        "id": "masinski-3",
+        "name": "III Година",
+        "type": "folder",
+        "children": [
+          { "id": "hp-1", "name": "Теорија и корисни линкови", "type": "file", "url": "https://drive.google.com/file/d/1aEm4Y8-2REa9zSAV79arRSryemcth89M/view" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "energeticar",
+    "name": "Енергетичар",
+    "type": "folder",
+    "children": [
+      {
+        "id": "energeticar-2",
+        "name": "II Година",
+        "type": "folder",
+        "children": [
+          {
+            "id": "elektricni-merenja",
+            "name": "Електрични мерења",
+            "type": "folder",
+            "children": [
+              { "id": "em-mk-en", "name": "Електрични мерења-МК", "type": "file", "url": "https://www.e-ucebnici.mon.gov.mk/pdf/Elektricni%20merenja%20-%20WEB.pdf" },
+              { "id": "em-alb-en", "name": "Електрични мерења-АЛБ", "type": "file", "url": "https://www.e-ucebnici.mon.gov.mk/pdf/Elektricni%20merenja_ALB_web.pdf" }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "elektronicar",
+    "name": "Електроничар",
+    "type": "folder",
+    "children": [
+      {
+        "id": "elektronicar-2",
+        "name": "II Година",
+        "type": "folder",
+        "children": [
+          {
+            "id": "autocad-el",
+            "name": "AutoCad",
+            "type": "folder",
+            "children": [
+              { "id": "el-a0", "name": "YouTube Пример 0", "type": "file", "url": "https://www.youtube.com/watch?v=wY3rezjj9es&t=371s" },
+              { "id": "el-a1", "name": "YouTube Пример 1", "type": "file", "url": "https://www.youtube.com/watch?v=eMdCDFISkiw" },
+              { "id": "el-a2", "name": "YouTube Пример 2", "type": "file", "url": "https://www.youtube.com/watch?v=dxtq_sy7Gw0" },
+              { "id": "el-a3", "name": "YouTube Пример 3", "type": "file", "url": "https://www.youtube.com/watch?v=v0YoXCjKMZE" },
+              { "id": "el-a4", "name": "YouTube Пример 4", "type": "file", "url": "https://www.youtube.com/watch?v=MEiyi2WMfZc" },
+              { "id": "el-a5", "name": "YouTube Пример 5", "type": "file", "url": "https://www.youtube.com/watch?v=8PCFt1O7EL8" },
+              { "id": "el-a6", "name": "YouTube Пример 6", "type": "file", "url": "https://www.youtube.com/watch?v=XnVmvMcQ94I" },
+              { "id": "el-a7", "name": "YouTube Пример 7", "type": "file", "url": "https://www.youtube.com/watch?v=6reJsWxvGyM" },
+              { "id": "el-a8", "name": "YouTube Пример 8", "type": "file", "url": "https://www.youtube.com/watch?v=JR_U2uCssIg" },
+              { "id": "el-a9", "name": "YouTube Пример 9", "type": "file", "url": "https://www.youtube.com/watch?v=wBRJdyatvcY" },
+              { "id": "el-a10", "name": "YouTube Пример 10", "type": "file", "url": "https://www.youtube.com/watch?v=w22qqOORTj4" },
+              { "id": "el-a11", "name": "YouTube Пример 11", "type": "file", "url": "https://www.youtube.com/watch?v=zf28FvMOko4" },
+              { "id": "el-a12", "name": "YouTube Пример 12", "type": "file", "url": "https://www.youtube.com/watch?v=gubORj98Y18" },
+              { "id": "el-a13", "name": "YouTube Пример 13", "type": "file", "url": "https://www.youtube.com/watch?v=dvy6QjHOQ0g" },
+              { "id": "el-a14", "name": "YouTube Пример 14", "type": "file", "url": "https://www.youtube.com/watch?v=7Mm6eZFl5bM" },
+              { "id": "el-a15", "name": "YouTube Пример 15", "type": "file", "url": "https://www.youtube.com/watch?v=mwZcCmnbRlA" },
+              { "id": "el-a16", "name": "YouTube Пример 16", "type": "file", "url": "https://www.youtube.com/watch?v=0k-OnSMcnBs" },
+              { "id": "el-a17", "name": "YouTube Пример 17", "type": "file", "url": "https://www.youtube.com/watch?v=Hc4cG-p2q4w" },
+              { "id": "el-a18", "name": "YouTube Пример 18", "type": "file", "url": "https://www.youtube.com/watch?v=1rniKcUW9Xo" },
+              { "id": "el-a19", "name": "YouTube Пример 19", "type": "file", "url": "https://www.youtube.com/watch?v=wFkR1SvhMZk" },
+              { "id": "el-a20", "name": "YouTube Пример 20", "type": "file", "url": "https://www.youtube.com/watch?v=2RPNGuyJy-M" },
+              { "id": "el-a21", "name": "YouTube Пример 21", "type": "file", "url": "https://www.youtube.com/watch?v=2LmZfax1Dxs" },
+              { "id": "el-a22", "name": "YouTube Пример 22", "type": "file", "url": "https://www.youtube.com/watch?v=7MNXElnwnH8" },
+              { "id": "el-a23", "name": "YouTube Пример 23", "type": "file", "url": "https://www.youtube.com/watch?v=BvkpGGEoPmk" },
+              { "id": "el-a24", "name": "YouTube Пример 24", "type": "file", "url": "https://www.youtube.com/watch?v=E76qJdClrbA" },
+              { "id": "el-a25", "name": "YouTube Пример 25", "type": "file", "url": "https://www.youtube.com/watch?v=J5FM-E4Kcuw" },
+              { "id": "el-a26", "name": "YouTube Пример 26", "type": "file", "url": "https://www.youtube.com/watch?v=RQll_sGa2pc" },
+              { "id": "el-a27", "name": "YouTube Пример 27", "type": "file", "url": "https://www.youtube.com/watch?v=un7atXBHZuo" },
+              { "id": "el-a28", "name": "YouTube Пример 28", "type": "file", "url": "https://www.youtube.com/watch?v=8uibNJmjDoI" },
+              { "id": "el-a29", "name": "YouTube Пример 29", "type": "file", "url": "https://www.youtube.com/watch?v=OCAnP8cXXk4" },
+              { "id": "el-a30", "name": "YouTube Пример 30", "type": "file", "url": "https://www.youtube.com/watch?v=ONEs8F3je1k" },
+              { "id": "el-a31", "name": "YouTube Пример 31", "type": "file", "url": "https://www.youtube.com/watch?v=xEpi3C29PoM" },
+              { "id": "el-a32", "name": "YouTube Пример 32", "type": "file", "url": "https://www.youtube.com/watch?v=e-38yl71n8I" },
+              { "id": "el-a33", "name": "YouTube Пример 33", "type": "file", "url": "https://www.youtube.com/watch?v=VPe8D0hekUo" },
+              { "id": "el-a34", "name": "YouTube Пример 34", "type": "file", "url": "https://www.youtube.com/watch?v=OsSexwfuuTc" },
+              { "id": "el-a35", "name": "YouTube Пример 35", "type": "file", "url": "https://www.youtube.com/watch?v=QlYb4qv8dGw" },
+              { "id": "el-a36", "name": "YouTube Пример 36", "type": "file", "url": "https://www.youtube.com/watch?v=V0WGeuQ2GaY" },
+              { "id": "el-a37", "name": "YouTube Пример 37", "type": "file", "url": "https://www.youtube.com/watch?v=fHqolQwz93U" },
+              { "id": "el-a38", "name": "YouTube Пример 38", "type": "file", "url": "https://www.youtube.com/watch?v=Woc4jUXBFtM&list=PLMtzJAOD3B7Z0kAGbqdVPZuT91pNIsF-R" },
+              { "id": "el-a39", "name": "YouTube Пример 39", "type": "file", "url": "https://www.youtube.com/watch?v=U0gbU_EAPRE" },
+              { "id": "el-a40", "name": "YouTube Пример 40", "type": "file", "url": "https://www.youtube.com/watch?v=hlSDL_oG4R0" },
+              { "id": "el-a41", "name": "YouTube Пример 41", "type": "file", "url": "https://www.youtube.com/watch?v=bWpU0DpKelU" },
+              { "id": "el-a42", "name": "YouTube Пример 42", "type": "file", "url": "https://www.youtube.com/watch?v=EVRx2AYeOSA" },
+              { "id": "el-a43", "name": "YouTube Пример 43", "type": "file", "url": "https://www.youtube.com/watch?v=sr92RVFmDkg" },
+              { "id": "el-a44", "name": "YouTube Пример 44", "type": "file", "url": "https://www.youtube.com/watch?v=6Jtccoo5g88&t=11s" },
+              { "id": "el-a45", "name": "YouTube Пример 45", "type": "file", "url": "https://www.youtube.com/watch?v=G7DV0S33MFI" },
+              { "id": "el-a46", "name": "YouTube Пример 46", "type": "file", "url": "https://www.youtube.com/watch?v=R5KVtgz0lB4" },
+              { "id": "el-a47", "name": "YouTube Пример 47", "type": "file", "url": "https://www.youtube.com/watch?v=dE3fa-MPsCg" },
+              { "id": "el-a48", "name": "YouTube Пример 48", "type": "file", "url": "https://www.youtube.com/watch?v=JwRvNHFKGH4" },
+              { "id": "el-a49", "name": "YouTube Пример 49", "type": "file", "url": "https://www.youtube.com/watch?v=XSRn0maJRfg" },
+              { "id": "el-a50", "name": "YouTube Пример 50", "type": "file", "url": "https://www.youtube.com/watch?v=uZkh90jzjBI" },
+              { "id": "el-a51", "name": "YouTube Пример 51", "type": "file", "url": "https://www.youtube.com/watch?v=ADHIyRAwMyc" },
+              { "id": "el-a52", "name": "YouTube Пример 52", "type": "file", "url": "https://www.youtube.com/results?search_query=autocad+tutorial+2007&sp=eAE%253D" },
+              { "id": "el-a53", "name": "YouTube Пример 53", "type": "file", "url": "https://www.youtube.com/watch?v=24oKDtIaP-I" },
+              { "id": "el-a54", "name": "YouTube Пример 54", "type": "file", "url": "https://www.youtube.com/watch?v=t6uWlormym8" },
+              { "id": "el-a55", "name": "YouTube Пример 55", "type": "file", "url": "https://www.youtube.com/watch?v=ECpGjiinbaw" },
+              { "id": "el-a56", "name": "YouTube Пример 56", "type": "file", "url": "https://www.youtube.com/watch?v=EITt-2rBm1A" },
+              { "id": "el-a57", "name": "YouTube Пример 57", "type": "file", "url": "https://www.youtube.com/watch?v=S0ccuSeZ_LU" },
+              { "id": "el-a58", "name": "YouTube Пример 58", "type": "file", "url": "https://www.youtube.com/watch?v=YNYbnX5wIzA" },
+              { "id": "el-a59", "name": "YouTube Пример 59", "type": "file", "url": "https://www.youtube.com/watch?v=j_BaRR3GTtU" },
+              { "id": "el-a60", "name": "YouTube Пример 60", "type": "file", "url": "https://www.youtube.com/watch?v=R8Hd7DUZcF0" },
+              { "id": "el-a61", "name": "YouTube Пример 61", "type": "file", "url": "https://www.youtube.com/watch?v=pIU6a4ECdlk" },
+              { "id": "el-a62", "name": "YouTube Пример 62", "type": "file", "url": "https://www.youtube.com/watch?v=ONapRVyXn2E" },
+              { "id": "el-a63", "name": "YouTube Пример 63", "type": "file", "url": "https://www.youtube.com/watch?v=UGTs5DiUAUI" },
+              { "id": "el-a64", "name": "YouTube Пример 64", "type": "file", "url": "https://www.youtube.com/watch?v=cmR9cfWJRUU" },
+              { "id": "el-a65", "name": "YouTube Пример 65", "type": "file", "url": "https://www.youtube.com/watch?v=sGeERfiw2Vk&t=20s" },
+              { "id": "el-a66", "name": "YouTube Пример 66", "type": "file", "url": "https://www.youtube.com/watch?v=TebtsatwiiU" },
+              { "id": "el-a67", "name": "YouTube Пример 67", "type": "file", "url": "https://www.youtube.com/watch?v=uy2GvFwVJU4&list=PL970B66C256FA05E1" },
+              { "id": "el-a68", "name": "YouTube Пример 68", "type": "file", "url": "https://www.youtube.com/watch?v=p2ioGErcZuI" }
+            ]
+          },
+          {
+            "id": "elektricni-merenja-el",
+            "name": "Електрични мерења",
+            "type": "folder",
+            "children": [
+              { "id": "em-mk-el", "name": "Електрични мерења-МК", "type": "file", "url": "https://www.e-ucebnici.mon.gov.mk/pdf/Elektricni%20merenja%20-%20WEB.pdf" },
+              { "id": "em-alb-el", "name": "Електрични мерења-АЛБ", "type": "file", "url": "https://www.e-ucebnici.mon.gov.mk/pdf/Elektricni%20merenja_ALB_web.pdf" }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "arhitektonski",
+    "name": "Архитектонски техничар",
+    "type": "folder",
+    "children": [
+      {
+        "id": "arhitektonski-1",
+        "name": "I Година",
+        "type": "folder",
+        "children": [
+          {
+            "id": "inf1-arh",
+            "name": "Информатика 1 година",
+            "type": "folder",
+            "children": [
+              { "id": "arh-t1", "name": "Теорија - учебник", "type": "file", "url": "https://drive.google.com/file/d/1mX3CqLhfKxd9FKvmKubezT3ykYchp2TO/view?usp=sharing" },
+              { "id": "arh-h1", "name": "Влезни единици", "type": "file", "url": "https://drive.google.com/file/d/1we8WW0b2ES6kNNLEJq9YW8N9IB8fcGXF/view?usp=sharing" },
+              { "id": "arh-h2", "name": "Излезни единици", "type": "file", "url": "https://drive.google.com/file/d/1B-0hwpmekpegMP8HnE65sxG0Ujf4Ft96/view?usp=sharing" },
+              { "id": "arh-h3", "name": "Компјутерски систем", "type": "file", "url": "https://drive.google.com/file/d/1TzSoljQIOygq5MIUYfxB-pqG6dHMQhmu/view?usp=sharing" },
+              { "id": "arh-h4", "name": "Видови на компјутери", "type": "file", "url": "https://drive.google.com/file/d/1tznEGVGXFMGniOxH4E2JM1mQGb1WGIcP/view?usp=sharing" },
+              { "id": "arh-h5", "name": "Периферни уреди", "type": "file", "url": "https://drive.google.com/file/d/1-zaBmtbiWAFQWFKUe9kNYoqXLoGIKahe/view?usp=sharing" },
+              { "id": "arh-h6", "name": "Мемориски уреди", "type": "file", "url": "https://drive.google.com/file/d/1Dgctw0TtOV0g10wBxImR7EiklKPmv239/view?usp=sharing" },
+              { "id": "arh-s1", "name": "Видови на софтвер 1", "type": "file", "url": "https://drive.google.com/file/d/1vkaHAe9CN5OtNiAGd1GsT4JtumExiP7E/view?usp=sharing" },
+              { "id": "arh-s2", "name": "Видови на софтвер 2", "type": "file", "url": "https://drive.google.com/file/d/1kg6m0t-2QJ6SOtBzyhcPvO9_5ismIhXo/view?usp=sharing" },
+              { "id": "arh-s3", "name": "Оперативен систем", "type": "file", "url": "https://drive.google.com/file/d/1f5V7l74cyRtw7gUKSxK1mq1m67Nva1XR/view?usp=sharing" },
+              { "id": "arh-s4", "name": "Фолдери и датотеки", "type": "file", "url": "https://drive.google.com/file/d/1iVWinaRqYGpFmqeXLbU4rsjqrHXXyTg4/view?usp=sharing" },
+              { "id": "arh-c1", "name": "Алгоритми", "type": "file", "url": "https://drive.google.com/file/d/1x02y_MGRCMrB-f4rhasvAFQKrqX_hMb-/view?usp=sharing" },
+              { "id": "arh-c2", "name": "Програмирање", "type": "file", "url": "https://drive.google.com/file/d/1gXXSFSoOUavPdvmDcOI87xwIxbtNELs4/view?usp=sharing" },
+              { "id": "arh-c3", "name": "Програмски јазици", "type": "file", "url": "https://drive.google.com/file/d/1asrrHA3aa0JMfbShjyqV6igidKvvFGDx/view?usp=sharing" },
+              { "id": "arh-n1", "name": "Компјутерска мрежа", "type": "file", "url": "https://drive.google.com/file/d/1yyyXsRyFvLEIRufMUtgDgfoFEtTfDzJd/view?usp=sharing" },
+              { "id": "arh-n2", "name": "Мрежна опрема", "type": "file", "url": "https://drive.google.com/file/d/1WBKr2StVGCkytUgsGv-itnx2qHEYjTEd/view?usp=sharing" },
+              { "id": "arh-n3", "name": "Историја и развој", "type": "file", "url": "https://drive.google.com/file/d/1l3A_0EPJUUXJGWtx2bt3EV58EM3IGr-z/view?usp=sharing" }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "arhitektonski-2",
+        "name": "II Година",
+        "type": "folder",
+        "children": [
+          {
+            "id": "informatika-2",
+            "name": "Информатика 2 година",
+            "type": "folder",
+            "children": [
+              { "id": "db1", "name": "Бази на податоци - MS Access ТЕОРИЈА", "type": "file", "url": "https://drive.google.com/file/d/1_ebUNo7yysPmpTtUlMARR0lwKwEFull0/view" },
+              { "id": "db2", "name": "Бази на податоци - MS Access", "type": "file", "url": "https://drive.google.com/file/d/1g_XELFJidI4UMSSZhLv-kSjAtujWRK1q/view" },
+              { "id": "db3", "name": "MS Access Табели", "type": "file", "url": "https://www.youtube.com/watch?v=PBhftKTmdHI" },
+              { "id": "db4", "name": "MS Access Форми", "type": "file", "url": "https://www.youtube.com/watch?v=Lge4WO_bpcI" },
+              { "id": "db5", "name": "MS Access Извештаи", "type": "file", "url": "https://www.youtube.com/watch?v=GxZeMZhjwDE" },
+              { "id": "db6", "name": "MS Access Релации", "type": "file", "url": "https://www.youtube.com/watch?v=NtRAyS0LLlk" },
+              { "id": "db7", "name": "MS Access Прашања", "type": "file", "url": "https://www.youtube.com/watch?v=DjP2aOU2KuE" },
+              { "id": "ps1", "name": "PhotoPea Online", "type": "file", "url": "https://www.photopea.com/" },
+              { "id": "ps2", "name": "GIMP Download", "type": "file", "url": "https://www.gimp.org/downloads/" },
+              { "id": "ps3", "name": "Photoshop Layers", "type": "file", "url": "https://www.youtube.com/watch?v=3gxcIn8L__w" },
+              { "id": "ps4", "name": "Photoshop Selection", "type": "file", "url": "https://www.youtube.com/watch?v=n9fwiNyDHLI" },
+              { "id": "ps5", "name": "Photoshop Merge 2 Images", "type": "file", "url": "https://www.youtube.com/watch?v=GuiLRikRO68" },
+              { "id": "ps6", "name": "Photoshop Merge Multiple", "type": "file", "url": "https://www.youtube.com/watch?v=Pr2jx62_k-g" },
+              { "id": "web1", "name": "HTML & CSS Теорија", "type": "file", "url": "https://drive.google.com/file/d/1V2zwxqqdbVDmAMI_yWy657CN38ovi2Kg/view" },
+              { "id": "web2", "name": "WWW HTTP URL", "type": "file", "url": "https://drive.google.com/file/d/1h7ijLWuwyPgGRL8l_feBXEOwuAn1vNUZ/view" },
+              { "id": "web3", "name": "HTML Тагови 1", "type": "file", "url": "https://drive.google.com/file/d/1CxIrVB4gajY5Y4x75Zi_7OFdSv3TpN_l/view" },
+              { "id": "web4", "name": "HTML Тагови 2", "type": "file", "url": "https://drive.google.com/file/d/1I3gLO7vLvpF7wHDXUwGgio6DK8g75yUj/view" },
+              { "id": "web5", "name": "HTML 1", "type": "file", "url": "https://www.youtube.com/watch?v=bWPMSSsVdPk" },
+              { "id": "web6", "name": "HTML 2", "type": "file", "url": "https://www.youtube.com/watch?v=KJ13lX20FqU" },
+              { "id": "web7", "name": "HTML Styling", "type": "file", "url": "https://www.youtube.com/watch?v=nIxeAiEsi0k" },
+              { "id": "web8", "name": "HTML Website", "type": "file", "url": "https://www.youtube.com/watch?v=Xha-BuRWGaI" }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mehatronika",
+    "name": "Мехатроника",
+    "type": "folder",
+    "children": [
+      {
+        "id": "mehatronika-2",
+        "name": "II Година",
+        "type": "folder",
+        "children": [
+          {
+            "id": "osnovi-programiranje",
+            "name": "Основи на програмирање",
+            "type": "folder",
+            "children": [
+              { "id": "meh-cpp-book", "name": "E-Учебник C++", "type": "file", "url": "https://drive.google.com/file/d/1MGebCy-U-dHE1Jr4YtD5vl-9d1gSS8ZA/view?usp=sharing" },
+              { "id": "meh-cpp-alg", "name": "Алгоритми", "type": "file", "url": "https://drive.google.com/file/d/1x02y_MGRCMrB-f4rhasvAFQKrqX_hMb-/view?usp=sharing" },
+              { "id": "meh-cpp-struct", "name": "Алгоритамски структури", "type": "file", "url": "https://drive.google.com/file/d/19CYXiZ8vLTDRvjm1VzZSkmPLT8Po9Dsq/view?usp=sharing" },
+              { "id": "meh-cpp-prog", "name": "Програмирање", "type": "file", "url": "https://drive.google.com/file/d/1gXXSFSoOUavPdvmDcOI87xwIxbtNELs4/view?usp=sharing" },
+              { "id": "meh-cpp-lang", "name": "Програмски јазици", "type": "file", "url": "https://drive.google.com/file/d/1asrrHA3aa0JMfbShjyqV6igidKvvFGDx/view?usp=sharing" },
+              { "id": "meh-cpp-dev", "name": "Dev-C++ Download", "type": "file", "url": "https://sourceforge.net/projects/orwelldevcpp/files/Setup%20Releases/Dev-Cpp%205.9.2%20TDM-GCC%204.8.1%20Setup.exe/download" },
+              { "id": "meh-cpp-codeblocks", "name": "CodeBlocks Download", "type": "file", "url": "https://sourceforge.net/projects/codeblocks/" },
+              { "id": "meh-cpp-compiler", "name": "CodeBlocks Compiler", "type": "file", "url": "https://jmeubank.github.io/tdm-gcc/articles/2020-03/9.2.0-release" },
+              { "id": "meh-cpp-online", "name": "Online Compiler", "type": "file", "url": "https://www.onlinegdb.com/" },
+              { "id": "meh-cpp-examples", "name": "CPP Examples", "type": "file", "url": "https://codeforwin.org/2015/05/basic-programming-practice-problems.html" },
+              { "id": "meh-cpp-struct2", "name": "Структура на програм", "type": "file", "url": "http://ostugostivar.edu.mk/ostu_nova_zyro/Struktura.htm" },
+              { "id": "meh-cpp-types", "name": "Типови променливи", "type": "file", "url": "http://ostugostivar.edu.mk/ostu_nova_zyro/Tipovi.htm" },
+              { "id": "meh-cpp-types2", "name": "Сите типови", "type": "file", "url": "http://ostugostivar.edu.mk/ostu_nova_zyro/Тип.htm" },
+              { "id": "meh-cpp-op", "name": "Оператори", "type": "file", "url": "http://ostugostivar.edu.mk/ostu_nova_zyro/Operatori.htm" },
+              { "id": "meh-v1", "name": "Вежба 1", "type": "file", "url": "http://ostugostivar.edu.mk/ostu_nova_zyro/vezba1.htm" },
+              { "id": "meh-v3", "name": "Вежба 3", "type": "file", "url": "http://ostugostivar.edu.mk/ostu_nova_zyro/vezba3.htm" },
+              { "id": "meh-v4", "name": "Вежба If", "type": "file", "url": "http://ostugostivar.edu.mk/ostu_nova_zyro/vezba4.htm" },
+              { "id": "meh-v5", "name": "Вежба If-else", "type": "file", "url": "http://ostugostivar.edu.mk/ostu_nova_zyro/vezba5.htm" },
+              { "id": "meh-v9", "name": "Вежба Switch", "type": "file", "url": "http://ostugostivar.edu.mk/ostu_nova_zyro/vezba9.htm" },
+              { "id": "meh-v6", "name": "Вежба For", "type": "file", "url": "http://ostugostivar.edu.mk/ostu_nova_zyro/vezba6.htm" },
+              { "id": "meh-v7", "name": "Вежба While", "type": "file", "url": "http://ostugostivar.edu.mk/ostu_nova_zyro/vezba7.htm" },
+              { "id": "meh-v8", "name": "Вежба Do While", "type": "file", "url": "http://ostugostivar.edu.mk/ostu_nova_zyro/vezba8.htm" },
+              { "id": "meh-v10", "name": "Вежба типови", "type": "file", "url": "http://ostugostivar.edu.mk/ostu_nova_zyro/vezba10.htm" },
+              { "id": "meh-theory-func", "name": "Теорија функции", "type": "file", "url": "http://ostugostivar.edu.mk/ostu_nova_zyro/Функции-во-С++.pdf" },
+              { "id": "meh-theory-arr", "name": "Теорија низи", "type": "file", "url": "http://ostugostivar.edu.mk/ostu_nova_zyro/NIZI-C++.pdf" },
+              { "id": "meh-arr1", "name": "Вежба низа 1", "type": "file", "url": "http://ostugostivar.edu.mk/ostu_nova_zyro/vezba_pole1.htm" },
+              { "id": "meh-arr2", "name": "Вежба низа 2", "type": "file", "url": "http://ostugostivar.edu.mk/ostu_nova_zyro/vezba_pole3.htm" },
+              { "id": "meh-mat-theory", "name": "Теорија матрици", "type": "file", "url": "http://ostugostivar.edu.mk/ostu_nova_zyro/dvodimenzinalni-nizi.pdf" },
+              { "id": "meh-mat-zad", "name": "Задачи матрици", "type": "file", "url": "http://ostugostivar.edu.mk/ostu_nova_zyro/Дводимензионални низи.pdf" },
+              { "id": "meh-mat1", "name": "Вежба матрица 1", "type": "file", "url": "http://ostugostivar.edu.mk/ostu_nova_zyro/vezba_matrica1.htm" },
+              { "id": "meh-mat2", "name": "Вежба матрица 2", "type": "file", "url": "http://ostugostivar.edu.mk/ostu_nova_zyro/vezba_matrica2.htm" },
+              { "id": "meh-ptr", "name": "Теорија покажувачи", "type": "file", "url": "http://ostugostivar.edu.mk/ostu_nova_zyro/Покажувачи.pdf" },
+              { "id": "meh-ptr1", "name": "Вежба покажувачи 1", "type": "file", "url": "http://ostugostivar.edu.mk/ostu_nova_zyro/vezba_pok1.htm" },
+              { "id": "meh-ptr2", "name": "Вежба покажувачи 2", "type": "file", "url": "http://ostugostivar.edu.mk/ostu_nova_zyro/vezba_pok2.htm" },
+              { "id": "meh-struct", "name": "Теорија структури", "type": "file", "url": "http://ostugostivar.edu.mk/ostu_nova_zyro/Структури.pdf" },
+              { "id": "meh-struct-v", "name": "Вежби структури", "type": "file", "url": "http://ostugostivar.edu.mk/ostu_nova_zyro/vezba_struct.htm" },
+              { "id": "meh-files", "name": "Теорија датотеки", "type": "file", "url": "http://ostugostivar.edu.mk/ostu_nova_zyro/Датотеки.pdf" },
+              { "id": "meh-f1", "name": "Вежба датотеки 1", "type": "file", "url": "http://ostugostivar.edu.mk/ostu_nova_zyro/vezba_dat1.htm" },
+              { "id": "meh-f2", "name": "Вежба датотеки 2", "type": "file", "url": "http://ostugostivar.edu.mk/ostu_nova_zyro/vezba_dat2.htm" },
+              { "id": "meh-f3", "name": "Вежба датотеки 3", "type": "file", "url": "http://ostugostivar.edu.mk/ostu_nova_zyro/vezba_dat3.htm" }
+            ]
+          },
+          {
+            "id": "elektricni-merenja-meha",
+            "name": "Електрични мерења",
+            "type": "folder",
+            "children": [
+              { "id": "em-mk-meha", "name": "Електрични мерења-МК", "type": "file", "url": "https://www.e-ucebnici.mon.gov.mk/pdf/Elektricni%20merenja%20-%20WEB.pdf" },
+              { "id": "em-alb-meha", "name": "Електрични мерења-АЛБ", "type": "file", "url": "https://www.e-ucebnici.mon.gov.mk/pdf/Elektricni%20merenja_ALB_web.pdf" }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
