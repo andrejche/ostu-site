@@ -6,6 +6,7 @@ export default function ChatWidget() {
   const { t } = useTranslation();
 
   const [open,      setOpen]      = useState(false);
+  const [visible,   setVisible]   = useState(false);
   const [input,     setInput]     = useState("");
   const [msgs,      setMsgs]      = useState([
     { role: "assistant", content: t("chat.welcome") },
@@ -22,6 +23,15 @@ export default function ChatWidget() {
 
   const scrollDown = () =>
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
+
+  useEffect(() => {
+    if (open) {
+      setVisible(true);
+    } else {
+      const timer = setTimeout(() => setVisible(false), 250);
+      return () => clearTimeout(timer);
+    }
+  }, [open]);
 
   useEffect(() => {
     if (open) {
@@ -106,106 +116,115 @@ export default function ChatWidget() {
   return (
     <div className="fixed bottom-6 right-4 z-50 sm:right-6 flex flex-col items-end">
 
-      {open && (
-        <>
-          {/* Backdrop */}
-            <div
-              className="fixed inset-0 z-40 bg-black/40 md:hidden"
-              onClick={() => setOpen(false)}
-            />
+      {/* Backdrop */}
+      <div
+        className="fixed inset-0 z-40 md:hidden"
+        style={{
+          opacity: open ? 1 : 0,
+          background: "rgba(0,0,0,0.4)",
+          transition: "opacity 0.25s ease",
+          pointerEvents: open ? "auto" : "none",
+          visibility: visible ? "visible" : "hidden",
+        }}
+        onClick={() => setOpen(false)}
+      />
 
-          {/* Chat box */}
-          <div className="relative z-50 mb-3 w-[calc(100vw-2rem)] overflow-hidden rounded-2xl bg-white shadow-2xl ring-1 ring-slate-200 sm:w-[360px]">
-
-            {/* Header */}
-            <div className="flex items-center justify-between border-b border-slate-200 px-4 py-3">
-              <div className="flex items-center gap-3">
-                <div className="w-9 h-9 rounded-full bg-[#0B2E5B] flex items-center justify-center text-white text-sm font-bold">
-                  AI
-                </div>
-                <div>
-                  <div className="text-sm font-semibold text-slate-900">
-                    {t("chat.title")}
-                  </div>
-                  <div className="text-xs text-green-500">● {t("chat.live")}</div>
-                </div>
+      {/* Chat box */}
+      <div
+        className="relative z-50 mb-3 w-[calc(100vw-2rem)] overflow-hidden rounded-2xl bg-white shadow-2xl ring-1 ring-slate-200 sm:w-[360px]"
+        style={{
+          opacity: open ? 1 : 0,
+          transform: open ? "translateY(0) scale(1)" : "translateY(24px) scale(0.95)",
+          transition: "opacity 0.25s ease, transform 0.25s ease",
+          transformOrigin: "bottom right",
+          pointerEvents: open ? "auto" : "none",
+          visibility: visible ? "visible" : "hidden",
+        }}
+      >
+        {/* Header */}
+        <div className="flex items-center justify-between border-b border-slate-200 px-4 py-3">
+          <div className="flex items-center gap-3">
+            <div className="w-9 h-9 rounded-full bg-[#0B2E5B] flex items-center justify-center text-white text-sm font-bold">
+              AI
+            </div>
+            <div>
+              <div className="text-sm font-semibold text-slate-900">
+                {t("chat.title")}
               </div>
-              <button
-                onClick={() => setOpen(false)}
-                className="text-slate-400 hover:text-slate-700 transition text-lg font-bold px-2"
-              >
-                ✕
-              </button>
-            </div>
-
-            {/* Messages */}
-            <div className="h-[280px] space-y-2 overflow-auto px-3 py-3">
-              {msgs.map((m, i) => (
-                <div
-                  key={i}
-                  className={
-                    "max-w-[85%] whitespace-pre-wrap px-3 py-2 text-sm leading-relaxed " +
-                    (m.role === "user"
-                      ? "ml-auto bg-[#0B2E5B] text-white rounded-2xl rounded-br-md shadow"
-                      : "mr-auto bg-slate-100 text-slate-900 rounded-2xl rounded-bl-md shadow-sm")
-                  }
-                >
-                  {m.content ||
-                    (streaming && i === msgs.length - 1 ? (
-                      <div className="flex gap-1 mt-1">
-                        <span className="w-2 h-2 bg-slate-400 rounded-full animate-bounce" />
-                        <span className="w-2 h-2 bg-slate-400 rounded-full animate-bounce [animation-delay:0.2s]" />
-                        <span className="w-2 h-2 bg-slate-400 rounded-full animate-bounce [animation-delay:0.4s]" />
-                      </div>
-                    ) : "")}
-                </div>
-              ))}
-              <div ref={bottomRef} />
-            </div>
-
-            {/* Input */}
-            <div className="flex items-center gap-2 border-t border-slate-200 p-3">
-              <input
-                ref={inputRef}
-                value={input}
-                onChange={(e) => setInput(e.target.value)}
-                placeholder={t("chat.placeholder")}
-                onKeyDown={(e) => e.key === "Enter" && send()}
-                disabled={streaming}
-                className="flex-1 rounded-full border border-slate-200 px-4 py-2.5 text-base outline-none focus:ring-2 focus:ring-[#0B2E5B]/30 text-slate-800"
-              />
-              <button
-                onClick={send}
-                disabled={streaming}
-                className="rounded-full bg-[#0B2E5B] hover:bg-[#0a2750] text-white px-4 py-2.5 text-sm font-semibold transition disabled:opacity-50"
-              >
-                ➤
-              </button>
+              <div className="text-xs text-green-500">● {t("chat.live")}</div>
             </div>
           </div>
-        </>
-      )}
+          <button
+            onClick={() => setOpen(false)}
+            className="text-slate-400 hover:text-slate-700 transition text-lg font-bold px-2"
+          >
+            ✕
+          </button>
+        </div>
 
-      {/* Floating button — hidden when chat is open */}
-      {!open && (
-        <button
-          onClick={() => setOpen(true)}
-          className="rounded-full bg-slate-900 hover:bg-slate-800 transition p-3.5 text-white shadow-lg"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-            strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
-            <path strokeLinecap="round" strokeLinejoin="round"
-              d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 0 1-2.555-.337A5.972 5.972 0 0 1 5.41 20.97a5.969 5.969 0 0 1-.474-.065 4.48 4.48 0 0 0 .978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25Z" />
-          </svg>
-        </button>
-      )}
+        {/* Messages */}
+        <div className="h-[280px] space-y-2 overflow-auto px-3 py-3">
+          {msgs.map((m, i) => (
+            <div
+              key={i}
+              className={
+                "max-w-[85%] whitespace-pre-wrap px-3 py-2 text-sm leading-relaxed " +
+                (m.role === "user"
+                  ? "ml-auto bg-[#0B2E5B] text-white rounded-2xl rounded-br-md shadow"
+                  : "mr-auto bg-slate-100 text-slate-900 rounded-2xl rounded-bl-md shadow-sm")
+              }
+            >
+              {m.content ||
+                (streaming && i === msgs.length - 1 ? (
+                  <div className="flex gap-1 mt-1">
+                    <span className="w-2 h-2 bg-slate-400 rounded-full animate-bounce" />
+                    <span className="w-2 h-2 bg-slate-400 rounded-full animate-bounce [animation-delay:0.2s]" />
+                    <span className="w-2 h-2 bg-slate-400 rounded-full animate-bounce [animation-delay:0.4s]" />
+                  </div>
+                ) : "")}
+            </div>
+          ))}
+          <div ref={bottomRef} />
+        </div>
 
-      <style>{`
-        @keyframes fadeUp {
-          from { opacity: 0; transform: translateY(10px); }
-          to   { opacity: 1; transform: translateY(0); }
-        }
-      `}</style>
+        {/* Input */}
+        <div className="flex items-center gap-2 border-t border-slate-200 p-3">
+          <input
+            ref={inputRef}
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            placeholder={t("chat.placeholder")}
+            onKeyDown={(e) => e.key === "Enter" && send()}
+            disabled={streaming}
+            className="flex-1 rounded-full border border-slate-200 px-4 py-2.5 text-base outline-none focus:ring-2 focus:ring-[#0B2E5B]/30 text-slate-800"
+          />
+          <button
+            onClick={send}
+            disabled={streaming}
+            className="rounded-full bg-[#0B2E5B] hover:bg-[#0a2750] text-white px-4 py-2.5 text-sm font-semibold transition disabled:opacity-50"
+          >
+            ➤
+          </button>
+        </div>
+      </div>
+
+      {/* Floating button */}
+      <button
+        onClick={() => setOpen((v) => !v)}
+        className="rounded-full bg-slate-900 hover:bg-slate-800 transition p-3.5 text-white shadow-lg"
+        style={{
+          visibility: open ? "hidden" : "visible",
+          height: open ? "0" : "auto",
+          padding: open ? "0" : "",
+          overflow: "hidden",
+        }}
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+          strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
+          <path strokeLinecap="round" strokeLinejoin="round"
+            d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 0 1-2.555-.337A5.972 5.972 0 0 1 5.41 20.97a5.969 5.969 0 0 1-.474-.065 4.48 4.48 0 0 0 .978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25Z" />
+        </svg>
+      </button>
     </div>
   );
 }
