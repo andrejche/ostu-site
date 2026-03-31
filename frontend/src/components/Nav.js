@@ -20,7 +20,6 @@ export default function Nav() {
   useEffect(() => { setMenuOpen(false); }, [pathname]);
 
   const menuLink = "text-[12px] font-semibold tracking-wider text-white/90 hover:text-white transition-colors";
-  const mobileLink = "block px-4 py-3 text-sm font-semibold text-white/90 hover:text-white hover:bg-white/10 rounded-xl transition-colors";
 
   return (
     <header className="absolute inset-x-0 top-0 z-30">
@@ -84,38 +83,74 @@ export default function Nav() {
       </div>
 
       {/* MOBILE MENU DROPDOWN */}
-      <div className={`md:hidden overflow-hidden transition-all duration-300 ${menuOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"}`}>
-        <div className="bg-slate-900/90 backdrop-blur-md px-4 py-4 space-y-1">
+        {menuOpen && (
+          <div
+            className="fixed inset-0 z-40 bg-[#000]/40 md:hidden"
+            onClick={() => setMenuOpen(false)}
+          />
+        )}
+
+        <div className={`
+          fixed bottom-0 left-0 right-0 z-50 md:hidden
+          bg-white rounded-t-2xl border-t border-slate-200 pb-8
+          transition-transform duration-300 ease-out
+          ${menuOpen ? "translate-y-0" : "translate-y-full"}
+        `}>
+          {/* Handle */}
+          <div className="flex justify-center pt-3 pb-3">
+            <div className="w-8 h-0.5 bg-slate-300 rounded-full" />
+          </div>
 
           {/* Nav links */}
-          <NavLink to="/za-nas"    className={mobileLink}>{t("nav.about")}</NavLink>
-          <NavLink to="/vesti"     className={mobileLink}>{t("nav.news")}</NavLink>
-          <NavLink to="/stipendii" className={mobileLink}>{t("nav.scholarships")}</NavLink>
-          <NavLink to="/kontakt"   className={mobileLink}>{t("nav.contact")}</NavLink>
-          <NavLink to="/profesori" className={mobileLink}>{t("nav.teachers")}</NavLink>
+          <nav className="px-2 space-y-0.5">
+            {[
+              { to: "/za-nas",    label: t("nav.about") },
+              { to: "/vesti",     label: t("nav.news") },
+              { to: "/stipendii", label: t("nav.scholarships") },
+              { to: "/kontakt",   label: t("nav.contact") },
+              { to: "/profesori", label: t("nav.teachers") },
+            ].map(({ to, label }) => (
+              <NavLink
+                key={to} to={to}
+                className={({ isActive }) =>
+                  `flex items-center justify-between px-3 py-3 rounded-xl text-sm font-medium transition-colors ` +
+                  (isActive
+                    ? "bg-[#EFF4FB] text-[#0B2E5B] font-bold"
+                    : "text-slate-700 hover:bg-slate-100 hover:text-[#0B2E5B]")
+                }
+              >
+                {({ isActive }) => (
+                  <>
+                    <span>{label}</span>
+                    {isActive
+                      ? <span className="w-1.5 h-1.5 rounded-full bg-[#0B2E5B]" />
+                      : <span className="text-slate-400 text-sm">›</span>
+                    }
+                  </>
+                )}
+              </NavLink>
+            ))}
+          </nav>
 
-          {/* Divider */}
-          <div className="h-px bg-white/10 my-3" />
+          <div className="h-px bg-slate-200 mx-4 my-3" />
 
           {/* Language switcher */}
-          <div className="flex items-center gap-2 px-4">
-            <span className="text-xs text-white/50 font-semibold tracking-wider uppercase mr-1">Lang</span>
+          <div className="flex items-center gap-1.5 px-5">
+            <span className="text-[11px] text-slate-400 font-semibold tracking-wider uppercase mr-2">Lang</span>
             {langs.map((l) => (
               <button key={l.code} onClick={() => i18n.changeLanguage(l.code)}
                 className={
-                  "rounded px-2.5 py-1 text-xs font-bold tracking-wider transition-all " +
+                  "rounded-lg px-2.5 py-1.5 text-[11px] font-bold tracking-wider border transition-all " +
                   (i18n.language === l.code
-                    ? "bg-white/20 text-white"
-                    : "text-white/50 hover:text-white/80")
+                    ? "bg-[#0B2E5B] text-white border-[#0B2E5B]"
+                    : "text-slate-400 border-transparent hover:text-[#0B2E5B] hover:border-slate-200")
                 }
               >
                 {l.label}
               </button>
             ))}
           </div>
-
         </div>
-      </div>
     </header>
   );
 }

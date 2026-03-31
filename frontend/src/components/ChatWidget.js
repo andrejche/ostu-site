@@ -30,7 +30,6 @@ export default function ChatWidget() {
     }
   }, [open]);
 
-  // Auto scroll when new messages arrive
   useEffect(() => {
     scrollDown();
   }, [msgs]);
@@ -107,76 +106,84 @@ export default function ChatWidget() {
   return (
     <div className="fixed bottom-6 right-4 z-50 sm:right-6 flex flex-col items-end">
 
-      {/* Chat box — opens upward */}
       {open && (
-        <div className="mb-3 w-[calc(100vw-2rem)] overflow-hidden rounded-2xl bg-white/90 backdrop-blur shadow-2xl ring-1 ring-slate-200 sm:w-[360px]">
+        <>
+          {/* Backdrop */}
+          <div
+            className="fixed inset-0 z-40 bg-black/40"
+            onClick={() => setOpen(false)}
+          />
 
-          {/* Header */}
-          <div className="flex items-center justify-between border-b border-slate-200 px-4 py-3">
-            <div className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-full bg-[#0B2E5B] flex items-center justify-center text-white text-sm font-bold">
-                AI
-              </div>
-              <div>
-                <div className="text-sm font-semibold text-slate-900">
-                  {t("chat.title")}
+          {/* Chat box */}
+          <div className="relative z-50 mb-3 w-[calc(100vw-2rem)] overflow-hidden rounded-2xl bg-white shadow-2xl ring-1 ring-slate-200 sm:w-[360px]">
+
+            {/* Header */}
+            <div className="flex items-center justify-between border-b border-slate-200 px-4 py-3">
+              <div className="flex items-center gap-3">
+                <div className="w-9 h-9 rounded-full bg-[#0B2E5B] flex items-center justify-center text-white text-sm font-bold">
+                  AI
                 </div>
-                <div className="text-xs text-green-500">● {t("chat.live")}</div>
+                <div>
+                  <div className="text-sm font-semibold text-slate-900">
+                    {t("chat.title")}
+                  </div>
+                  <div className="text-xs text-green-500">● {t("chat.live")}</div>
+                </div>
               </div>
-            </div>
-            <button
-              onClick={() => setOpen(false)}
-              className="text-slate-400 hover:text-slate-700 transition text-lg font-bold px-2"
-            >
-              ✕
-            </button>
-          </div>
-
-          {/* Messages */}
-          <div className="h-[280px] space-y-2 overflow-auto px-3 py-3">
-            {msgs.map((m, i) => (
-              <div
-                key={i}
-                className={
-                  "max-w-[85%] whitespace-pre-wrap px-3 py-2 text-sm leading-relaxed " +
-                  (m.role === "user"
-                    ? "ml-auto bg-[#0B2E5B] text-white rounded-2xl rounded-br-md shadow"
-                    : "mr-auto bg-slate-100 text-slate-900 rounded-2xl rounded-bl-md shadow-sm")
-                }
+              <button
+                onClick={() => setOpen(false)}
+                className="text-slate-400 hover:text-slate-700 transition text-lg font-bold px-2"
               >
-                {m.content ||
-                  (streaming && i === msgs.length - 1 ? (
-                    <div className="flex gap-1 mt-1">
-                      <span className="w-2 h-2 bg-slate-400 rounded-full animate-bounce" />
-                      <span className="w-2 h-2 bg-slate-400 rounded-full animate-bounce [animation-delay:0.2s]" />
-                      <span className="w-2 h-2 bg-slate-400 rounded-full animate-bounce [animation-delay:0.4s]" />
-                    </div>
-                  ) : "")}
-              </div>
-            ))}
-            <div ref={bottomRef} />
-          </div>
+                ✕
+              </button>
+            </div>
 
-          {/* Input */}
-          <div className="flex items-center gap-2 border-t border-slate-200 p-3">
-            <input
-              ref={inputRef}
-              value={input}
-              onChange={(e) => setInput(e.target.value)}
-              placeholder={t("chat.placeholder")}
-              onKeyDown={(e) => e.key === "Enter" && send()}
-              disabled={streaming}
-              className="flex-1 rounded-full border border-slate-200 px-4 py-2.5 text-base outline-none focus:ring-2 focus:ring-[#0B2E5B]/30 text-slate-800"
-            />
-            <button
-              onClick={send}
-              disabled={streaming}
-              className="rounded-full bg-[#0B2E5B] hover:bg-[#0a2750] text-white px-4 py-2.5 text-sm font-semibold transition disabled:opacity-50"
-            >
-              ➤
-            </button>
+            {/* Messages */}
+            <div className="h-[280px] space-y-2 overflow-auto px-3 py-3">
+              {msgs.map((m, i) => (
+                <div
+                  key={i}
+                  className={
+                    "max-w-[85%] whitespace-pre-wrap px-3 py-2 text-sm leading-relaxed " +
+                    (m.role === "user"
+                      ? "ml-auto bg-[#0B2E5B] text-white rounded-2xl rounded-br-md shadow"
+                      : "mr-auto bg-slate-100 text-slate-900 rounded-2xl rounded-bl-md shadow-sm")
+                  }
+                >
+                  {m.content ||
+                    (streaming && i === msgs.length - 1 ? (
+                      <div className="flex gap-1 mt-1">
+                        <span className="w-2 h-2 bg-slate-400 rounded-full animate-bounce" />
+                        <span className="w-2 h-2 bg-slate-400 rounded-full animate-bounce [animation-delay:0.2s]" />
+                        <span className="w-2 h-2 bg-slate-400 rounded-full animate-bounce [animation-delay:0.4s]" />
+                      </div>
+                    ) : "")}
+                </div>
+              ))}
+              <div ref={bottomRef} />
+            </div>
+
+            {/* Input */}
+            <div className="flex items-center gap-2 border-t border-slate-200 p-3">
+              <input
+                ref={inputRef}
+                value={input}
+                onChange={(e) => setInput(e.target.value)}
+                placeholder={t("chat.placeholder")}
+                onKeyDown={(e) => e.key === "Enter" && send()}
+                disabled={streaming}
+                className="flex-1 rounded-full border border-slate-200 px-4 py-2.5 text-base outline-none focus:ring-2 focus:ring-[#0B2E5B]/30 text-slate-800"
+              />
+              <button
+                onClick={send}
+                disabled={streaming}
+                className="rounded-full bg-[#0B2E5B] hover:bg-[#0a2750] text-white px-4 py-2.5 text-sm font-semibold transition disabled:opacity-50"
+              >
+                ➤
+              </button>
+            </div>
           </div>
-        </div>
+        </>
       )}
 
       {/* Floating button — hidden when chat is open */}
