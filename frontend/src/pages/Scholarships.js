@@ -44,13 +44,13 @@ export default function Scholarships() {
   ];
 
   return (
-    <div className="relative bg-slate-100">
+    <div className="relative bg-slate-100 dark:bg-slate-900">
 
       {/* IMAGE */}
       <div className="absolute inset-x-0 top-0 h-[60vh]">
         <img src={bg} alt="" className="w-full h-full object-cover object-top" />
         <div className="absolute inset-0 bg-slate-900/60" />
-        <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-b from-transparent to-slate-100" />
+        <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-b from-transparent to-slate-100 dark:to-slate-900" />
       </div>
 
       {/* CONTENT */}
@@ -58,24 +58,24 @@ export default function Scholarships() {
 
         {/* Intro */}
         <Reveal direction="up" delay={0.05}>
-          <div className="rounded-2xl border border-white/30 bg-white/70 backdrop-blur-md p-8 shadow-xl shadow-slate-200/60">
+          <div className="rounded-2xl border border-white/30 dark:border-slate-700/30 bg-white/70 dark:bg-slate-800/70 backdrop-blur-md p-8 shadow-xl shadow-slate-200/60 dark:shadow-none">
             <div className="flex items-center gap-3 mb-5">
               <div className="grid h-10 w-10 place-items-center rounded-xl bg-[#0B2E5B]/10 text-xl">🏅</div>
-              <h1 className="text-3xl font-extrabold text-slate-900">{t("scholarships.title")}</h1>
+              <h1 className="text-3xl font-extrabold text-slate-900 dark:text-white">{t("scholarships.title")}</h1>
             </div>
-            <p className="text-slate-600 leading-relaxed">{t("scholarships.intro")}</p>
+            <p className="text-slate-600 dark:text-slate-300 leading-relaxed">{t("scholarships.intro")}</p>
           </div>
         </Reveal>
 
         {/* State scholarships */}
         <div className="mt-6">
           <Reveal direction="up" delay={0.1}>
-            <div className="rounded-2xl border border-white/30 bg-white/70 backdrop-blur-md p-6 shadow-xl shadow-slate-200/60">
+            <div className="rounded-2xl border border-white/30 dark:border-slate-700/30 bg-white/70 dark:bg-slate-800/70 backdrop-blur-md p-6 shadow-xl shadow-slate-200/60 dark:shadow-none">
               <div className="flex items-center gap-3 mb-4">
                 <div className="grid h-10 w-10 place-items-center rounded-xl bg-[#0B2E5B]/10 text-xl">🎓</div>
-                <h2 className="text-lg font-bold text-slate-900">{t("scholarships.stateTitle")}</h2>
+                <h2 className="text-lg font-bold text-slate-900 dark:text-white">{t("scholarships.stateTitle")}</h2>
               </div>
-              <p className="text-slate-600 text-sm leading-relaxed">{t("scholarships.stateDesc")}</p>
+              <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">{t("scholarships.stateDesc")}</p>
             </div>
           </Reveal>
         </div>
@@ -85,19 +85,19 @@ export default function Scholarships() {
           <Reveal direction="up" delay={0.05}>
             <div className="flex items-center gap-3 mb-5">
               <div className="grid h-10 w-10 place-items-center rounded-xl bg-[#0B2E5B]/10 text-xl">🤝</div>
-              <h2 className="text-2xl font-bold text-slate-900">{t("scholarships.processTitle")}</h2>
+              <h2 className="text-2xl font-bold text-slate-900 dark:text-white">{t("scholarships.processTitle")}</h2>
             </div>
           </Reveal>
 
           <div className="grid gap-4 md:grid-cols-3">
             {supportItems.map((item, i) => (
               <Reveal key={item.label} direction="up" delay={i * 0.1}>
-                <div className="group rounded-2xl border border-white/30 bg-white/70 backdrop-blur-md p-6 shadow-xl shadow-slate-200/60 hover:bg-white/90 transition-all duration-300 hover:scale-[1.02]">
+                <div className="group rounded-2xl border border-white/30 dark:border-slate-700/30 bg-white/70 dark:bg-slate-800/70 backdrop-blur-md p-6 shadow-xl shadow-slate-200/60 dark:shadow-none hover:bg-white/90 dark:hover:bg-slate-700/70 transition-all duration-300 hover:scale-[1.02]">
                   <div className="grid h-12 w-12 place-items-center rounded-xl bg-[#0B2E5B]/10 text-2xl mb-4 group-hover:bg-[#0B2E5B]/20 transition-colors">
                     {item.icon}
                   </div>
-                  <div className="font-bold text-slate-900 mb-2">{item.label}</div>
-                  <p className="text-slate-500 text-sm leading-relaxed">{item.desc}</p>
+                  <div className="font-bold text-slate-900 dark:text-white mb-2">{item.label}</div>
+                  <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">{item.desc}</p>
                 </div>
               </Reveal>
             ))}

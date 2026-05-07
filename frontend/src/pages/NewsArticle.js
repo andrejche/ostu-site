@@ -75,7 +75,7 @@ export default function NewsArticle() {
     : "";
 
   return (
-    <div className="relative bg-slate-100">
+    <div className="relative bg-slate-100 dark:bg-slate-900">
 
       {/* ── IMAGE ── */}
       <div className="absolute inset-x-0 top-0 h-[60vh]">
@@ -85,7 +85,7 @@ export default function NewsArticle() {
           className="w-full h-full object-cover object-top"
         />
         <div className="absolute inset-0 bg-slate-900/60" />
-        <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-b from-transparent to-slate-100" />
+        <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-b from-transparent to-slate-100 dark:to-slate-900" />
       </div>
 
       {/* ── CONTENT ── */}
@@ -102,7 +102,7 @@ export default function NewsArticle() {
         </Reveal>
 
         {loading && (
-          <div className="flex items-center gap-3 p-8 text-slate-500">
+          <div className="flex items-center gap-3 p-8 text-slate-500 dark:text-slate-400">
             <div className="h-5 w-5 animate-spin rounded-full border-2 border-slate-300 border-t-[#0B2E5B]" />
             <span className="text-sm font-semibold">{t("newsArticle.loading")}</span>
           </div>
@@ -116,26 +116,26 @@ export default function NewsArticle() {
 
         {article && (
           <Reveal delay={0.05}>
-            <div className="rounded-2xl border border-white/30 bg-white/70 backdrop-blur-md p-8 shadow-xl shadow-slate-200/60">
+            <div className="rounded-2xl border border-white/30 dark:border-slate-700/30 bg-white/70 dark:bg-slate-800/70 backdrop-blur-md p-8 shadow-xl shadow-slate-200/60 dark:shadow-none">
 
               {article.category && (
-                <span className="inline-block mb-4 rounded-full bg-[#0B2E5B]/10 px-3 py-1 text-xs font-semibold text-[#0B2E5B] uppercase tracking-wider">
+                <span className="inline-block mb-4 rounded-full bg-[#0B2E5B]/10 dark:bg-blue-400/10 px-3 py-1 text-xs font-semibold text-[#0B2E5B] dark:text-blue-400 uppercase tracking-wider">
                   {article.category}
                 </span>
               )}
 
-              <h1 className="text-3xl font-extrabold text-slate-900 mb-3 leading-tight md:text-4xl">
+              <h1 className="text-3xl font-extrabold text-slate-900 dark:text-white mb-3 leading-tight md:text-4xl">
                 {article.title}
               </h1>
 
-              <div className="flex items-center gap-2 mb-8 text-sm text-slate-400">
+              <div className="flex items-center gap-2 mb-8 text-sm text-slate-400 dark:text-slate-500">
                 <span>📅</span>
                 <span>{date}</span>
               </div>
 
               <div className="w-16 h-1 bg-[#0B2E5B]/20 rounded-full mb-8" />
 
-              <div className="prose prose-slate max-w-none text-slate-600 leading-relaxed whitespace-pre-wrap">
+              <div className="prose prose-slate max-w-none text-slate-600 dark:text-slate-300 leading-relaxed whitespace-pre-wrap">
                 {article.body}
               </div>
 

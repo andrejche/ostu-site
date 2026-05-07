@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { useState, useEffect } from "react";
 import logo from "../assets/logo.png";
 import { school } from "../data/school";
+import useDarkMode from "../hooks/useDarkMode";
 
 const langs = [
   { code: "mk", label: "МК" },
@@ -14,6 +15,7 @@ const langs = [
 export default function Nav() {
   const { t, i18n } = useTranslation();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [dark, setDark] = useDarkMode();
   const { pathname } = useLocation();
 
   // Close menu on route change
@@ -75,6 +77,13 @@ export default function Nav() {
               <span className={`block h-0.5 w-6 bg-white transition-all duration-300 ${menuOpen ? "rotate-45 translate-y-2" : ""}`} />
               <span className={`block h-0.5 w-6 bg-white transition-all duration-300 ${menuOpen ? "opacity-0" : ""}`} />
               <span className={`block h-0.5 w-6 bg-white transition-all duration-300 ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`} />
+            </button>
+            {/* Dark mode toggle — visible on both mobile and desktop */}
+            <button
+              onClick={() => setDark((v) => !v)}
+              className="hidden md:flex items-center justify-center w-8 h-8 rounded-lg text-white/70 hover:text-white hover:bg-white/10 transition-colors text-base"
+            >
+              {dark ? "☀️" : "🌙"}
             </button>
 
           </div>
@@ -149,6 +158,18 @@ export default function Nav() {
                 {l.label}
               </button>
             ))}
+          </div>
+          <div className="h-px bg-slate-200 mx-4 my-3" />
+          <div className="px-5 flex items-center justify-between">
+            <span className="text-[11px] text-slate-400 font-semibold tracking-wider uppercase">
+              {dark ? "Light mode" : "Dark mode"}
+            </span>
+            <button
+              onClick={() => setDark((v) => !v)}
+              className="rounded-lg px-3 py-1.5 text-sm border border-slate-200 text-slate-600 hover:bg-slate-100 transition-colors"
+            >
+              {dark ? "☀️ Light" : "🌙 Dark"}
+            </button>
           </div>
         </div>
     </header>

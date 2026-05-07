@@ -201,5 +201,23 @@
 },
   "footer": {
     "rights": "Të gjitha të drejtat e rezervuara"
-  }
+  },
+  "teachers": {
+  "title": "Profesorë",
+  "loading": "Duke u ngarkuar…",
+  "searchPlaceholder": "Kërko profesor ose lëndë...",
+  "noResults": "Nuk ka rezultate",
+  "noResultsNote": "Provoni me një kërkim tjetër.",
+  "subject": "lëndë",
+  "subjects": "lëndë"
+},
+"files": {
+  "title": "Materiale",
+  "subtitle": "Kliko në dosje për ta hapur, në skedar për ta hapur",
+  "search": "Kërko...",
+  "loading": "Duke u ngarkuar...",
+  "empty": "Nuk ka materiale.",
+  "folderHint": "Dosje — kliko për ta hapur",
+  "fileHint": "Skedar — kliko për ta hapur"
+}
 }

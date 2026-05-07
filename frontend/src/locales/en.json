@@ -201,5 +201,23 @@
 },
     "footer": {
     "rights": "All rights reserved"
-    }
+    },
+    "teachers": {
+  "title": "Teachers",
+  "loading": "Loading…",
+  "searchPlaceholder": "Search teacher or subject...",
+  "noResults": "No results found",
+  "noResultsNote": "Try a different search.",
+  "subject": "subject",
+  "subjects": "subjects"
+},
+"files": {
+  "title": "Materials",
+  "subtitle": "Click a folder to open it, click a file to open it",
+  "search": "Search...",
+  "loading": "Loading...",
+  "empty": "No materials.",
+  "folderHint": "Folder — click to open",
+  "fileHint": "File — click to open"
+}
 }

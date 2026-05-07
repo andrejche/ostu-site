@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 import bg from "../assets/hero.png";
 import filesData from "../data/files.json";
 
-// ─── Hooks ────────────────────────────────────────────────────────────────────
 function useInView(threshold = 0.12) {
   const ref = useRef(null);
   const [inView, setInView] = useState(false);
@@ -30,7 +30,6 @@ function Reveal({ children, delay = 0, className = "" }) {
   );
 }
 
-// ─── Icons ────────────────────────────────────────────────────────────────────
 function FolderIcon({ open }) {
   return open ? (
     <svg className="w-5 h-5 text-amber-400 shrink-0" fill="currentColor" viewBox="0 0 24 24">
@@ -51,10 +50,8 @@ function FileIcon() {
   );
 }
 
-// ─── Tree Node ────────────────────────────────────────────────────────────────
 function TreeNode({ node, depth = 0, search }) {
   const [open, setOpen] = useState(depth === 0);
-
   const isFolder = node.type === "folder";
 
   const matchesSearch = (n, q) => {
@@ -129,35 +126,35 @@ function TreeNode({ node, depth = 0, search }) {
   );
 }
 
-// ─── Main Page ────────────────────────────────────────────────────────────────
 export default function FileExplorer() {
+  const { t } = useTranslation();
   const [search, setSearch] = useState("");
-  const [data, setData] = useState([]);
+  const [data, setData]     = useState([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [error, setError]   = useState(null);
 
-useEffect(() => {
-  try {
-    setData(filesData);
-    setLoading(false);
-  } catch (err) {
-    console.error("Failed to load files.json:", err);
-    setError("Неуспешно вчитување на материјали.");
-    setLoading(false);
-  }
-}, []);
+  useEffect(() => {
+    try {
+      setData(filesData);
+      setLoading(false);
+    } catch (err) {
+      console.error("Failed to load files.json:", err);
+      setError(t("files.loadError"));
+      setLoading(false);
+    }
+  }, []); // eslint-disable-line
 
   return (
     <div className="relative bg-slate-100">
 
-      {/* ── IMAGE ── */}
+      {/* IMAGE */}
       <div className="absolute inset-x-0 top-0 h-[60vh]">
         <img src={bg} alt="" className="w-full h-full object-cover object-top" />
         <div className="absolute inset-0 bg-slate-900/60" />
         <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-b from-transparent to-slate-100" />
       </div>
 
-      {/* ── CONTENT ── */}
+      {/* CONTENT */}
       <div className="relative mx-auto max-w-4xl px-4 pt-40 pb-24">
 
         {/* Header */}
@@ -167,17 +164,16 @@ useEffect(() => {
               <div className="flex items-center gap-3">
                 <div className="grid h-10 w-10 place-items-center rounded-xl bg-[#0B2E5B]/10 text-xl">📁</div>
                 <div>
-                  <h1 className="text-3xl font-extrabold text-slate-900">Материјали</h1>
-                  <p className="text-slate-500 text-sm mt-0.5">Кликни на папка за да ја отвориш, на датотека за да ја преземеш</p>
+                  <h1 className="text-3xl font-extrabold text-slate-900">{t("files.title")}</h1>
+                  <p className="text-slate-500 text-sm mt-0.5">{t("files.subtitle")}</p>
                 </div>
               </div>
-              {/* Search */}
               <div className="relative">
                 <span className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-sm">🔍</span>
                 <input
                   value={search}
                   onChange={(e) => setSearch(e.target.value)}
-                  placeholder="Пребарај..."
+                  placeholder={t("files.search")}
                   className="w-full sm:w-56 rounded-xl border border-slate-200 bg-white pl-9 pr-4 py-2.5 text-sm text-slate-800 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-[#0B2E5B]/20"
                 />
               </div>
@@ -194,17 +190,17 @@ useEffect(() => {
               <div className="w-3 h-3 rounded-full bg-red-400" />
               <div className="w-3 h-3 rounded-full bg-amber-400" />
               <div className="w-3 h-3 rounded-full bg-green-400" />
-              <span className="ml-3 text-xs text-slate-400 font-mono">ОСТУ / Материјали</span>
+              <span className="ml-3 text-xs text-slate-400 font-mono">ОСТУ / {t("files.title")}</span>
             </div>
 
             {/* Tree */}
             <div className="p-3">
               {loading ? (
-                <div className="py-12 text-center text-slate-400 text-sm animate-pulse">Вчитување...</div>
+                <div className="py-12 text-center text-slate-400 text-sm animate-pulse">{t("files.loading")}</div>
               ) : error ? (
                 <div className="py-12 text-center text-red-400 text-sm">{error}</div>
               ) : data.length === 0 ? (
-                <div className="py-12 text-center text-slate-400 text-sm">Нема материјали.</div>
+                <div className="py-12 text-center text-slate-400 text-sm">{t("files.empty")}</div>
               ) : (
                 data.map((node) => (
                   <TreeNode key={node.id} node={node} depth={0} search={search} />
@@ -220,11 +216,11 @@ useEffect(() => {
           <div className="mt-4 flex items-center gap-6 px-2 text-xs text-slate-400">
             <div className="flex items-center gap-1.5">
               <FolderIcon open={false} />
-              <span>Папка — кликни за да ја отвориш</span>
+              <span>{t("files.folderHint")}</span>
             </div>
             <div className="flex items-center gap-1.5">
               <FileIcon />
-              <span>Датотека — кликни за да ја отвориш</span>
+              <span>{t("files.fileHint")}</span>
             </div>
           </div>
         </Reveal>

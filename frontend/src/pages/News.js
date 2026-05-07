@@ -56,7 +56,7 @@ function NewsCard({ article, index, onClick }) {
     <Reveal direction="up" delay={index * 0.08}>
       <div
         onClick={() => onClick(article._id)}
-        className="group cursor-pointer rounded-2xl border border-white/30 bg-white/70 backdrop-blur-md shadow-xl shadow-slate-200/60 overflow-hidden hover:bg-white/90 hover:scale-[1.01] transition-all duration-300"
+        className="group cursor-pointer rounded-2xl border border-white/30 dark:border-slate-700/30 bg-white/70 dark:bg-slate-800/70 backdrop-blur-md shadow-xl shadow-slate-200/60 dark:shadow-none overflow-hidden hover:bg-white/90 dark:hover:bg-slate-700/90 hover:scale-[1.01] transition-all duration-300"
       >
         {article.image && (
           <div className="h-48 overflow-hidden">
@@ -70,22 +70,22 @@ function NewsCard({ article, index, onClick }) {
 
         <div className="p-6">
           {article.category && (
-            <span className="inline-block mb-3 rounded-full bg-[#0B2E5B]/10 px-3 py-1 text-xs font-semibold text-[#0B2E5B] uppercase tracking-wider">
+            <span className="inline-block mb-3 rounded-full bg-blue-900 px-3 py-1 text-xs font-semibold text-slate-100 dark:text-white uppercase tracking-wider">
               {article.category}
             </span>
           )}
 
-          <h2 className="text-lg font-extrabold text-slate-900 mb-2 group-hover:text-[#0B2E5B] transition-colors leading-snug">
+          <h2 className="text-lg font-extrabold text-slate-900 dark:text-white mb-2 group-hover:text-[#0B2E5B] dark:group-hover:text-blue-400 transition-colors leading-snug">
             {article.title}
           </h2>
 
-          <p className="text-slate-500 text-sm leading-relaxed line-clamp-3 mb-4">
+          <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed line-clamp-3 mb-4">
             {article.excerpt || article.body?.substring(0, 150) + "..."}
           </p>
 
           <div className="flex items-center justify-between">
-            <span className="text-xs text-slate-400">{date}</span>
-            <span className="text-xs font-semibold text-[#0B2E5B] group-hover:translate-x-1 transition-transform">
+            <span className="text-xs text-slate-400 dark:text-slate-500">{date}</span>
+            <span className="text-xs font-semibold text-[#0B2E5B] dark:text-blue-400 group-hover:translate-x-1 transition-transform">
               {t("news.readMore")} →
             </span>
           </div>
@@ -125,13 +125,13 @@ export default function News() {
   }, [t]);
 
   return (
-    <div className="relative bg-slate-100">
+    <div className="relative bg-slate-100 dark:bg-slate-900">
 
       {/* ── IMAGE ── */}
       <div className="absolute inset-x-0 top-0 h-[60vh]">
         <img src={bg} alt="" className="w-full h-full object-cover object-top" />
         <div className="absolute inset-0 bg-slate-900/60" />
-        <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-b from-transparent to-slate-100" />
+        <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-b from-transparent to-slate-100 dark:to-slate-900" />
       </div>
 
       {/* ── CONTENT ── */}
@@ -139,12 +139,12 @@ export default function News() {
 
         {/* Header */}
         <Reveal direction="up" delay={0.05}>
-          <div className="rounded-2xl border border-white/30 bg-white/70 backdrop-blur-md p-8 shadow-xl shadow-slate-200/60 mb-8">
+          <div className="rounded-2xl border border-white/30 dark:border-slate-700/30 bg-white/70 dark:bg-slate-800/70 backdrop-blur-md p-8 shadow-xl shadow-slate-200/60 dark:shadow-none mb-8">
             <div className="flex items-center gap-3">
               <div className="grid h-10 w-10 place-items-center rounded-xl bg-[#0B2E5B]/10 text-xl">📰</div>
               <div>
-                <h1 className="text-3xl font-extrabold text-slate-900">{t("news.title")}</h1>
-                <p className="text-slate-500 text-sm mt-0.5">{t("news.subtitle")}</p>
+                <h1 className="text-3xl font-extrabold text-slate-900 dark:text-white">{t("news.title")}</h1>
+                <p className="text-slate-500 dark:text-slate-400 text-sm mt-0.5">{t("news.subtitle")}</p>
               </div>
             </div>
           </div>
@@ -152,7 +152,7 @@ export default function News() {
 
         {/* Loading */}
         {loading && (
-          <div className="flex items-center gap-3 p-8 text-slate-500">
+          <div className="flex items-center gap-3 p-8 text-slate-500 dark:text-slate-400">
             <div className="h-5 w-5 animate-spin rounded-full border-2 border-slate-300 border-t-[#0B2E5B]" />
             <span className="text-sm font-semibold">{t("news.loading")}</span>
           </div>
@@ -167,10 +167,10 @@ export default function News() {
 
         {/* Empty */}
         {!loading && !error && articles.length === 0 && (
-          <div className="rounded-2xl border border-white/30 bg-white/70 backdrop-blur-md p-12 text-center shadow-xl">
+          <div className="rounded-2xl border border-white/30 dark:border-slate-700/30 bg-white/70 dark:bg-slate-800/70 backdrop-blur-md p-12 text-center shadow-xl dark:shadow-none">
             <div className="text-5xl mb-4">📭</div>
-            <div className="text-lg font-bold text-slate-800">{t("news.empty")}</div>
-            <div className="text-sm text-slate-500 mt-2">{t("news.emptyNote")}</div>
+            <div className="text-lg font-bold text-slate-800 dark:text-white">{t("news.empty")}</div>
+            <div className="text-sm text-slate-500 dark:text-slate-400 mt-2">{t("news.emptyNote")}</div>
           </div>
         )}
 

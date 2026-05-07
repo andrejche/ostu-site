@@ -128,7 +128,7 @@ export default function HomePage() {
     ({ komp: "💻", mas: "⚙️", ener: "⚡", elek: "🔌", arh: "🏛️" }[key] ?? "🤖");
 
   return (
-    <div className="bg-slate-100">
+    <div className="bg-slate-100 dark:bg-slate-900">
 
       {/* ── HERO ─────────────────────────────────────────────────────────────── */}
       <section
@@ -173,18 +173,18 @@ export default function HomePage() {
 
       {/* ── SECTION 1 ────────────────────────────────────────────────────────── */}
       <section className="flex flex-col md:flex-row min-h-[600px]">
-        <Reveal direction="left" className="w-full md:w-[40%] flex flex-col justify-center px-10 py-16 md:px-16 bg-slate-50">
-          <h2 className="text-4xl font-black text-slate-900 mb-3">{t("section1.heading")}</h2>
-          <p className="text-slate-500 text-base mb-6">{t("section1.lead")}</p>
-          <p className="text-slate-600 text-sm leading-relaxed mb-4">{t("section1.p1")}</p>
-          <p className="text-slate-600 text-sm leading-relaxed">{t("section1.p2")}</p>
+        <Reveal direction="left" className="w-full md:w-[40%] flex flex-col justify-center px-10 py-16 md:px-16 bg-slate-50 dark:bg-slate-800">
+          <h2 className="text-4xl font-black text-slate-900 dark:text-white mb-3">{t("section1.heading")}</h2>
+          <p className="text-slate-500 dark:text-slate-400 text-base mb-6">{t("section1.lead")}</p>
+          <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-4">{t("section1.p1")}</p>
+          <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">{t("section1.p2")}</p>
         </Reveal>
 
         <div className="w-full md:w-[60%] relative overflow-hidden min-h-[340px]">
           <Reveal direction="right" className="absolute inset-0">
             <img src={pic3} alt="Училиште" className="w-full h-full object-cover" />
           </Reveal>
-          <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-slate-50 to-transparent pointer-events-none" />
+          <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-slate-50 dark:from-slate-800 to-transparent pointer-events-none" />
         </div>
       </section>
 
@@ -206,22 +206,22 @@ export default function HomePage() {
           <Reveal direction="left" className="absolute inset-0">
             <img src={pic2} alt="Настава" className="w-full h-full object-cover" />
           </Reveal>
-          <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-r from-transparent to-slate-50 pointer-events-none" />
-          <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-slate-50 to-transparent pointer-events-none" />
+          <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-r from-transparent to-slate-50 dark:to-slate-800 pointer-events-none" />
+          <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-slate-50 dark:from-slate-800 to-transparent pointer-events-none" />
         </div>
 
-        <Reveal direction="right" className="w-full md:w-[40%] flex flex-col justify-center px-10 py-16 md:px-16 bg-slate-50">
-          <span className="text-slate-400 text-xs font-semibold tracking-widest uppercase mb-3">
+        <Reveal direction="right" className="w-full md:w-[40%] flex flex-col justify-center px-10 py-16 md:px-16 bg-slate-50 dark:bg-slate-800">
+          <span className="text-slate-400 dark:text-slate-500 text-xs font-semibold tracking-widest uppercase mb-3">
             {t("section2.label")}
           </span>
-          <h2 className="text-4xl font-black text-slate-900 mb-3 leading-tight">
+          <h2 className="text-4xl font-black text-slate-900 dark:text-white mb-3 leading-tight">
             {t("section2.heading").split("\n").map((line, i) => (
               <span key={i}>{line}{i === 0 && <br />}</span>
             ))}
           </h2>
           <div className="w-12 h-1 bg-slate-700 rounded-full mb-5" />
-          <p className="text-slate-600 text-sm leading-relaxed mb-4">{t("section2.p1")}</p>
-          <p className="text-slate-600 text-sm leading-relaxed mb-8">
+          <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-4">{t("section2.p1")}</p>
+          <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-8">
             {t("section2.p2")}{" "}
             <Link to="/praktika" className="text-slate-400 hover:underline font-medium">
               {t("section2.p2link")}
@@ -239,21 +239,21 @@ export default function HomePage() {
 
       {/* ── ONLINE TESTOVI ───────────────────────────────────────────────────── */}
       <section id="online-test" className="mx-auto max-w-6xl px-4 py-16">
-        <div className="rounded-2xl bg-white p-8 shadow-lg ring-1 ring-slate-200 md:p-10">
+        <div className="rounded-2xl bg-white dark:bg-slate-800 p-8 shadow-lg ring-1 ring-slate-200 dark:ring-slate-700 md:p-10">
           <div className="text-center">
-            <div className="inline-flex items-center gap-2 rounded-full bg-slate-100 px-4 py-2 text-sm font-semibold text-slate-700 ring-1 ring-slate-200">
+            <div className="inline-flex items-center gap-2 rounded-full bg-slate-100 dark:bg-slate-700 px-4 py-2 text-sm font-semibold text-slate-700 dark:text-slate-200 ring-1 ring-slate-200 dark:ring-slate-600">
               📝 {t("testovi.badge")}
             </div>
-            <h2 className="mt-4 text-3xl font-extrabold text-[#0B2E5B] md:text-4xl">
+            <h2 className="mt-4 text-3xl font-extrabold text-[#0B2E5B] dark:text-white md:text-4xl">
               {t("testovi.heading")}
             </h2>
-            <p className="mt-3 text-base text-slate-600">{t("testovi.subtitle")}</p>
+            <p className="mt-3 text-base text-slate-600 dark:text-slate-300">{t("testovi.subtitle")}</p>
           </div>
           <div className="mt-10">
-            <div className="flex flex-col items-center justify-center rounded-2xl border-2 border-dashed border-slate-300 bg-slate-50 p-12 text-center">
+            <div className="flex flex-col items-center justify-center rounded-2xl border-2 border-dashed border-slate-300 dark:border-slate-600 bg-slate-50 dark:bg-slate-700/30 p-12 text-center">
               <div className="text-5xl">📭</div>
-              <div className="mt-4 text-xl font-bold text-slate-800">{t("testovi.empty")}</div>
-              <div className="mt-2 text-sm text-slate-600">{t("testovi.emptyNote")}</div>
+              <div className="mt-4 text-xl font-bold text-slate-800 dark:text-white">{t("testovi.empty")}</div>
+              <div className="mt-2 text-sm text-slate-600 dark:text-slate-400">{t("testovi.emptyNote")}</div>
             </div>
           </div>
         </div>
@@ -263,16 +263,16 @@ export default function HomePage() {
       <section id="online" className="px-3 py-12 md:px-4 md:py-16">
         <div className="mx-auto max-w-6xl">
           <Reveal>
-            <div className="rounded-2xl bg-white p-5 shadow-lg ring-1 ring-slate-200 sm:p-8 md:p-10">
+            <div className="rounded-2xl bg-white dark:bg-slate-800 p-5 shadow-lg ring-1 ring-slate-200 dark:ring-slate-700 sm:p-8 md:p-10">
 
               <div className="text-center">
-                <div className="inline-flex items-center gap-2 rounded-full bg-slate-100 px-3 py-1.5 text-xs font-semibold text-slate-700 ring-1 ring-slate-200 sm:px-4 sm:py-2 sm:text-sm">
+                <div className="inline-flex items-center gap-2 rounded-full bg-slate-100 dark:bg-slate-700 px-3 py-1.5 text-xs font-semibold text-slate-700 dark:text-slate-200 ring-1 ring-slate-200 dark:ring-slate-600 sm:px-4 sm:py-2 sm:text-sm">
                   🎓 {t("nastava.badge")}
                 </div>
-                <h2 className="mt-3 text-2xl font-extrabold text-[#0B2E5B] sm:mt-4 sm:text-3xl md:text-4xl">
+                <h2 className="mt-3 text-2xl font-extrabold text-[#0B2E5B] dark:text-white sm:mt-4 sm:text-3xl md:text-4xl">
                   {t("nastava.heading")}
                 </h2>
-                <p className="mt-2 text-sm text-slate-600 sm:mt-3 sm:text-base">
+                <p className="mt-2 text-sm text-slate-600 dark:text-slate-300 sm:mt-3 sm:text-base">
                   {t("nastava.subtitle")}
                 </p>
               </div>
@@ -280,8 +280,8 @@ export default function HomePage() {
               {/* Tracks */}
               <div className="mt-8 md:mt-10">
                 <div className="mb-3 flex items-center justify-between md:mb-4">
-                  <div className="text-lg font-bold text-slate-800 md:text-xl">{t("nastava.trackLabel")}</div>
-                  <div className="text-xs text-slate-500 sm:text-sm">{t("nastava.trackHint")}</div>
+                  <div className="text-lg font-bold text-slate-800 dark:text-white md:text-xl">{t("nastava.trackLabel")}</div>
+                  <div className="text-xs text-slate-500 dark:text-slate-400 sm:text-sm">{t("nastava.trackHint")}</div>
                 </div>
                 <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3">
                   {onlineTracks.map((tr) => {
@@ -293,19 +293,19 @@ export default function HomePage() {
                           "active:scale-[0.98] focus:outline-none focus:ring-4 focus:ring-[#0B2E5B]/15 " +
                           (active
                             ? "border-[#0B2E5B] bg-[#0B2E5B] text-white shadow-md"
-                            : "border-slate-200 bg-white text-slate-800 hover:border-[#0B2E5B] hover:bg-slate-50 hover:shadow-sm")
+                            : "border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-700 text-slate-800 dark:text-white hover:border-[#0B2E5B] hover:bg-slate-50 dark:hover:bg-slate-600 hover:shadow-sm")
                         }
                       >
                         <div className="flex items-center gap-3">
                           <div className={
                             "grid h-10 w-10 shrink-0 place-items-center rounded-xl text-xl ring-1 transition " +
-                            (active ? "bg-white/10 ring-white/20" : "bg-slate-100 ring-slate-200 group-hover:bg-slate-200")
+                            (active ? "bg-white/10 ring-white/20" : "bg-slate-100 dark:bg-slate-600 ring-slate-200 dark:ring-slate-500 group-hover:bg-slate-200 dark:group-hover:bg-slate-500")
                           }>
                             {trackIcon(tr.key)}
                           </div>
                           <div className="min-w-0">
                             <div className="truncate text-base font-extrabold leading-tight">{t(`tracks.${tr.key}`)}</div>
-                            <div className={active ? "mt-0.5 text-xs text-white/80" : "mt-0.5 text-xs text-slate-500"}>
+                            <div className={active ? "mt-0.5 text-xs text-white/80" : "mt-0.5 text-xs text-slate-500 dark:text-slate-400"}>
                               {t("nastava.yearsAvail")} {tr.years.join(", ")}
                             </div>
                           </div>
@@ -318,7 +318,7 @@ export default function HomePage() {
 
               {/* Years */}
               <div className="mt-8 md:mt-10">
-                <div className="mb-3 text-lg font-bold text-slate-800 md:mb-4 md:text-xl">
+                <div className="mb-3 text-lg font-bold text-slate-800 dark:text-white md:mb-4 md:text-xl">
                   {t("nastava.yearLabel")}
                 </div>
                 <div className="grid grid-cols-2 gap-2 sm:flex sm:flex-wrap sm:gap-3">
@@ -331,7 +331,7 @@ export default function HomePage() {
                           "active:scale-[0.98] focus:outline-none focus:ring-4 focus:ring-slate-900/10 " +
                           (active
                             ? "border-slate-900 bg-slate-900 text-white shadow-md"
-                            : "border-slate-200 bg-white text-slate-800 hover:border-slate-900 hover:bg-slate-50")
+                            : "border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-700 text-slate-800 dark:text-white hover:border-slate-900 hover:bg-slate-50 dark:hover:bg-slate-600")
                         }
                       >
                         {t(`nastava.years.${y - 1}`)}
@@ -344,13 +344,13 @@ export default function HomePage() {
               {/* Subjects */}
               <div className="mt-10 md:mt-12">
                 <div className="mb-4 flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between md:mb-5">
-                  <div className="text-xl font-extrabold text-[#0B2E5B] md:text-2xl">📚 {t("nastava.subjects")}</div>
-                  <div className="text-xs text-slate-500 sm:text-sm">{t(`tracks.${trackKey}`)} • {year}. {t("nastava.yearLabel").toLowerCase()}</div>
+                  <div className="text-xl font-extrabold text-slate-900 dark:text-white md:text-2xl">📚 {t("nastava.subjects")}</div>
+                  <div className="text-xs text-slate-500 dark:text-slate-400 sm:text-sm">{t(`tracks.${trackKey}`)} • {year}. {t("nastava.yearLabel").toLowerCase()}</div>
                 </div>
 
                 {loading && (
-                  <div className="rounded-2xl border border-slate-200 bg-slate-50 p-6">
-                    <div className="flex items-center gap-3 text-slate-600">
+                  <div className="rounded-2xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-700/30 p-6">
+                    <div className="flex items-center gap-3 text-slate-600 dark:text-slate-300">
                       <div className="h-4 w-4 animate-spin rounded-full border-2 border-slate-300 border-t-slate-700" />
                       <span className="text-sm font-semibold">{t("nastava.loading")}</span>
                     </div>
@@ -362,7 +362,7 @@ export default function HomePage() {
                   </div>
                 )}
                 {!loading && !error && subjects.length === 0 && (
-                  <div className="rounded-2xl border border-slate-200 bg-slate-50 p-6 text-slate-600">
+                  <div className="rounded-2xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-700/30 p-6 text-slate-600 dark:text-slate-300">
                     <span className="text-sm font-semibold">{t("nastava.noData")}</span>
                   </div>
                 )}
@@ -372,16 +372,16 @@ export default function HomePage() {
                     <Link
                       key={s.id}
                       to={`/folders`}
-                      className="group rounded-2xl border border-slate-200 bg-white p-4 text-left shadow-sm transition-all duration-200 hover:border-[#0B2E5B] hover:shadow-md active:scale-[0.99] focus:outline-none focus:ring-4 focus:ring-[#0B2E5B]/10 sm:p-6"
+                      className="group rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-700 p-4 text-left shadow-sm transition-all duration-200 hover:border-[#0B2E5B] hover:shadow-md active:scale-[0.99] focus:outline-none focus:ring-4 focus:ring-[#0B2E5B]/10 sm:p-6"
                     >
                         <div className="flex items-start justify-between gap-2 sm:gap-3">
                           <div className="flex items-center gap-2 sm:gap-3">
-                            <div className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-slate-100 text-lg ring-1 ring-slate-200 group-hover:bg-slate-200 transition sm:h-11 sm:w-11 sm:text-xl">
+                            <div className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-slate-100 dark:bg-slate-600 text-lg ring-1 ring-slate-200 dark:ring-slate-500 group-hover:bg-slate-200 dark:group-hover:bg-slate-500 transition sm:h-11 sm:w-11 sm:text-xl">
                               📄
                             </div>
                             <div>
-                              <div className="text-base font-extrabold text-slate-900 sm:text-lg">{s.title}</div>
-                              <div className="mt-0.5 text-xs text-slate-500 sm:mt-1 sm:text-sm">{t("nastava.subjectMeta")}</div>
+                              <div className="text-base font-extrabold text-slate-900 dark:text-white sm:text-lg">{s.title}</div>
+                              <div className="mt-0.5 text-xs text-slate-500 dark:text-slate-400 sm:mt-1 sm:text-sm">{t("nastava.subjectMeta")}</div>
                             </div>
                           </div>
                           {s.lang && (
@@ -390,7 +390,7 @@ export default function HomePage() {
                             </span>
                           )}
                         </div>
-                        <div className="mt-3 text-xs font-semibold text-[#0B2E5B] group-hover:translate-x-1 transition-transform sm:mt-4 sm:text-sm">
+                        <div className="mt-3 text-xs font-semibold text-slate-900 dark:text-white group-hover:translate-x-1 transition-transform sm:mt-4 sm:text-sm">
                           {t("nastava.open")}
                         </div>
                       </Link>

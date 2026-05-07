@@ -56,13 +56,13 @@ export default function About() {
   ];
 
   return (
-    <div className="relative bg-slate-100">
+    <div className="relative bg-slate-100 dark:bg-slate-900">
 
       {/* ── IMAGE ── */}
       <div className="absolute inset-x-0 top-0 h-[60vh]">
         <img src={bg} alt="" className="w-full h-full object-cover object-top" />
         <div className="absolute inset-0 bg-slate-900/60" />
-        <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-b from-transparent to-slate-100" />
+        <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-b from-transparent to-slate-100 dark:to-slate-900" />
       </div>
 
       {/* ── CONTENT ── */}
@@ -70,14 +70,14 @@ export default function About() {
 
         {/* HISTORY */}
         <Reveal direction="up" delay={0.05}>
-          <div className="rounded-2xl border border-white/30 bg-white/70 backdrop-blur-md p-8 shadow-xl shadow-slate-200/60">
+          <div className="rounded-2xl border border-white/30 dark:border-slate-700/30 bg-white/70 dark:bg-slate-800/70 backdrop-blur-md p-8 shadow-xl shadow-slate-200/60 dark:shadow-none">
             <div className="flex items-center gap-3 mb-5">
               <div className="grid h-10 w-10 place-items-center rounded-xl bg-[#0B2E5B]/10 text-xl">📜</div>
-              <h2 className="text-2xl font-bold text-slate-900">{t("about.historyTitle")}</h2>
+              <h2 className="text-2xl font-bold text-slate-900 dark:text-white">{t("about.historyTitle")}</h2>
             </div>
-            <p className="text-slate-600 leading-relaxed mb-4">{t("about.historyP1")}</p>
-            <p className="text-slate-600 leading-relaxed mb-4">{t("about.historyP2")}</p>
-            <p className="text-slate-600 leading-relaxed">{t("about.historyP3")}</p>
+            <p className="text-slate-600 dark:text-slate-300 leading-relaxed mb-4">{t("about.historyP1")}</p>
+            <p className="text-slate-600 dark:text-slate-300 leading-relaxed mb-4">{t("about.historyP2")}</p>
+            <p className="text-slate-600 dark:text-slate-300 leading-relaxed mb-4">{t("about.historyP3")}</p>
           </div>
         </Reveal>
 
@@ -86,19 +86,19 @@ export default function About() {
           <Reveal direction="up" delay={0.05}>
             <div className="flex items-center gap-3 mb-5">
               <div className="grid h-10 w-10 place-items-center rounded-xl bg-[#0B2E5B]/10 text-xl">🏫</div>
-              <h2 className="text-2xl font-bold text-slate-900">{t("about.cardTitle")}</h2>
+              <h2 className="text-2xl font-bold text-slate-900 dark:text-white">{t("about.cardTitle")}</h2>
             </div>
           </Reveal>
 
-          <div className="rounded-2xl border border-white/30 bg-white/70 backdrop-blur-md shadow-xl shadow-slate-200/60 overflow-hidden">
+          <div className="rounded-2xl border border-white/30 dark:border-slate-700/30 bg-white/70 dark:bg-slate-800/70 backdrop-blur-md shadow-xl shadow-slate-200/60 dark:shadow-none overflow-hidden">
             <div className="grid md:grid-cols-2">
               {infoItems.map(([title, value], i) => (
                 <Reveal key={title} direction="up" delay={i * 0.03}>
-                  <div className="border-b border-slate-100/80 p-5 flex flex-col hover:bg-white/60 transition-colors duration-200">
-                    <span className="text-xs font-semibold text-[#0B2E5B]/60 uppercase tracking-wider">
+                  <div className="border-b border-slate-100/80 dark:border-slate-700/50 p-5 flex flex-col hover:bg-white/60 dark:hover:bg-slate-700/40 transition-colors duration-200">
+                    <span className="text-xs font-semibold text-[#0B2E5B]/60 dark:text-blue-400/80 uppercase tracking-wider">
                       {title}
                     </span>
-                    <span className="text-slate-800 font-medium mt-1">
+                    <span className="text-slate-800 dark:text-slate-200 font-medium mt-1">
                       {value}
                     </span>
                   </div>

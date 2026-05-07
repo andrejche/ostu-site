@@ -31,7 +31,7 @@ export default function App() {
   const { pathname } = useLocation();
 
   return (
-    <div className="min-h-screen text-slate-100 overflow-x-hidden">
+    <div className="min-h-screen text-slate-100 overflow-x-hidden dark:bg-slate-900">
       <ScrollToTop />
       {!pathname.startsWith("/admin") && <Nav />}
       <main>
@@ -54,11 +54,11 @@ export default function App() {
       </main>
       <ChatWidget />
       {!pathname.startsWith("/admin") && (
-      <footer className="border-t border-white/10 bg-white/10">
+      <footer className="border-t border-white/10 dark:border-slate-700/50 bg-white/10 dark:bg-slate-800/50">
         <div className="mx-auto flex max-w-6xl flex-col gap-4 px-4 py-8 text-sm text-slate-400 md:flex-row md:items-center md:justify-between">
           <div>
-            <div className="font-semibold text-slate-400">ОСТУ „Гостивар"</div>
-            <div className="mt-1 text-xs text-slate-400">
+            <div className="font-semibold text-slate-400 dark:text-slate-300">ОСТУ „Гостивар"</div>
+            <div className="mt-1 text-xs text-slate-400 dark:text-slate-500">
               Ул. „Мара Уграинова" бб, Гостивар • Тел: 042 / 111 – 222 | Направено од Андреј Танески
             </div>
           </div>
@@ -66,7 +66,7 @@ export default function App() {
             {/* <Link to="/vesti"    className="hover:text-slate-200 transition-colors">Вести</Link>
             <Link to="/kontakt"  className="hover:text-slate-200 transition-colors">{t("nav.contact",    "Контакт")}</Link> */}
           </nav>
-          <span className="text-xs text-slate-500">
+          <span className="text-xs text-slate-500 dark:text-slate-400">
             © {new Date().getFullYear()} ОСТУ „Гостивар" • {t("footer.rights", "Сите права задржани")}
           </span>
         </div>

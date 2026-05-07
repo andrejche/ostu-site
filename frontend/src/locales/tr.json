@@ -201,5 +201,23 @@
 },
     "footer": {
     "rights": "Tüm hakları saklıdır"
-    }
+    },
+    "teachers": {
+  "title": "Öğretmenler",
+  "loading": "Yükleniyor…",
+  "searchPlaceholder": "Öğretmen veya ders ara...",
+  "noResults": "Sonuç bulunamadı",
+  "noResultsNote": "Farklı bir arama deneyin.",
+  "subject": "ders",
+  "subjects": "ders"
+},
+"files": {
+  "title": "Materyaller",
+  "subtitle": "Klasörü açmak için tıklayın, dosyayı açmak için tıklayın",
+  "search": "Ara...",
+  "loading": "Yükleniyor...",
+  "empty": "Materyal yok.",
+  "folderHint": "Klasör — açmak için tıklayın",
+  "fileHint": "Dosya — açmak için tıklayın"
+}
 }

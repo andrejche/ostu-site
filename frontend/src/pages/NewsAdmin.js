@@ -218,7 +218,7 @@ export default function Admin() {
             <p className="text-white/60 text-xs mt-0.5">ОСТУ „Гостивар"</p>
           </div>
           <div className="flex gap-2">
-            {[{ key: "news", label: "📰 Вести" }, { key: "teachers", label: "👩‍🏫 Наставници" }].map((t) => (
+            {[{ key: "news", label: "📰 Вести" }, { key: "teachers", label: "👩‍🏫 Професори" }].map((t) => (
               <button key={t.key} onClick={() => setTab(t.key)}
                 className={
                   "rounded-xl px-4 py-2 text-sm font-bold transition-all " +
@@ -388,7 +388,7 @@ function TeachersTab({ adminKey }) {
       const method = editing !== null ? "PUT" : "POST";
       const res    = await fetch(url, { method, headers: authHeaders(adminKey), body: JSON.stringify(form) });
       if (!res.ok) throw new Error((await res.json()).error);
-      setMsg(editing !== null ? "Ажурирано!" : "Додаден наставник!");
+      setMsg(editing !== null ? "Ажурирано!" : "Додаден професор!");
       setForm(emptyTeacher); setEditing(null); setSubInput(""); load();
     } catch (e) { setMsg("Грешка: " + e.message); }
   };
@@ -402,7 +402,7 @@ function TeachersTab({ adminKey }) {
 
   const del = async (idx) => {
     if (!adminKey) return setMsg("Грешка: Внеси админ клуч.");
-    if (!window.confirm("Избриши го наставникот?")) return;
+    if (!window.confirm("Избриши го професорот?")) return;
     await fetch(`${TEACHER_API}/${idx}`, { method: "DELETE", headers: authHeaders(adminKey) });
     load();
   };
@@ -414,9 +414,9 @@ function TeachersTab({ adminKey }) {
   return (
     <div>
       <Card>
-        <CardTitle>{editing !== null ? "✏️ Уреди наставник" : "➕ Нов наставник"}</CardTitle>
+        <CardTitle>{editing !== null ? "✏️ Уреди професор" : "➕ Нов професор"}</CardTitle>
         <div className="space-y-4">
-          <Field label="Ime и презиме *">
+          <Field label="Име и презиме *">
             <input className={inp} value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} placeholder="Маријанчо Алексоски" />
           </Field>
           <Field label="Слика">
@@ -450,24 +450,24 @@ function TeachersTab({ adminKey }) {
         {msg && <Msg msg={msg} />}
         <div className="mt-6 flex gap-3">
           <PrimaryBtn onClick={save} disabled={!form.name.trim()}>
-            {editing !== null ? "Зачувај промени" : "Додај наставник"}
+            {editing !== null ? "Зачувај промени" : "Додај професор"}
           </PrimaryBtn>
           {editing !== null && <SecondaryBtn onClick={() => { setForm(emptyTeacher); setEditing(null); setMsg(""); setSubInput(""); }}>Откажи</SecondaryBtn>}
         </div>
       </Card>
 
       <div className="flex items-center justify-between mb-4 gap-4 flex-wrap">
-        <SectionTitle>Сите наставници ({teachers.length})</SectionTitle>
+        <SectionTitle>Сите професори ({teachers.length})</SectionTitle>
         <input
           className="rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#0B2E5B]/20 w-64"
-          placeholder="🔍 Пребарај наставник..."
+          placeholder="🔍 Пребарај професор..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
         />
       </div>
 
       <div className="space-y-3">
-        {filtered.length === 0 && <EmptyMsg>Нема наставници.</EmptyMsg>}
+        {filtered.length === 0 && <EmptyMsg>Нема професори.</EmptyMsg>}
         {filtered.map((t, i) => (
           <div key={t.name + i} className="rounded-xl bg-white border border-slate-200 p-5 shadow-sm">
             <div className="flex items-start justify-between gap-4">
