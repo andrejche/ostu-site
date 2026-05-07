@@ -81,9 +81,10 @@ export default function Nav() {
             {/* Dark mode toggle — visible on both mobile and desktop */}
             <button
               onClick={() => setDark((v) => !v)}
-              className="hidden md:flex items-center justify-center w-8 h-8 rounded-lg text-white/70 hover:text-white hover:bg-white/10 transition-colors text-base"
+              className="hidden md:flex items-center gap-1.5 rounded-full border border-white/20 bg-white/10 hover:bg-white/20 px-3 py-1.5 transition-all duration-200"
             >
-              {dark ? "☀️" : "🌙"}
+              <span className="text-sm">{dark ? "☀️" : "🌙"}</span>
+              <span className="text-[11px] font-bold text-white/80">{dark ? "Light" : "Dark"}</span>
             </button>
 
           </div>
@@ -101,13 +102,13 @@ export default function Nav() {
 
         <div className={`
           fixed bottom-0 left-0 right-0 z-50 md:hidden
-          bg-white rounded-t-2xl border-t border-slate-200 pb-8
+          bg-white dark:bg-slate-900 rounded-t-2xl border-t border-slate-200 dark:border-slate-700 pb-8
           transition-transform duration-300 ease-out
           ${menuOpen ? "translate-y-0" : "translate-y-full"}
         `}>
           {/* Handle */}
           <div className="flex justify-center pt-3 pb-3">
-            <div className="w-8 h-0.5 bg-slate-300 rounded-full" />
+            <div className="w-8 h-0.5 bg-slate-300 dark:bg-slate-600 rounded-full" />
           </div>
 
           {/* Nav links */}
@@ -124,8 +125,8 @@ export default function Nav() {
                 className={({ isActive }) =>
                   `flex items-center justify-between px-3 py-3 rounded-xl text-sm font-medium transition-colors ` +
                   (isActive
-                    ? "bg-[#EFF4FB] text-[#0B2E5B] font-bold"
-                    : "text-slate-700 hover:bg-slate-100 hover:text-[#0B2E5B]")
+                  ? "bg-[#EFF4FB] dark:bg-[#0B2E5B]/30 text-[#0B2E5B] dark:text-blue-400 font-bold"
+                  : "text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-[#0B2E5B]")
                 }
               >
                 {({ isActive }) => (
@@ -141,36 +142,37 @@ export default function Nav() {
             ))}
           </nav>
 
-          <div className="h-px bg-slate-200 mx-4 my-3" />
+          <div className="h-px bg-slate-200 dark:bg-slate-700 mx-4 my-3" />
 
           {/* Language switcher */}
           <div className="flex items-center gap-1.5 px-5">
-            <span className="text-[11px] text-slate-400 font-semibold tracking-wider uppercase mr-2">Lang</span>
+            <span className="text-[11px] text-slate-400 dark:text-slate-500 font-semibold tracking-wider uppercase mr-2">Lang</span>
             {langs.map((l) => (
               <button key={l.code} onClick={() => i18n.changeLanguage(l.code)}
                 className={
                   "rounded-lg px-2.5 py-1.5 text-[11px] font-bold tracking-wider border transition-all " +
                   (i18n.language === l.code
                     ? "bg-[#0B2E5B] text-white border-[#0B2E5B]"
-                    : "text-slate-400 border-transparent hover:text-[#0B2E5B] hover:border-slate-200")
+                    : "text-slate-400 dark:text-slate-500 border-transparent hover:text-[#0B2E5B] hover:border-slate-200 dark:hover:border-slate-600")
                 }
               >
                 {l.label}
               </button>
             ))}
           </div>
-          <div className="h-px bg-slate-200 mx-4 my-3" />
-          <div className="px-5 flex items-center justify-between">
-            <span className="text-[11px] text-slate-400 font-semibold tracking-wider uppercase">
-              {dark ? "Light mode" : "Dark mode"}
-            </span>
-            <button
-              onClick={() => setDark((v) => !v)}
-              className="rounded-lg px-3 py-1.5 text-sm border border-slate-200 text-slate-600 hover:bg-slate-100 transition-colors"
-            >
-              {dark ? "☀️ Light" : "🌙 Dark"}
-            </button>
-          </div>
+          <div className="h-px bg-slate-200 dark:bg-slate-700 mx-4 my-3" />
+            <div className="px-5 flex items-center justify-between">
+              <span className="text-[11px] text-slate-400 dark:text-slate-500 font-semibold tracking-wider uppercase">
+                {dark ? "Light mode" : "Dark mode"}
+              </span>
+              <button
+                onClick={() => setDark((v) => !v)}
+                className="flex items-center gap-2 rounded-full border border-slate-200 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 px-4 py-1.5 text-sm font-semibold text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all duration-200"
+              >
+                <span>{dark ? "☀️" : "🌙"}</span>
+                <span>{dark ? "Light" : "Dark"}</span>
+              </button>
+            </div>
         </div>
     </header>
   );

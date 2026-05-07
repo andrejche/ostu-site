@@ -59,7 +59,7 @@ export default function App() {
           <div>
             <div className="font-semibold text-slate-400 dark:text-slate-300">ОСТУ „Гостивар"</div>
             <div className="mt-1 text-xs text-slate-400 dark:text-slate-500">
-              Ул. „Мара Уграинова" бб, Гостивар • Тел: 042 / 111 – 222 | Направено од Андреј Танески
+              Ул. Илинденска 167, Гостивар • Тел: 042 / 111 – 222 | Направено од Андреј Танески
             </div>
           </div>
           <nav className="flex flex-wrap gap-3 text-xs md:text-sm">
