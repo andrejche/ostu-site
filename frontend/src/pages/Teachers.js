@@ -52,7 +52,7 @@ function TeacherCard({ teacher, index }) {
   return (
     <Reveal direction="up" delay={(index % 3) * 0.08}>
       <div
-        className="group rounded-2xl border border-white/30 bg-white/70 backdrop-blur-md shadow-xl shadow-slate-200/60 p-5 hover:bg-white/90 transition-all duration-300 cursor-pointer"
+        className="group rounded-2xl border border-white/30 dark:border-slate-700 bg-white/70 dark:bg-slate-800 backdrop-blur-md shadow-xl shadow-slate-200/60 dark:shadow-none p-5 hover:bg-white/90 dark:hover:bg-slate-700 transition-all duration-300 cursor-pointer"
         onClick={() => setExpanded((v) => !v)}
       >
         <div className="flex items-center gap-4">

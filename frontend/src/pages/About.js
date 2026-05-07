@@ -98,7 +98,7 @@ export default function About() {
                     <span className="text-xs font-semibold text-[#0B2E5B]/60 dark:text-blue-400/80 uppercase tracking-wider">
                       {title}
                     </span>
-                    <span className="text-slate-800 dark:text-slate-200 font-medium mt-1">
+                    <span className="text-slate-800 dark:text-white font-medium mt-1">
                       {value}
                     </span>
                   </div>
