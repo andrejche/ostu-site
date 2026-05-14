@@ -3,7 +3,7 @@ export const school = {
   city: "Гостивар",
   address: "Ул. „Мара Уграинова“ бб, Гостивар",
   phone: "+389 42 214 333",
-  website: "ostugostivar.edu.mk",
+  website: "ostugostivar.site",
   programs: [
     "Компјутерска техника и автоматика",
     "Енергетика",
