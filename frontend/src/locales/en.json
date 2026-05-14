@@ -219,5 +219,25 @@
   "empty": "No materials.",
   "folderHint": "Folder — click to open",
   "fileHint": "File — click to open"
+},
+"enrollment": {
+  "badge": "Enrollment 2025/2026",
+  "title": "The future is your decision!",
+  "subtitle": "Choose a track. Build your future!",
+  "tagline": "Knowledge today – success tomorrow!",
+  "track1": "Mechanical Technician", "track1desc": "Create. Fix. Improve.",
+  "track2": "Industrial Mechatronics Technician", "track2desc": "Robots. Automate. Innovate.",
+  "track3": "Computer Engineering & Automation", "track3desc": "Code. Control. Create the future.",
+  "track4": "Electrical Technician – Energy", "track4desc": "Energy today, bright future tomorrow!",
+  "track5": "Electrical Technician for Electronics", "track5desc": "Connect. Communicate. Inspire.",
+  "track6": "Architectural Technician", "track6desc": "Draw. Plan. Build the future.",
+  "benefit1": "4 Years of education", "benefit1desc": "Quality education for a secure future!",
+  "benefit2": "Scholarships for everyone", "benefit2desc": "Support for every student!",
+  "benefit3": "Guaranteed internship", "benefit3desc": "Learn through practice. Gain experience!",
+  "benefit4": "Guaranteed employment", "benefit4desc": "A profession with a future. Career without limits!",
+  "cta1": "Guaranteed admission to any university!",
+  "cta2": "Your future – without obstacles!",
+  "cta3": "Choose a profession with a future! Choose OSTU Gostivar!",
+  "ctaBtn": "Contact us"
 }
 }

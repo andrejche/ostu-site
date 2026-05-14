@@ -171,6 +171,81 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── УПИСИ ───────────────────────────────────────────────────────────────── */}
+      <section className="bg-slate-50 dark:bg-slate-800 py-16 px-4">
+        <div className="mx-auto max-w-6xl">
+
+          {/* Header */}
+          <Reveal>
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center gap-2 rounded-full bg-[#0B2E5B]/10 dark:bg-blue-400/10 px-4 py-2 text-sm font-semibold text-[#0B2E5B] dark:text-blue-400 mb-4">
+                🎓 {t("enrollment.badge")}
+              </div>
+              <h2 className="text-4xl md:text-5xl font-black text-slate-900 dark:text-white mb-3">
+                {t("enrollment.title")}
+              </h2>
+              <p className="text-lg font-semibold text-[#0B2E5B] dark:text-blue-400">
+                {t("enrollment.subtitle")}
+              </p>
+              <p className="text-slate-500 dark:text-slate-400 mt-2">{t("enrollment.tagline")}</p>
+            </div>
+          </Reveal>
+
+          {/* Tracks grid */}
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-12">
+            {[
+              { icon: "⚙️",  title: t("enrollment.track1"), desc: t("enrollment.track1desc"), color: "from-slate-700 to-slate-900" },
+              { icon: "🤖",  title: t("enrollment.track2"), desc: t("enrollment.track2desc"), color: "from-blue-700 to-blue-900" },
+              { icon: "💻",  title: t("enrollment.track3"), desc: t("enrollment.track3desc"), color: "from-green-700 to-green-900" },
+              { icon: "⚡",  title: t("enrollment.track4"), desc: t("enrollment.track4desc"), color: "from-yellow-600 to-orange-700" },
+              { icon: "📡",  title: t("enrollment.track5"), desc: t("enrollment.track5desc"), color: "from-purple-700 to-purple-900" },
+              { icon: "🏛️", title: t("enrollment.track6"), desc: t("enrollment.track6desc"), color: "from-pink-600 to-pink-900" },
+            ].map((tr, i) => (
+              <Reveal key={tr.title} delay={i * 0.07}>
+                <div className={`group rounded-2xl bg-gradient-to-br ${tr.color} p-5 text-white hover:scale-[1.03] transition-all duration-300 shadow-lg h-full`}>
+                  <div className="text-4xl mb-3">{tr.icon}</div>
+                  <div className="font-extrabold text-sm md:text-base leading-tight mb-2">{tr.title}</div>
+                  <div className="text-white/70 text-xs leading-relaxed">{tr.desc}</div>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+
+          {/* Benefits */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+            {[
+              { icon: "📅", title: t("enrollment.benefit1"), desc: t("enrollment.benefit1desc") },
+              { icon: "🏅", title: t("enrollment.benefit2"), desc: t("enrollment.benefit2desc") },
+              { icon: "🏢", title: t("enrollment.benefit3"), desc: t("enrollment.benefit3desc") },
+              { icon: "💼", title: t("enrollment.benefit4"), desc: t("enrollment.benefit4desc") },
+            ].map((b, i) => (
+              <Reveal key={b.title} delay={i * 0.08}>
+                <div className="rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-700 p-5 text-center shadow-sm hover:shadow-md transition-all duration-300">
+                  <div className="text-3xl mb-3">{b.icon}</div>
+                  <div className="font-extrabold text-slate-900 dark:text-white text-sm mb-1">{b.title}</div>
+                  <div className="text-slate-500 dark:text-slate-400 text-xs leading-relaxed">{b.desc}</div>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+
+          {/* CTA banner */}
+          <Reveal>
+            <div className="rounded-2xl bg-gradient-to-r from-[#0B2E5B] to-blue-700 p-8 md:p-12 text-center text-white shadow-2xl">
+              <div className="text-4xl mb-4">🎓</div>
+              <h3 className="text-2xl md:text-4xl font-black mb-2">{t("enrollment.cta1")}</h3>
+              <p className="text-blue-200 text-lg font-semibold mb-1">{t("enrollment.cta2")}</p>
+              <p className="text-white/70 text-sm mb-6">{t("enrollment.cta3")}</p>
+              <Link to="/kontakt"
+                className="inline-flex items-center gap-2 bg-white text-[#0B2E5B] font-extrabold px-8 py-3 rounded-full hover:bg-blue-50 transition-all duration-200 hover:scale-[1.03] text-sm">
+                {t("enrollment.ctaBtn")} →
+              </Link>
+            </div>
+          </Reveal>
+
+        </div>
+      </section>
+
       {/* ── SECTION 1 ────────────────────────────────────────────────────────── */}
       <section className="flex flex-col md:flex-row min-h-[600px]">
         <Reveal direction="left" className="w-full md:w-[40%] flex flex-col justify-center px-10 py-16 md:px-16 bg-slate-50 dark:bg-slate-800">

@@ -219,5 +219,25 @@
   "empty": "Nuk ka materiale.",
   "folderHint": "Dosje — kliko për ta hapur",
   "fileHint": "Skedar — kliko për ta hapur"
+},
+"enrollment": {
+  "badge": "Regjistrim 2025/2026",
+  "title": "E ardhmja është vendimi yt!",
+  "subtitle": "Zgjedh drejtimin. Ndërto të ardhmen!",
+  "tagline": "Dija sot – sukses nesër!",
+  "track1": "Teknik mekanik", "track1desc": "Krijo. Riparo. Përmirëso.",
+  "track2": "Teknik për mekatronikë industriale", "track2desc": "Robotë. Automatizo. Inovo.",
+  "track3": "Teknikë kompjuterike dhe automatikë", "track3desc": "Kodo. Kontrollo. Krijo të ardhmen.",
+  "track4": "Elektroteknik – Energjetik", "track4desc": "Energji sot, e ardhme e ndritshme nesër!",
+  "track5": "Elektroteknik për elektronikë", "track5desc": "Lidhu. Komuniko. Frymëzo.",
+  "track6": "Teknik arkitektonik", "track6desc": "Vizo. Plano. Ndërto të ardhmen.",
+  "benefit1": "4 Vite arsim", "benefit1desc": "Arsim cilësor për një të ardhme të sigurt!",
+  "benefit2": "Bursa për të gjithë", "benefit2desc": "Mbështetje për çdo nxënës!",
+  "benefit3": "Praktikë e garantuar", "benefit3desc": "Mëso përmes praktikës. Fito përvojë!",
+  "benefit4": "Punë e garantuar", "benefit4desc": "Profesion me të ardhme. Karrierë pa kufij!",
+  "cta1": "Regjistrim i garantuar në çdo fakultet!",
+  "cta2": "E ardhmja jote – pa pengesa!",
+  "cta3": "Zgjedh profesion me të ardhme! Zgjedh SSTU Gostivar!",
+  "ctaBtn": "Na kontakto"
 }
 }

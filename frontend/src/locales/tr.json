@@ -219,5 +219,25 @@
   "empty": "Materyal yok.",
   "folderHint": "Klasör — açmak için tıklayın",
   "fileHint": "Dosya — açmak için tıklayın"
+},
+"enrollment": {
+  "badge": "Kayıt 2025/2026",
+  "title": "Gelecek senin kararın!",
+  "subtitle": "Bir bölüm seç. Geleceğini inşa et!",
+  "tagline": "Bugün bilgi – yarın başarı!",
+  "track1": "Makine Teknikeri", "track1desc": "Yarat. Onar. Geliştir.",
+  "track2": "Endüstriyel Mekatronik Teknikeri", "track2desc": "Robotlar. Otomatize et. Yenilik yap.",
+  "track3": "Bilgisayar Mühendisliği ve Otomasyon", "track3desc": "Kodla. Kontrol et. Geleceği yarat.",
+  "track4": "Elektrik Teknikeri – Enerji", "track4desc": "Bugün enerji, yarın parlak gelecek!",
+  "track5": "Elektronik Elektrik Teknikeri", "track5desc": "Bağlan. İletişim kur. İlham ver.",
+  "track6": "Mimari Tekniker", "track6desc": "Çiz. Planla. Geleceği inşa et.",
+  "benefit1": "4 Yıl eğitim", "benefit1desc": "Güvenli bir gelecek için kaliteli eğitim!",
+  "benefit2": "Herkese burs", "benefit2desc": "Her öğrenciye destek!",
+  "benefit3": "Garantili staj", "benefit3desc": "Uygulama yaparak öğren. Deneyim kazan!",
+  "benefit4": "Garantili iş", "benefit4desc": "Geleceği olan bir meslek. Sınırsız kariyer!",
+  "cta1": "Her üniversiteye garantili kabul!",
+  "cta2": "Geleceğin – engelsiz!",
+  "cta3": "Geleceği olan bir meslek seç! OSТУ Gostivar'ı seç!",
+  "ctaBtn": "Bize ulaşın"
 }
 }
